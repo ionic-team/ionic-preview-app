@@ -30,9 +30,11 @@
 <ion-nav id="nav" [root]="rootPage" #content></ion-nav>
 
 
-<button fab fab-bottom fab-left light (click)="previousSection()">
-  <icon arrow-back></icon>
-</button>
-<button fab fab-bottom fab-right light (click)="nextSection()">
-  <icon arrow-forward></icon>
-</button>
+<div *ngIf="!isProductionMode">
+  <button fab fab-bottom fab-left light (click)="previousSection()">
+    <ion-icon arrow-back></ion-icon>
+  </button>
+  <button fab fab-bottom fab-right light (click)="nextSection()">
+    <ion-icon arrow-forward></ion-icon>
+  </button>
+</div>

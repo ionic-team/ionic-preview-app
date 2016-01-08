@@ -60,6 +60,7 @@ class DemoApp {
       });
 
       if (this.config.get('production') === true) {
+        this.isProductionMode = true;
         window.parent.postMessage(this.platform.is('ios') ? "ios" : "android", "*");
         if (helpers.hasScrollbar() === true) {
           setTimeout(function() {
@@ -68,6 +69,7 @@ class DemoApp {
           }, 500);
         }
       } else {
+          this.isProductionMode = true;
           this.currentPageIndex = 1;
           let nav = this.app.getComponent('nav');
           nav.setRoot(actionSheets.BasicPage);

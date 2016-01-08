@@ -1,0 +1,109 @@
+//////////////////////////////////
+// Global Styles
+//////////////////////////////////
+
+body, body:hover, body a, body button, body media-switch {
+  cursor: url('http://ionicframework.com/img/finger.png') 8 8, auto;
+}
+
+body ion-app {
+  overflow: visible;
+}
+
+ion-page {
+  display: flex;
+}
+
+ion-scroll {
+  width: 100%;
+  height: 100%;
+}
+
+body.has-scrollbar scroll-content {
+  margin-right: -15px;
+}
+body.has-scrollbar ion-menu scroll-content {
+  margin-right: 0;
+}
+
+scroll-content {
+  overflow-y: scroll;
+}
+
+section.hidden {
+  display: none !important;
+}
+
+.components-demo h4 {
+  text-align: center;
+}
+
+.section-padding {
+  padding: 16px;
+}
+
+.components-demo section {
+  width: 100%;
+  height: 100%;
+}
+
+#card-wireframe {
+  width: 100%;
+  margin-bottom: 2.7em;
+}
+
+.demo-card {
+  height: 0;
+}
+.demo-card button {
+  font-size: 1.3rem;
+}
+
+.ios ion-content.cards-bg {
+  background-color: #f4f4f7;
+}
+.md ion-content.cards-bg {
+  background-color: #EEEEEE !important;
+}
+
+.demo-list-icons icon {
+  color: #444444;
+}
+.demo-list-icons icon#secondary {
+  color: #32DB64;
+}
+body.md {
+  border-top: 24px solid black;
+}
+
+body.md backdrop {
+  top: -24px;
+  height: 107%;
+}
+ 
+body.md img#md-only {
+  display: block !important;
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  height: auto;
+}
+
+body.md img#md-tabs-icon, body.md img#md-tabs-icon-text {
+  display: none;
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  height: auto;
+}
+
+body.ios img#ios-only {
+  display: block !important;
+  position: absolute;
+  background-color: #F8F8F8;
+  padding: 5px 0;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}

@@ -6,7 +6,7 @@
     <button (click)="dismiss()" clear *ngIf=" currentPlatform === 'ios' ">
       <span primary>Cancel</span>
     </button>
-    <button (click)="dismiss()" *ngIf=" currentPlatform === 'android' ">
+    <button (click)="dismiss()" clear *ngIf=" currentPlatform === 'android' " style="color: #fff; margin-right: 10px">
       <ion-icon name='close'></ion-icon>
     </button>
   </ion-buttons>

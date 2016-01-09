@@ -8,7 +8,7 @@ import * as helpers from './helpers';
 @App({
   templateUrl: './build/app.html',
   config: {
-    production: false,
+    production: true,
     platforms: {
       android: {
         activator: 'ripple'
@@ -53,8 +53,10 @@ class DemoApp {
             } else {
               this.nextPage = actionSheets.BasicPage;
             }
-            let nav = this.app.getComponent('nav');
-            helpers.debounce(nav.setRoot(this.nextPage), 60, false);
+            setTimeout(() => {
+              let nav = this.app.getComponent('nav');
+              helpers.debounce(nav.setRoot(this.nextPage), 60, false);
+            });
           }
         });
       });
@@ -69,7 +71,7 @@ class DemoApp {
           }, 500);
         }
       } else {
-          this.isProductionMode = true;
+          this.isProductionMode = false;
           this.currentPageIndex = 1;
           let nav = this.app.getComponent('nav');
           nav.setRoot(actionSheets.BasicPage);

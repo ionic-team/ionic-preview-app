@@ -7,59 +7,63 @@
 </ion-navbar>
 
 <ion-content>
-  <ion-list radio-group>
 
-    <ion-list-header>
-      Language
-    </ion-list-header>
+  <form (submit)="doSubmit($event)" [ngFormModel]="langForm">
+    <ion-list radio-group ngControl="langs">
 
-    <ion-radio checked="true">
-      Go
-    </ion-radio>
+      <ion-list-header>
+        Language
+      </ion-list-header>
 
-    <ion-radio>
-      Rust
-    </ion-radio>
+      <ion-radio value="golang" checked="true">
+        Go
+      </ion-radio>
 
-    <ion-radio>
-      Python
-    </ion-radio>
+      <ion-radio value="rust">
+        Rust
+      </ion-radio>
 
-    <ion-radio>
-      Ruby
-    </ion-radio>
+      <ion-radio value="python">
+        Python
+      </ion-radio>
 
-    <ion-radio>
-      Clojure
-    </ion-radio>
+      <ion-radio value="ruby">
+        Ruby
+      </ion-radio>
 
-    <ion-radio>
-      Java
-    </ion-radio>
+      <ion-radio value="clojure">
+        Clojure
+      </ion-radio>
 
-    <ion-radio>
-      PHP
-    </ion-radio>
+      <ion-radio value="java">
+        Java
+      </ion-radio>
 
-    <ion-radio>
-      .NET
-    </ion-radio>
+      <ion-radio value="php">
+        PHP
+      </ion-radio>
 
-    <ion-radio>
-      C++
-    </ion-radio>
+      <ion-radio value="dotnet">
+        .NET
+      </ion-radio>
 
-    <ion-radio>
-      Scala
-    </ion-radio>
+      <ion-radio value="cplusplus">
+        C++
+      </ion-radio>
 
-    <ion-radio>
-      Haskell
-    </ion-radio>
+      <ion-radio value="scala">
+        Scala
+      </ion-radio>
 
-    <ion-radio>
-      Erlang
-    </ion-radio>
+      <ion-radio value="haskell">
+        Haskell
+      </ion-radio>
 
-  </ion-list>
+      <ion-radio value="erlang">
+        Erlang
+      </ion-radio>
+
+    </ion-list>
+  </form>
+
 </ion-content>

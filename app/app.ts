@@ -11,7 +11,8 @@ import * as helpers from './helpers';
     production: true,
     platforms: {
       android: {
-        activator: 'ripple'
+        activator: 'ripple',
+        backButtonIcon: 'md-arrow-back'
       }
     }
   }

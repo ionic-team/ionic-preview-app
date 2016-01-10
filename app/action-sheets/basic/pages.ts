@@ -35,7 +35,7 @@ export class BasicPage {
           },
           { text: 'Favorite',
             handler: buttonHandler,
-            icon: 'ion-md-heart-outline'
+            icon: 'md-heart-outline'
           },
           {
             text: 'Delete',

@@ -7,7 +7,7 @@ import * as helpers from '../../helpers';
 @Page({
   template: '' +
   '<ion-navbar *navbar hideBackButton [attr.royal]="isAndroid ? \'\' : null">' +
-    '<ion-title>Tabs</ion-title>' +
+  '<ion-title>Tabs</ion-title>' +
   '</ion-navbar>' +
   '<ion-content>' +
   '</ion-content>',
@@ -25,13 +25,14 @@ class TabIconTextPage {
   }
 }
 
+
 @Page({
   template:
   '<ion-tabs class="tabs-icon-text">' +
-    '<ion-tab tabIcon="water" tabTitle="Water" [root]="tabOne"></ion-tab>' +
-    '<ion-tab tabIcon="leaf" tabTitle="Life" [root]="tabTwo"></ion-tab>' +
-    '<ion-tab tabIcon="flame" tabTitle="Fire" [root]="tabThree"></ion-tab>' +
-    '<ion-tab tabIcon="magnet" tabTitle="Force" [root]="tabFour"></ion-tab>' +
+  '<ion-tab tabIcon="water" tabTitle="Water" [root]="tabOne"></ion-tab>' +
+  '<ion-tab tabIcon="leaf" tabTitle="Life" [root]="tabTwo"></ion-tab>' +
+  '<ion-tab tabIcon="flame" tabTitle="Fire" [root]="tabThree"></ion-tab>' +
+  '<ion-tab tabIcon="magnet" tabTitle="Force" [root]="tabFour"></ion-tab>' +
   '</ion-tabs>',
 })
 export class IconTextPage {

@@ -3,13 +3,13 @@
 </ion-navbar>
 
 <ion-content class="has-header components-demo">
-  <form (submit)="processForm($event)" [ng-form-model]="form">
+  <form (submit)="processForm($event)" [ngFormModel]="form">
       <ion-list>
       <ion-input>
-        <input ng-control="firstName" type="text" placeholder="First Name">
+        <input ngControl="firstName" type="text" placeholder="First Name">
       </ion-input>
       <ion-input>
-        <input ng-control="lastName" type="text" placeholder="Last Name">
+        <input ngControl="lastName" type="text" placeholder="Last Name">
       </ion-input>
     </ion-list>
     <div padding>

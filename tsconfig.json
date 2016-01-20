@@ -6,7 +6,7 @@
     "rootDir": ".",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "sourceRoot": "",
     "inlineSourceMap": false,
     "inlineSources": false

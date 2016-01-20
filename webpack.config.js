@@ -14,24 +14,22 @@ module.exports = {
     filename: 'app.bundle.js',
     pathinfo: false // show module paths in the bundle, handy for debugging
   },
+  devtool: 'source-map',
   module: {
-    loaders: [
-      {
-        test: /\.ts$/,
-        loader: 'awesome-typescript',
-        query: {
-          'doTypeCheck': false,
-          useWebpackText: true
-        },
-        include: path.resolve('app'),
-        exclude: /node_modules/
+    loaders: [{
+      test: /\.ts$/,
+      loader: 'awesome-typescript',
+      query: {
+        'doTypeCheck': false,
+        useWebpackText: true
       },
-      {
-        test: /\.js$/,
-        include: path.resolve('node_modules/angular2'),
-        loader: 'strip-sourcemap'
-      }
-    ],
+      include: path.resolve('app'),
+      exclude: /node_modules/
+    }, {
+      test: /\.js$/,
+      include: path.resolve('node_modules/angular2'),
+      loader: 'strip-sourcemap'
+    }],
     noParse: [
       /es6-shim/,
       /reflect-metadata/,

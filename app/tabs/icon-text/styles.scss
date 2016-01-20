@@ -1,9 +1,8 @@
 body.md {
-
   .tabs-icon-text ion-title div.toolbar-title {
     color: #fff !important;
   }
-  
+
   .tabs-icon-text tabbar {
     background-color: #7e60ff;
 
@@ -11,6 +10,7 @@ body.md {
       color: #fff !important;
     }
   }
+
   .tabs-icon-text tab-highlight {
     color: #fff;
     background-color: #fff;
@@ -19,7 +19,8 @@ body.md {
 
 body.ios {
   .tabs-icon-text tabbar {
-    a {
+    .tab-button[aria-selected=true],
+    .tab-button:hover:not(.disable-hover) {
       color: #7e60ff;
     }
   }

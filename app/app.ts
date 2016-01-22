@@ -8,7 +8,7 @@ import * as helpers from './helpers';
 @App({
   templateUrl: './build/app.html',
   config: {
-    production: false,
+    production: true,
     platforms: {
       android: {
         activator: 'ripple',

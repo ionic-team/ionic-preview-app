@@ -21,7 +21,6 @@ module.exports = {
       loader: 'awesome-typescript',
       query: {
         'doTypeCheck': false,
-        useWebpackText: true
       },
       include: path.resolve('app'),
       exclude: /node_modules/

@@ -5,12 +5,15 @@
 <ion-content class="has-header components-demo">
   <form (submit)="processForm($event)" [ngFormModel]="form">
       <ion-list>
-      <ion-input>
-        <input ngControl="firstName" type="text" placeholder="First Name">
-      </ion-input>
-      <ion-input>
-        <input ngControl="lastName" type="text" placeholder="Last Name">
-      </ion-input>
+
+      <ion-item>
+        <ion-input ngControl="firstName" type="text" placeholder="First Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input ngControl="lastName" type="text" placeholder="Last Name"></ion-input>
+      </ion-item>
+
     </ion-list>
     <div padding>
       <button block type="submit">Create Account</button>

@@ -2,20 +2,26 @@ import {Directive, ElementRef, Renderer} from 'angular2/core';
 import {Platform, Navbar} from 'ionic-framework/ionic';
 
 import * as actionSheets from './action-sheets/action-sheets';
-import * as badges from './badge/badge';
+import * as alerts from './alerts/alerts';
+import * as badges from './badges/badges';
 import * as buttons from './buttons/buttons';
 import * as cards from './cards/cards';
+import * as checkboxes from './checkboxes/checkboxes';
 import * as grid from './grid/grid';
-import * as labels from './labels/labels';
 import * as icons from './icons/icons';
 import * as inputs from './inputs/inputs';
 import * as lists from './lists/lists';
 import * as menus from './menus/menus';
 import * as modals from './modals/modals';
 import * as navigation from './navigation/navigation';
-import * as alerts from './alerts/alerts';
+import * as radios from './radios/radios';
+import * as ranges from './ranges/ranges';
+import * as searchbars from './searchbars/searchbars';
+import * as segments from './segments/segments';
+import * as selects from './selects/selects';
 import * as slides from './slides/slides';
 import * as tabs from './tabs/tabs';
+import * as toggles from './toggles/toggles';
 
 
 @Directive({
@@ -96,20 +102,20 @@ export function getPages() {
     'card-advanced-map': cards.AdvancedMapPage,
     'card-advanced-social': cards.AdvancedSocialPage,
     'card-advanced-weather': cards.AdvancedWeatherPage,
-    'checkbox': inputs.CheckboxPage,
-    'radio': inputs.RadioPage,
-    'range': inputs.RangePage,
-    'segment': inputs.SegmentPage,
-    'select': inputs.SelectPage,
-    'searchbar': inputs.SearchPage,
-    'toggle': inputs.TogglePage,
-    'inputs': labels.BasicPage,
-    'fixed-inline-labels': labels.FixedInlinePage,
-    'floating-labels': labels.FloatingPage,
-    'inline-labels': labels.InlinePage,
-    'inset-labels': labels.InsetPage,
-    'placeholder-labels': labels.PlaceholderPage,
-    'stacked-labels': labels.StackedPage,
+    'checkbox': checkboxes.CheckboxPage,
+    'radio': radios.RadioPage,
+    'range': ranges.RangePage,
+    'segment': segments.SegmentPage,
+    'select': selects.SelectPage,
+    'searchbar': searchbars.SearchPage,
+    'toggle': toggles.TogglePage,
+    'inputs': inputs.BasicPage,
+    'fixed-inline-labels': inputs.FixedInlinePage,
+    'floating-labels': inputs.FloatingPage,
+    'inline-labels': inputs.InlinePage,
+    'inset-labels': inputs.InsetPage,
+    'placeholder-labels': inputs.PlaceholderPage,
+    'stacked-labels': inputs.StackedPage,
     'icons': icons.BasicPage,
     'grid': grid.BasicPage,
     'lists': lists.BasicPage,

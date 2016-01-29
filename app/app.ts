@@ -1,14 +1,15 @@
 import {App, IonicApp, Platform, ActionSheet} from 'ionic-framework/ionic';
 import {Page, Config, Events} from 'ionic-framework/ionic';
 import {PageOne, PageTwo, PageThree} from './menus/menus';
-import * as actionSheets from './action-sheets/action-sheets';
 import * as helpers from './helpers';
 
+// Change the import if you want to change the first page
+import * as rootPage from './action-sheets/action-sheets';
 
 @App({
   templateUrl: './build/app.html',
   config: {
-    production: true,
+    production: false,
     platforms: {
       android: {
         activator: 'ripple',
@@ -53,7 +54,7 @@ class DemoApp {
                 this.app.getComponent('leftMenu').enable(false);
               }
             } else {
-              this.nextPage = actionSheets.BasicPage;
+              this.nextPage = rootPage.BasicPage;
             }
             setTimeout(() => {
               let nav = this.app.getComponent('nav');
@@ -76,7 +77,7 @@ class DemoApp {
         this.isProductionMode = false;
         this.currentPageIndex = 1;
         let nav = this.app.getComponent('nav');
-        nav.setRoot(actionSheets.BasicPage);
+        nav.setRoot(rootPage.BasicPage);
       }
 
     });

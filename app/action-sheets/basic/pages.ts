@@ -39,6 +39,7 @@ export class BasicPage {
           {
             text: 'Delete',
             style: 'destructive',
+            icon: 'md-trash',
             handler: () => {
               console.log('Destructive clicked');
             }
@@ -46,6 +47,7 @@ export class BasicPage {
           {
             text: 'Cancel',
             style: 'cancel',
+            icon: 'md-close',
             handler: () => {
               console.log('Cancel clicked');
             }

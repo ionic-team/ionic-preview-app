@@ -82,6 +82,8 @@ export function getPages() {
     'overview': actionSheets.BasicPage,
     'action-sheets': actionSheets.BasicPage,
     'alert': alerts.BasicPage,
+    'alert-confirm': alerts.ConfirmPage,
+    'alert-prompt': alerts.PromptPage,
     'badges': badges.BasicPage,
     'buttons': buttons.BasicPage,
     'block-buttons': buttons.BlockPage,

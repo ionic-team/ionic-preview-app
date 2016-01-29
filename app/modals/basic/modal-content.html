@@ -3,11 +3,9 @@
     Description
   </ion-title>
   <ion-buttons start>
-    <button (click)="dismiss()" clear *ngIf=" currentPlatform === 'ios' ">
-      <span primary>Cancel</span>
-    </button>
-    <button (click)="dismiss()" clear *ngIf=" currentPlatform === 'android' " style="color: #fff; margin-right: 10px">
-      <ion-icon name='close'></ion-icon>
+    <button (click)="dismiss()">
+      <span primary showWhen="ios">Cancel</span>
+      <ion-icon name='close' showWhen="android"></ion-icon>
     </button>
   </ion-buttons>
 </ion-toolbar>
@@ -36,10 +34,3 @@
     </ion-list>
 
   </ion-content>
-
-
-
-
-
-
-

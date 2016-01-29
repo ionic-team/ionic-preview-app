@@ -25,7 +25,7 @@ export class AndroidAttribute {
 
     constructor (platform: Platform, elementRef: ElementRef, renderer: Renderer) {
         this.isAndroid = platform.is('android');
-        renderer.setElementAttribute(elementRef, 'primary', this.isAndroid ? true : null);
+        renderer.setElementAttribute(elementRef.nativeElement, 'primary', this.isAndroid ? true : null);
     }
 
 }

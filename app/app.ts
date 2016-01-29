@@ -39,7 +39,6 @@ class DemoApp {
     this.platform.ready().then(() => {
 
       window.addEventListener('message', (e) => {
-        console.log("FUCK");
         zone.run(() => {
           if (e.data) {
             var data;
@@ -57,7 +56,6 @@ class DemoApp {
               this.nextPage = actionSheets.BasicPage;
             }
             setTimeout(() => {
-              console.log("here")
               let nav = this.app.getComponent('nav');
               helpers.debounce(nav.setRoot(this.nextPage), 60, false);
             });
@@ -94,7 +92,6 @@ class DemoApp {
 
   nextSection() {
     let pageName = Object.keys(helpers.getPages())[this.currentPageIndex + 1];
-    console.log(pageName);
     let nav = this.app.getComponent('nav');
     nav.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
     this.currentPageIndex = this.currentPageIndex + 1;

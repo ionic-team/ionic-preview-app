@@ -13,6 +13,9 @@ npm install
 ionic serve
 ```
 
+Note: [production mode](https://github.com/driftyco/ionic-preview-app/blob/master/app/app.ts#L11) should be false for local development
+
+
 ### Updating ionic-site
 
 - Set [production mode](https://github.com/driftyco/ionic-preview-app/blob/master/app/app.ts#L11) to true

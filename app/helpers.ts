@@ -84,7 +84,6 @@ export function getPages() {
     'alert': alerts.BasicPage,
     'alert-confirm': alerts.ConfirmPage,
     'alert-prompt': alerts.PromptPage,
-    'alert-checkbox': alerts.CheckboxPage,
     'alert-radio': alerts.RadioPage,
     'badges': badges.BasicPage,
     'buttons': buttons.BasicPage,

@@ -1,10 +1,10 @@
 import {App, IonicApp, Platform, ActionSheet} from 'ionic-framework/ionic';
 import {Page, Config, Events} from 'ionic-framework/ionic';
-import {PageOne, PageTwo, PageThree} from './menus/menus';
-import * as helpers from './helpers';
+import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
+import * as helpers from './directives/helpers';
 
 // Change the import if you want to change the first page
-import * as rootPage from './action-sheets/action-sheets';
+import * as rootPage from './pages/action-sheets/action-sheets';
 
 @App({
   templateUrl: './build/app.html',

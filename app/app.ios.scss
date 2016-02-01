@@ -6,6 +6,7 @@ $colors: (
   dark:       #222,
   energized:  #ffc527,
   royal:      #7e60ff,
+  subtle:     #444444
 );
 
 $checkbox-md-icon-checkmark-color: #fff !important;
@@ -36,4 +37,3 @@ $segment-button-md-text-color-activated: #fff !important;
 @import "tabs/icon/styles";
 @import "tabs/icon-text/styles";
 @import "global";
-

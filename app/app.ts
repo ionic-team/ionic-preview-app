@@ -3,8 +3,9 @@ import {Page, Config, Events} from 'ionic-framework/ionic';
 import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
 import * as helpers from './directives/helpers';
 
-// Change the import if you want to change the first page
-import * as rootPage from './pages/action-sheets/action-sheets';
+// Change the import if you want to change the first page, for example:
+// import { ImagePage as rootPage } from './pages/cards/cards';
+import { BasicPage as rootPage } from './pages/action-sheets/action-sheets';
 
 @App({
   templateUrl: './build/app.html',
@@ -54,7 +55,7 @@ class DemoApp {
                 this.app.getComponent('leftMenu').enable(false);
               }
             } else {
-              this.nextPage = rootPage.BasicPage;
+              this.nextPage = rootPage;
             }
             setTimeout(() => {
               let nav = this.app.getComponent('nav');
@@ -77,7 +78,7 @@ class DemoApp {
         this.isProductionMode = false;
         this.currentPageIndex = 1;
         let nav = this.app.getComponent('nav');
-        nav.setRoot(rootPage.BasicPage);
+        nav.setRoot(rootPage);
       }
 
     });

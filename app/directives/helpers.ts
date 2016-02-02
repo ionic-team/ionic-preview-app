@@ -28,13 +28,14 @@ import * as toggles from '../pages/toggles/toggles';
   selector: '.android-attr',
 })
 export class AndroidAttribute {
-  isAndroid;
+  isAndroid: boolean;
+
   constructor(
     public platform: Platform,
     public elementRef: ElementRef,
     public renderer: Renderer) {
     this.isAndroid = platform.is('android');
-    renderer.setElementAttribute(elementRef.nativeElement, 'primary', this.isAndroid ? true : null);
+    renderer.setElementAttribute(elementRef.nativeElement, 'primary', this.isAndroid ? '' : null);
   }
 
 }
@@ -85,6 +86,7 @@ export function getPages() {
     'alert-confirm': alerts.ConfirmPage,
     'alert-prompt': alerts.PromptPage,
     'alert-radio': alerts.RadioPage,
+    'alert-checkbox': alerts.CheckboxPage,
     'badges': badges.BasicPage,
     'buttons': buttons.BasicPage,
     'block-buttons': buttons.BlockPage,

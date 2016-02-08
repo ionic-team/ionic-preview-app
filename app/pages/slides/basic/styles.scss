@@ -1,26 +1,37 @@
-.preview-slides {
+.tutorial-page {
 
-    .slide-contents {
-      display: block;
-      height: 100%;
-      padding: 500px 0;
-      width: 100%;
-      font-weight: bold;
-      font-size: 2.5em;
-      color: #fff;
-    }
+  .toolbar-background {
+    background: #fff;
+    border-color: transparent;
+  }
 
-    #slide-1 {
-      background-color: #32db64;
-    }
+  .slide-zoom {
+    height: 100%;
+  }
 
-    #slide-2 {
-      background-color: #387ef5;
-    }
+  .slide-title {
+    margin-top: 2.8rem;
+  }
 
-    #slide-3 {
-      background-color: #f53d3d;
+  .slide-image {
+    max-height: 50%;
+    max-width: 60%;
+    margin: 36px 0;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #60646B;
+
+    b {
+      color: #000000;
     }
+  }
 
 }
-

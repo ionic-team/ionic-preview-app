@@ -22,6 +22,7 @@ import * as selects from '../pages/selects/selects';
 import * as slides from '../pages/slides/slides';
 import * as tabs from '../pages/tabs/tabs';
 import * as toggles from '../pages/toggles/toggles';
+import * as toolbar from '../pages/toolbar/toolbar';
 
 
 @Directive({
@@ -139,6 +140,7 @@ export function getPages() {
     'tabs': tabs.BasicPage,
     'tabs-icon': tabs.IconPage,
     'tabs-icon-text': tabs.IconTextPage,
+    'toolbar': toolbar.BasicPage
   };
 }
 

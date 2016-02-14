@@ -5,4 +5,5 @@ export * from './icon/pages';
 export * from './inset/pages';
 export * from './no-lines/pages';
 export * from './multiline/pages';
+export * from './sliding/pages';
 export * from './thumbnail/pages';

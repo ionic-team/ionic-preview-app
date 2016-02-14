@@ -132,6 +132,7 @@ export function getPages() {
     'inset-list': lists.InsetPage,
     'list-headers': lists.HeadersPage,
     'multiline-list': lists.MultilinePage,
+    'sliding-list': lists.SlidingPage,
     'thumbnail-list': lists.ThumbnailPage,
     'menus': menus.BasicPage,
     'modals': modals.BasicPage,

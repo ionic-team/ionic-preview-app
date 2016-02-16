@@ -130,6 +130,7 @@ export function getPages() {
     'avatar-list': lists.AvatarPage,
     'icon-list': lists.IconPage,
     'inset-list': lists.InsetPage,
+    'list-dividers': lists.DividersPage,
     'list-headers': lists.HeadersPage,
     'multiline-list': lists.MultilinePage,
     'sliding-list': lists.SlidingPage,

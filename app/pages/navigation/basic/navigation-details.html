@@ -1,8 +1,11 @@
 
 <ion-navbar *navbar class="android-attr">
-  <ion-title>{{selection.title}}</ion-title>
+  <ion-title>
+    {{ item.title }}
+  </ion-title>
 </ion-navbar>
 
 <ion-content padding>
- {{selection.content}}
+  <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}"></ion-icon>
+  {{ item.description }}
 </ion-content>

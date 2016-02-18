@@ -5,26 +5,9 @@
 
 <ion-content>
   <ion-list>
-
-    <button ion-item (click)="openNavDetailsPage('Angular')">
-      <ion-icon name="logo-angular" item-left></ion-icon>
-      Angular
+    <button ion-item *ngFor="#item of items" (click)="openNavDetailsPage(item)">
+      <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon>
+      {{ item.title }}
     </button>
-
-    <button ion-item (click)="openNavDetailsPage('CSS3')">
-      <ion-icon name="logo-css3" item-left></ion-icon>
-      CSS3
-    </button>
-
-    <button ion-item (click)="openNavDetailsPage('HTML5')">
-      <ion-icon name="logo-html5" item-left></ion-icon>
-      HTML5
-    </button>
-
-    <button ion-item (click)="openNavDetailsPage('Sass')">
-      <ion-icon name="logo-sass" item-left></ion-icon>
-      Sass
-    </button>
-
   </ion-list>
 </ion-content>

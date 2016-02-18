@@ -3,7 +3,7 @@
   <ion-title>Social Card</ion-title>
 </ion-navbar>
 
-<ion-content class="has-header components-demo cards-bg">
+<ion-content class="has-header components-demo cards-bg social-cards">
 
 <ion-card>
 
@@ -21,19 +21,25 @@
     <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
   </ion-card-content>
 
-  <ion-item>
-    <button primary clear item-left>
-      <ion-icon name='thumbs-up'></ion-icon>
-      <div>12 Likes</div>
-    </button>
-    <button primary clear item-left>
-      <ion-icon name='text'></ion-icon>
-      <div>4 Comments</div>
-    </button>
-    <ion-note item-right>
-      11h ago
-    </ion-note>
-  </ion-item>
+  <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
 
 </ion-card>
 
@@ -54,19 +60,25 @@
     <p>I face the unknown future, with a sense of hope. Because if a machine, a Terminator, can learn the value of human life, maybe we can too.</p>
   </ion-card-content>
 
-  <ion-item>
-    <button primary clear item-left>
-      <ion-icon name='thumbs-up'></ion-icon>
-      <div>30 Likes</div>
-    </button>
-    <button primary clear item-left>
-      <ion-icon name='text'></ion-icon>
-      <div>64 Comments</div>
-    </button>
-    <ion-note item-right>
-      30yr ago
-    </ion-note>
-  </ion-item>
+  <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>30 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>64 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        30yr ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
 
 </ion-card>
 
@@ -87,21 +99,33 @@
     <p>Your scientists were so preoccupied with whether or not they could, that they didn't stop to think if they should.</p>
   </ion-card-content>
 
-  <ion-item>
-    <button primary clear item-left>
-      <ion-icon name='thumbs-up'></ion-icon>
-      <div>46 Likes</div>
-    </button>
-    <button primary clear item-left>
-      <ion-icon name='text'></ion-icon>
-      <div>66 Comments</div>
-    </button>
-    <ion-note item-right>
-      2d ago
-    </ion-note>
-  </ion-item>
+  <ion-row>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>46 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>66 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        2d ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
 
 </ion-card>
 
 
 </ion-content>
+
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+</style>

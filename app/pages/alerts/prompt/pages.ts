@@ -16,7 +16,7 @@ export class PromptPage {
   doPrompt() {
     let prompt = Alert.create({
       title: 'Login',
-      body: "Enter a name for this new album you're so keen on adding",
+      message: "Enter a name for this new album you're so keen on adding",
       inputs: [
         {
           name: 'title',

@@ -143,8 +143,10 @@ export function getPages() {
     'tabs-icon': tabs.IconPage,
     'tabs-icon-text': tabs.IconTextPage,
     'tabs-badges': tabs.BadgesPage,
-
-    'toolbar': toolbar.BasicPage
+    'toolbar': toolbar.BasicPage,
+    'toolbar-buttons': toolbar.ButtonsPage,
+    'toolbar-segment': toolbar.SegmentPage,
+    'toolbar-searchbar': toolbar.SearchbarPage
   };
 }
 

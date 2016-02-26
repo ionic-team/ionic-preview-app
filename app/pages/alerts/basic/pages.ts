@@ -8,7 +8,7 @@ import {forwardRef} from 'angular2/core';
   directives: [forwardRef(() => AndroidAttribute)]
 })
 export class BasicPage {
-
+nav: NavController;
   constructor(nav: NavController) {
     this.nav = nav;
   }
@@ -21,5 +21,4 @@ export class BasicPage {
     });
     this.nav.present(alert);
   }
-
 }

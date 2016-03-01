@@ -1,5 +1,5 @@
-import {NavController, NavParams} from 'ionic-framework/ionic';
-import {Page} from 'ionic-framework/ionic';
+import {NavController, NavParams} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {forwardRef} from 'angular2/core';
 import * as helpers from '../../../directives/helpers';
 

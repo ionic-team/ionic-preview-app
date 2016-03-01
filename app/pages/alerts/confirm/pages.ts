@@ -1,4 +1,4 @@
-import {Page, Alert, NavController} from 'ionic-framework/ionic';
+import {Page, Alert, NavController} from 'ionic-angular';
 import {AndroidAttribute} from '../../../directives/helpers';
 import {forwardRef} from 'angular2/core';
 

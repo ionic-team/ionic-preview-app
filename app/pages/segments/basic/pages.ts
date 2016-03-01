@@ -1,4 +1,4 @@
-import {Page, Platform} from 'ionic-framework/ionic';
+import {Page, Platform} from 'ionic-angular';
 import {forwardRef} from 'angular2/core';
 import {AndroidAttribute} from '../../../directives/helpers';
 

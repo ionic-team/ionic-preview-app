@@ -1,4 +1,4 @@
-import {App, IonicApp, Animation, Modal, Platform, NavController, NavParams, Page, Events, ViewController} from 'ionic-framework/ionic';
+import {App, IonicApp, Animation, Modal, Platform, NavController, NavParams, Page, Events, ViewController} from 'ionic-angular';
 import {forwardRef} from 'angular2/core';
 import {NgFor} from 'angular2/common';
 import * as helpers from '../../../directives/helpers';

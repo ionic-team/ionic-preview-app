@@ -1,6 +1,6 @@
 import {forwardRef} from 'angular2/core';
 import {FORM_DIRECTIVES, FormBuilder, Validators, Control, ControlGroup} from 'angular2/common';
-import {Page} from 'ionic-framework/ionic';
+import {Page} from 'ionic-angular';
 import {AndroidAttribute} from '../../../directives/helpers';
 
 @Page({

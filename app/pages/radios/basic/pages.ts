@@ -1,4 +1,4 @@
-import {App, IonicApp, Page} from 'ionic-framework/ionic';
+import {App, IonicApp, Page} from 'ionic-angular';
 import {forwardRef} from 'angular2/core';
 import {
   Control,

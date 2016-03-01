@@ -1,5 +1,5 @@
-import {App, IonicApp, Platform, ActionSheet} from 'ionic-framework/ionic';
-import {Page, Config, Events} from 'ionic-framework/ionic';
+import {App, IonicApp, Platform, ActionSheet} from 'ionic-angular';
+import {Page, Config, Events} from 'ionic-angular';
 import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
 import * as helpers from './directives/helpers';
 

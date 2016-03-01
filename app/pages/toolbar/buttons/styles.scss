@@ -1,0 +1,18 @@
+p.toolbar-buttons {
+  margin-left: 25px;
+}
+
+body.md {
+  .toolbar-buttons-page {
+    div.toolbar-title,
+    p.toolbar-buttons {
+      color: #fff;
+    }
+  }
+}
+
+body.ios {
+  .toolbar-buttons-page {
+
+  }
+}

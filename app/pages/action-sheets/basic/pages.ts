@@ -24,6 +24,14 @@ export class BasicPage {
       var androidSheet = {
         title: 'Albums',
         buttons: [
+          {
+            text: 'Delete',
+            style: 'destructive',
+            icon: 'md-trash',
+            handler: () => {
+              console.log('Destructive clicked');
+            }
+          },
           { text: 'Share',
             handler: buttonHandler,
             icon: 'share'
@@ -35,14 +43,6 @@ export class BasicPage {
           { text: 'Favorite',
             handler: buttonHandler,
             icon: 'md-heart-outline'
-          },
-          {
-            text: 'Delete',
-            style: 'destructive',
-            icon: 'md-trash',
-            handler: () => {
-              console.log('Destructive clicked');
-            }
           },
           {
             text: 'Cancel',
@@ -59,6 +59,13 @@ export class BasicPage {
     let actionSheet = ActionSheet.create( androidSheet || {
       buttons: [
         {
+          text: 'Delete',
+          style: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },
+        {
           text: 'Share',
           handler: () => {
             console.log('Share clicked');
@@ -74,13 +81,6 @@ export class BasicPage {
           text: 'Favorite',
           handler: () => {
             console.log('Favorite clicked');
-          }
-        },
-        {
-          text: 'Delete',
-          style: 'destructive',
-          handler: () => {
-            console.log('Destructive clicked');
           }
         },
         {

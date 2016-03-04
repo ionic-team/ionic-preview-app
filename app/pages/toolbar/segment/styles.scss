@@ -11,5 +11,10 @@ body.md {
 body.ios {
   .toolbar-segment-page {
     text-align: center;
+
+    ion-buttons[start] {
+      text-align: left !important;
+    }
+
   }
 }

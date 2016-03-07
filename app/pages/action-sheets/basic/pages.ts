@@ -14,78 +14,42 @@ export class BasicPage {
     public nav: NavController) {}
 
   openMenu() {
-    let buttonHandler = (index) => {
-      console.log('Button clicked', index);
-      if (index == 1) { return false; }
-      return true;
-    }
-
-    if (this.platform.is('android')) {
-      var androidSheet = {
-        title: 'Albums',
-        buttons: [
-          {
-            text: 'Delete',
-            style: 'destructive',
-            icon: 'md-trash',
-            handler: () => {
-              console.log('Destructive clicked');
-            }
-          },
-          { text: 'Share',
-            handler: buttonHandler,
-            icon: 'share'
-          },
-          { text: 'Play',
-            handler: buttonHandler,
-            icon: 'arrow-dropright-circle'
-          },
-          { text: 'Favorite',
-            handler: buttonHandler,
-            icon: 'md-heart-outline'
-          },
-          {
-            text: 'Cancel',
-            style: 'cancel',
-            icon: 'md-close',
-            handler: () => {
-              console.log('Cancel clicked');
-            }
-          }
-        ],
-      };
-    }
-
-    let actionSheet = ActionSheet.create( androidSheet || {
+    let actionSheet = ActionSheet.create({
+      title: 'Albums',
       buttons: [
         {
           text: 'Delete',
-          style: 'destructive',
+          role: 'destructive',
+          icon: !this.platform.is('ios') ? 'trash' : null,
           handler: () => {
-            console.log('Destructive clicked');
+            console.log('Delete clicked');
           }
         },
         {
           text: 'Share',
+          icon: !this.platform.is('ios') ? 'share' : null,
           handler: () => {
             console.log('Share clicked');
           }
         },
         {
           text: 'Play',
+          icon: !this.platform.is('ios') ? 'arrow-dropright-circle' : null,
           handler: () => {
             console.log('Play clicked');
           }
         },
         {
           text: 'Favorite',
+          icon: !this.platform.is('ios') ? 'heart-outline' : null,
           handler: () => {
             console.log('Favorite clicked');
           }
         },
         {
           text: 'Cancel',
-          style: 'cancel',
+          role: 'cancel', // will always sort to be on the bottom
+          icon: !this.platform.is('ios') ? 'close' : null,
           handler: () => {
             console.log('Cancel clicked');
           }

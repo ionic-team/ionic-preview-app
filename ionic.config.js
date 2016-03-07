@@ -10,7 +10,7 @@ module.exports = {
       src: ['app/theme/app.+(ios|md).scss'],
       dest: 'www/build/css',
       include: [
-        'node_modules/ionic-framework',
+        'node_modules/ionic-angular',
         'node_modules/ionicons/dist/scss'
       ]
     },

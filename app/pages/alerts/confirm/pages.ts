@@ -16,7 +16,7 @@ export class ConfirmPage {
   doConfirm() {
     let confirm = Alert.create({
       title: 'Use this lightsaber?',
-      body: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+      message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
       buttons: [
         {
           text: 'Disagree',

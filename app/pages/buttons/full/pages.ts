@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/buttons/full/full.html',
-  
+  templateUrl: './build/pages/buttons/full/full.html'
 })
-export class FullPage {
-    constructor() {
-
-    }
-}
+export class FullPage { }

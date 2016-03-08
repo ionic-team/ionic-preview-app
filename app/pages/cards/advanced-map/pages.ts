@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/cards/advanced-map/template.html',
-  
+  templateUrl: './build/pages/cards/advanced-map/template.html'
 })
-export class AdvancedMapPage {
-    constructor() {
-
-    }
-}
+export class AdvancedMapPage { }

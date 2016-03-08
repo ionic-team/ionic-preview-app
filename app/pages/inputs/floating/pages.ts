@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/inputs/floating/template.html',
-  
+  templateUrl: './build/pages/inputs/floating/template.html'
 })
-export class FloatingPage {
-    constructor() {
-
-    }
-}
+export class FloatingPage { }

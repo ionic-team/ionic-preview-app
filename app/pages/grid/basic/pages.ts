@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-    templateUrl: './build/pages/grid/basic/template.html',
-    
+    templateUrl: './build/pages/grid/basic/template.html'
 })
-export class BasicPage {
-    constructor() {
-
-    }
-}
+export class BasicPage { }

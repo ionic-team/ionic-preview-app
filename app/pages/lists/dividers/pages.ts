@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-    templateUrl: './build/pages/lists/dividers/template.html',
-    
+    templateUrl: './build/pages/lists/dividers/template.html'
 })
-export class DividersPage {
-    constructor() {
-
-    }
-}
+export class DividersPage { }

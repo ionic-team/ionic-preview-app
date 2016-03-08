@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/buttons/fab/fab.html',
-  
+  templateUrl: './build/pages/buttons/fab/fab.html'
 })
-export class FabPage {
-    constructor() {
-
-    }
-}
+export class FabPage { }

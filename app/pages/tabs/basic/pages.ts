@@ -1,11 +1,9 @@
 import {NavController, NavParams} from 'ionic-angular';
 import {Page, ViewController, Platform} from 'ionic-angular';
 
-import * as helpers from '../../../directives/helpers';
-
 
 @Page({
-  template: 
+  template:
     '<ion-navbar *navbar hideBackButton>' +
       '<ion-title>Tabs</ion-title>' +
     '</ion-navbar>' +

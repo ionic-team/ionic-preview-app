@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/cards/advanced-social/template.html',
-  
+  templateUrl: './build/pages/cards/advanced-social/template.html'
 })
-export class AdvancedSocialPage {
-    constructor() {
-
-    }
-}
+export class AdvancedSocialPage { }

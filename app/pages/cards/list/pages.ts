@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/cards/list/template.html',
-  
+  templateUrl: './build/pages/cards/list/template.html'
 })
-export class ListPage {
-    constructor() {
-
-    }
-}
+export class ListPage { }

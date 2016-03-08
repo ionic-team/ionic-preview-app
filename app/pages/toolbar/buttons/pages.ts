@@ -1,14 +1,12 @@
 import {Page, Platform} from 'ionic-angular';
 
 
-
 @Page({
-    templateUrl: './build/pages/toolbar/buttons/template.html',
-
+    templateUrl: './build/pages/toolbar/buttons/template.html'
 })
 export class ButtonsPage {
   isAndroid: boolean = false;
-  
+
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
   }

@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/cards/advanced-weather/template.html',
-  
+  templateUrl: './build/pages/cards/advanced-weather/template.html'
 })
-export class AdvancedWeatherPage {
-    constructor() {
-
-    }
-}
+export class AdvancedWeatherPage { }

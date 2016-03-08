@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
 
 
-
 @Page({
-  templateUrl: './build/pages/buttons/icons/icons.html',
-  
+  templateUrl: './build/pages/buttons/icons/icons.html'
 })
-export class IconsPage {
-    constructor() {
-
-    }
-}
+export class IconsPage { }

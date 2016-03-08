@@ -1,11 +1,9 @@
 import {NavController, NavParams} from 'ionic-angular';
 import {Page} from 'ionic-angular';
 
-import * as helpers from '../../../directives/helpers';
 
 @Page({
   templateUrl: './build/pages/navigation/basic/navigation-details.html',
-
 })
 class NavigationDetailsPage {
   item;
@@ -16,8 +14,7 @@ class NavigationDetailsPage {
 }
 
 @Page({
-    templateUrl: './build/pages/navigation/basic/navigation.html',
-  
+    templateUrl: './build/pages/navigation/basic/navigation.html'
 })
 export class BasicPage {
   items = [];

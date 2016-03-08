@@ -1,17 +1,14 @@
 import {Page, Alert, NavController} from 'ionic-angular';
-import {AndroidAttribute} from '../../../directives/helpers';
-import {forwardRef} from 'angular2/core';
 
 
 @Page({
-  templateUrl: './build/pages/alerts/radio/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/alerts/radio/template.html'
 })
 export class RadioPage {
+  testRadioOpen: boolean;
+  testRadioResult;
 
-  constructor(nav: NavController) {
-    this.nav = nav;
-  }
+  constructor(public nav: NavController) { }
 
   doRadio() {
     let alert = Alert.create();

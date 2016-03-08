@@ -11,8 +11,15 @@
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-$checkbox-md-icon-checkmark-color: #fff !important;
-$segment-button-md-text-color-activated: #fff !important;
+$toolbar-md-background:               map-get($colors, primary) !default;
+// $toolbar-md-border-color:             $toolbar-border-color !default;
+$toolbar-md-text-color:               #fff !default;
+// $toolbar-md-active-color:             $toolbar-active-color !default;
+// $toolbar-md-inactive-color:           $toolbar-inactive-color !default;
+$toolbar-md-button-color:             #fff !default;
+
+$checkbox-md-icon-checkmark-color: #fff !default;
+$segment-button-md-text-color-activated: #fff !default;
 
 // Ionic Material Design Sass
 // --------------------------------------------------

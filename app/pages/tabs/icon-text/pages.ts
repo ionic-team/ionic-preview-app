@@ -1,6 +1,6 @@
 import {NavController, NavParams} from 'ionic-angular';
 import {Page, ViewController, Platform} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
+
 import * as helpers from '../../../directives/helpers';
 
 
@@ -11,7 +11,7 @@ import * as helpers from '../../../directives/helpers';
   '</ion-navbar>' +
   '<ion-content>' +
   '</ion-content>',
-  directives: [forwardRef(() => helpers.AndroidAttribute)],
+,
 })
 class TabIconTextPage {
   constructor(platform: Platform) {

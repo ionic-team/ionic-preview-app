@@ -1,11 +1,11 @@
 import {NavController, NavParams} from 'ionic-angular';
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
+
 import * as helpers from '../../../directives/helpers';
 
 @Page({
   templateUrl: './build/pages/navigation/basic/navigation-details.html',
-  directives: [forwardRef(() => helpers.AndroidAttribute)]
+
 })
 class NavigationDetailsPage {
   item;
@@ -17,7 +17,7 @@ class NavigationDetailsPage {
 
 @Page({
     templateUrl: './build/pages/navigation/basic/navigation.html',
-    directives: [forwardRef(() => helpers.AndroidAttribute)]
+  
 })
 export class BasicPage {
   items = [];

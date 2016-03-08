@@ -1,10 +1,10 @@
 import {Page, IonicApp, NavController} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
+
 
 @Page({
     templateUrl: './build/pages/slides/basic/template.html',
-    directives: [forwardRef(() => AndroidAttribute)]
+    
 })
 export class BasicPage {
     constructor(nav: NavController, app: IonicApp) {

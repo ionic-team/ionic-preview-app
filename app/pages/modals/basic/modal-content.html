@@ -1,4 +1,4 @@
-<ion-toolbar class="android-attr">
+<ion-toolbar>
   <ion-title>
     Description
   </ion-title>
@@ -10,27 +10,21 @@
   </ion-buttons>
 </ion-toolbar>
 
+<ion-content class="has-header">
+  <ion-list>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{character.image}}">
+        </ion-avatar>
+        <h2>{{character.name}}</h2>
+        <p>{{character.quote}}</p>
+      </ion-item>
 
-  <ion-content class="has-header">
-
-    <ion-list>
-
-        <ion-item>
-          <ion-avatar item-left>
-            <img src="{{character.image}}">
-          </ion-avatar>
-          <h2>{{character.name}}</h2>
-          <p>{{character.quote}}</p>
-        </ion-item>
-
-        <ion-item *ngFor="#item of character['items']">
-          {{item.title}}
-          <ion-note item-right>
-            {{item.note}}
-          </ion-note>
-        </ion-item>
-
-
-    </ion-list>
-
-  </ion-content>
+      <ion-item *ngFor="#item of character['items']">
+        {{item.title}}
+        <ion-note item-right>
+          {{item.note}}
+        </ion-note>
+      </ion-item>
+  </ion-list>
+</ion-content>

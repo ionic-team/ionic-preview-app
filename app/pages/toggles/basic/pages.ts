@@ -1,12 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/toggles/basic/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/toggles/basic/template.html'
 })
-export class TogglePage{
-  constructor() {
-  }
-}
+export class BasicPage { }

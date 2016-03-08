@@ -1,17 +1,12 @@
 import {Page, Alert, NavController} from 'ionic-angular';
-import {AndroidAttribute} from '../../../directives/helpers';
-import {forwardRef} from 'angular2/core';
 
 
 @Page({
-  templateUrl: './build/pages/alerts/basic/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/alerts/basic/template.html'
 })
 export class BasicPage {
 
-  constructor(nav: NavController) {
-    this.nav = nav;
-  }
+  constructor(public nav: NavController) { }
 
   doAlert() {
     let alert = Alert.create({

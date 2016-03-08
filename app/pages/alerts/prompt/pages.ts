@@ -1,17 +1,12 @@
 import {Page, Alert, NavController} from 'ionic-angular';
-import {AndroidAttribute} from '../../../directives/helpers';
-import {forwardRef} from 'angular2/core';
 
 
 @Page({
-  templateUrl: './build/pages/alerts/prompt/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/alerts/prompt/template.html'
 })
 export class PromptPage {
 
-  constructor(nav: NavController) {
-    this.nav = nav;
-  }
+  constructor(public nav: NavController) { }
 
   doPrompt() {
     let prompt = Alert.create({

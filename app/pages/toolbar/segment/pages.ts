@@ -1,15 +1,14 @@
 import {Page, Platform} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-    templateUrl: './build/pages/toolbar/segment/template.html',
-    directives: [forwardRef(() => AndroidAttribute)]
+    templateUrl: './build/pages/toolbar/segment/template.html'
 })
-export class ToolbarSegmentPage {
+export class SegmentPage {
+  isAndroid: boolean = false;
+  selectedSegment: string = "hot";
 
   constructor(platform: Platform) {
-    this.platform = platform;
     this.isAndroid = platform.is('android');
   }
 

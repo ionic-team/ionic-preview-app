@@ -25,22 +25,6 @@ import * as toggles from '../pages/toggles/toggles';
 import * as toolbar from '../pages/toolbar/toolbar';
 
 
-@Directive({
-  selector: '.android-attr',
-})
-export class AndroidAttribute {
-  isAndroid: boolean;
-
-  constructor(
-    public platform: Platform,
-    public elementRef: ElementRef,
-    public renderer: Renderer) {
-    this.isAndroid = platform.is('android');
-    renderer.setElementAttribute(elementRef.nativeElement, 'primary', this.isAndroid ? '' : null);
-  }
-
-}
-
 export function toTitleCase(str) {
   return str.replace(/\w\S*/g, function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 }
@@ -108,13 +92,13 @@ export function getPages() {
     'card-advanced-map': cards.AdvancedMapPage,
     'card-advanced-social': cards.AdvancedSocialPage,
     'card-advanced-weather': cards.AdvancedWeatherPage,
-    'checkbox': checkboxes.CheckboxPage,
-    'radio': radios.RadioPage,
-    'range': ranges.RangePage,
-    'segment': segments.SegmentPage,
-    'select': selects.SelectPage,
-    'searchbar': searchbars.SearchPage,
-    'toggle': toggles.TogglePage,
+    'checkbox': checkboxes.BasicPage,
+    'radio': radios.BasicPage,
+    'range': ranges.BasicPage,
+    'segment': segments.BasicPage,
+    'select': selects.BasicPage,
+    'searchbar': searchbars.BasicPage,
+    'toggle': toggles.BasicPage,
     'inputs': inputs.BasicPage,
     'fixed-inline-labels': inputs.FixedInlinePage,
     'floating-labels': inputs.FloatingPage,
@@ -144,8 +128,8 @@ export function getPages() {
     'tabs-icon-text': tabs.IconTextPage,
     'tabs-badges': tabs.BadgesPage,
     'toolbar': toolbar.BasicPage,
-    'toolbar-buttons': toolbar.ToolbarButtonsPage,
-    'toolbar-segment': toolbar.ToolbarSegmentPage,
+    'toolbar-buttons': toolbar.ButtonsPage,
+    'toolbar-segment': toolbar.SegmentPage,
     'toolbar-searchbar': toolbar.SearchbarPage
   };
 }

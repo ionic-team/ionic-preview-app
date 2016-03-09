@@ -1,5 +1,5 @@
 import {RouteConfig, Location} from 'angular2/router';
-import {App, IonicApp, Platform, ActionSheet} from 'ionic-angular';
+import {App, IonicApp, Platform, ActionSheet, MenuController} from 'ionic-angular';
 import {Page, Config, Events} from 'ionic-angular';
 import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
 import {DisplayRoutePipe} from './pipes/display-route';
@@ -124,7 +124,6 @@ const ROUTES = [
 @App({
   templateUrl: './build/app.html',
   config: {
-    production: false,
     platforms: {
       android: {
         activator: 'ripple',
@@ -138,7 +137,8 @@ const ROUTES = [
 class DemoApp {
   isProductionMode: boolean = false;
   rootPage: any;
-  nextPage;
+  nextPage: any;
+
   pages = [
     { title: 'Home', component: PageOne },
     { title: 'Friends', component: PageTwo },
@@ -150,51 +150,51 @@ class DemoApp {
     public app: IonicApp,
     public platform: Platform,
     public config: Config,
+    public menu: MenuController,
     public location: Location) {
 
-    this.platform.ready().then(() => {
+    this.menu.enable(true);
 
-      window.addEventListener('message', (e) => {
-        zone.run(() => {
-          if (e.data) {
-            var data;
-            try {
-              data = JSON.parse(e.data);
-            } catch (e) {
-              console.error(e);
-            }
+    if (platform.query('production') == 'true') {
+      this.isProductionMode = true;
 
-            if (data.hash) {
-              this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
-              if (data.hash !== 'menus') {
-                this.app.getComponent('leftMenu').enable(false);
+      window.parent.postMessage(this.platform.is('ios') ? "ios" : "android", "*");
+      if (helpers.hasScrollbar() === true) {
+        setTimeout(function() {
+          var body = document.getElementsByTagName('body')[0];
+          body.className = body.className + ' has-scrollbar';
+        }, 500);
+      }
+
+      platform.ready().then(() => {
+        window.addEventListener('message', (e) => {
+          zone.run(() => {
+            if (e.data) {
+              var data;
+              try {
+                data = JSON.parse(e.data);
+              } catch (e) {
+                console.error(e);
               }
-            } else {
-              this.nextPage = rootPage;
-            }
 
-            setTimeout(() => {
-              let nav = this.app.getComponent('nav');
-              helpers.debounce(nav.setRoot(this.nextPage), 60, false);
-            });
-          }
+              if (data.hash) {
+                this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
+                if (data.hash !== 'menus') {
+                  this.menu.enable(false);
+                }
+              } else {
+                this.nextPage = rootPage;
+              }
+
+              setTimeout(() => {
+                let nav = this.app.getComponent('nav');
+                helpers.debounce(nav.setRoot(this.nextPage), 60, false);
+              });
+            }
+          });
         });
       });
-
-      if (this.config.get('production') === true) {
-        this.isProductionMode = true;
-        window.parent.postMessage(this.platform.is('ios') ? "ios" : "android", "*");
-        if (helpers.hasScrollbar() === true) {
-          setTimeout(function() {
-            var body = document.getElementsByTagName('body')[0];
-            body.className = body.className + ' has-scrollbar';
-          }, 500);
-        }
-      } else {
-        this.isProductionMode = false;
-        this.app.getComponent('leftMenu').enable(true);
-      }
-    });
+    }
   }
 
   openPage(page) {

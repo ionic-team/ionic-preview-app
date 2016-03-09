@@ -2,6 +2,7 @@ import {RouteConfig, Location} from 'angular2/router';
 import {App, IonicApp, Platform, ActionSheet} from 'ionic-angular';
 import {Page, Config, Events} from 'ionic-angular';
 import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
+import {DisplayRoutePipe} from './pipes/display-route';
 import * as helpers from './directives/helpers';
 
 // Change the import if you want to change the first page, for example:
@@ -33,19 +34,7 @@ import * as tabs from './pages/tabs/tabs';
 import * as toggles from './pages/toggles/toggles';
 import * as toolbar from './pages/toolbar/toolbar';
 
-@App({
-  templateUrl: './build/app.html',
-  config: {
-    production: false,
-    platforms: {
-      android: {
-        activator: 'ripple',
-        backButtonIcon: 'md-arrow-back'
-      }
-    }
-  }
-})
-@RouteConfig([
+const ROUTES = [
   { path: '/action-sheets/basic', component: actionSheets.BasicPage, useAsDefault: true },
 
   { path: '/alerts/basic', component: alerts.BasicPage },
@@ -130,18 +119,33 @@ import * as toolbar from './pages/toolbar/toolbar';
   { path: '/toolbar/buttons', component: toolbar.ButtonsPage },
   { path: '/toolbar/searchbar', component: toolbar.SearchbarPage },
   { path: '/toolbar/segment', component: toolbar.SegmentPage }
-])
-class DemoApp {
+];
 
+@App({
+  templateUrl: './build/app.html',
+  config: {
+    production: true,
+    platforms: {
+      android: {
+        activator: 'ripple',
+        backButtonIcon: 'md-arrow-back'
+      }
+    }
+  },
+  pipes: [DisplayRoutePipe]
+})
+@RouteConfig(ROUTES)
+class DemoApp {
+  isProductionMode: boolean = false;
   rootPage: any;
   nextPage;
-  isProductionMode;
-  currentPageIndex;
   pages = [
     { title: 'Home', component: PageOne },
     { title: 'Friends', component: PageTwo },
     { title: 'Events', component: PageThree }
   ];
+  routes = ROUTES;
+
   constructor(
     public app: IonicApp,
     public platform: Platform,
@@ -159,6 +163,7 @@ class DemoApp {
             } catch (e) {
               console.error(e);
             }
+
             if (data.hash) {
               this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
               if (data.hash !== 'menus') {
@@ -167,6 +172,7 @@ class DemoApp {
             } else {
               this.nextPage = rootPage;
             }
+
             setTimeout(() => {
               let nav = this.app.getComponent('nav');
               helpers.debounce(nav.setRoot(this.nextPage), 60, false);
@@ -174,8 +180,6 @@ class DemoApp {
           }
         });
       });
-
-      this.currentPageIndex = 1;
 
       if (this.config.get('production') === true) {
         this.isProductionMode = true;
@@ -186,23 +190,11 @@ class DemoApp {
             body.className = body.className + ' has-scrollbar';
           }, 500);
         }
+      } else {
+        this.isProductionMode = false;
+        this.app.getComponent('leftMenu').enable(true);
       }
     });
-  }
-
-  // TODO go back to the previous page in the view
-  previousSection() {
-    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex - 1];
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
-    this.currentPageIndex = this.currentPageIndex - 1;
-  }
-
-  nextSection() {
-    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex + 1];
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
-    this.currentPageIndex = this.currentPageIndex + 1;
   }
 
   openPage(page) {

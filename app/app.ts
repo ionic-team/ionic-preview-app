@@ -113,7 +113,7 @@ const ROUTES = [
   { path: '/tabs/icon', component: tabs.IconPage },
   { path: '/tabs/icon-text', component: tabs.IconTextPage },
 
-  { path: '/toggles/badges', component: toggles.BasicPage },
+  { path: '/toggles/basic', component: toggles.BasicPage },
 
   { path: '/toolbar/basic', component: toolbar.BasicPage },
   { path: '/toolbar/buttons', component: toolbar.ButtonsPage },
@@ -124,7 +124,7 @@ const ROUTES = [
 @App({
   templateUrl: './build/app.html',
   config: {
-    production: true,
+    production: false,
     platforms: {
       android: {
         activator: 'ripple',

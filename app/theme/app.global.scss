@@ -97,3 +97,12 @@ body.ios img#ios-only {
   height: auto;
   z-index: 999;
 }
+
+body.wp img#wp-only {
+  display: block !important;
+  position: absolute;
+  background-color: #F8F8F8;
+  top: -18;
+  width: 100%;
+  height: auto;
+}

@@ -10,9 +10,7 @@ import {Page} from 'ionic-angular';
     '<ion-content>' +
     '</ion-content>'
 })
-class TabBadgePage {
-
-}
+class TabBadgePage { }
 
 @Page({
   template:

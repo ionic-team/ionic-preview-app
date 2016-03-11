@@ -98,11 +98,15 @@ body.ios img#ios-only {
   z-index: 999;
 }
 
+body.wp {
+  border-top: 18px solid transparent;
+}
+
 body.wp img#wp-only {
   display: block !important;
   position: absolute;
   background-color: #F8F8F8;
-  top: -18;
+  top: -18px;
   width: 100%;
   height: auto;
 }

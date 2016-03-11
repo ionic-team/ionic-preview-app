@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/buttons/icons/icons.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/buttons/icons/icons.html'
 })
-export class IconsPage {
-    constructor() {
-
-    }
-}
+export class IconsPage { }

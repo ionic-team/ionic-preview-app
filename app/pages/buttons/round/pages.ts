@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/buttons/round/round.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/buttons/round/round.html'
 })
-export class RoundPage {
-    constructor() {
-
-    }
-}
+export class RoundPage { }

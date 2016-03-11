@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/buttons/basic/basic.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/buttons/basic/basic.html'
 })
-export class BasicPage {
-    constructor() {
-
-    }
-}
+export class BasicPage { }

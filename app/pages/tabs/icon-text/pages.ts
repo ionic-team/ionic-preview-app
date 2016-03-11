@@ -1,21 +1,19 @@
 import {NavController, NavParams} from 'ionic-angular';
 import {Page, ViewController, Platform} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import * as helpers from '../../../directives/helpers';
 
 
 @Page({
-  template: '' +
+  template:
   '<ion-navbar *navbar hideBackButton [attr.royal]="isAndroid ? \'\' : null">' +
-  '<ion-title>Tabs</ion-title>' +
+    '<ion-title>Tabs</ion-title>' +
   '</ion-navbar>' +
   '<ion-content>' +
-  '</ion-content>',
-  directives: [forwardRef(() => helpers.AndroidAttribute)],
+  '</ion-content>'
 })
 class TabIconTextPage {
+  isAndroid: boolean = false;
+
   constructor(platform: Platform) {
-    this.platform = platform;
     this.isAndroid = platform.is('android');
   }
   onPageWillEnter() {
@@ -36,12 +34,10 @@ class TabIconTextPage {
   '</ion-tabs>',
 })
 export class IconTextPage {
-  constructor() {
-    this.tabOne = TabIconTextPage;
-    this.tabTwo = TabIconTextPage;
-    this.tabThree = TabIconTextPage;
-    this.tabFour = TabIconTextPage;
-  }
+  tabOne = TabIconTextPage;
+  tabTwo = TabIconTextPage;
+  tabThree = TabIconTextPage;
+  tabFour = TabIconTextPage;
 
   onPageWillLeave() {
     document.getElementById('md-tabs-icon-text').style.display = "none";

@@ -1,17 +1,12 @@
 import {Page, Alert, NavController} from 'ionic-angular';
-import {AndroidAttribute} from '../../../directives/helpers';
-import {forwardRef} from 'angular2/core';
 
 
 @Page({
-  templateUrl: './build/pages/alerts/confirm/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/alerts/confirm/template.html'
 })
 export class ConfirmPage {
 
-  constructor(nav: NavController) {
-    this.nav = nav;
-  }
+  constructor(public nav: NavController) { }
 
   doConfirm() {
     let confirm = Alert.create({

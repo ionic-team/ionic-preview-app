@@ -1,20 +1,16 @@
 import {Platform, Page, ActionSheet, NavController} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/action-sheets/basic/basic.html',
-  directives: [forwardRef(() => AndroidAttribute)]
-
+  templateUrl: './build/pages/action-sheets/basic/basic.html'
 })
 export class BasicPage {
+  actionSheet;
 
-  constructor(
-    public platform: Platform,
-    public nav: NavController) {}
+  constructor(public platform: Platform, public nav: NavController) { }
 
   openMenu() {
-    let actionSheet = ActionSheet.create({
+    this.actionSheet = ActionSheet.create({
       title: 'Albums',
       buttons: [
         {
@@ -57,11 +53,10 @@ export class BasicPage {
       ]
     });
 
-    this.nav.present(actionSheet);
+    this.nav.present(this.actionSheet);
   }
 
   onPageWillLeave() {
-    actionSheet && actionSheet.dismiss();
+    this.actionSheet && this.actionSheet.dismiss();
   }
-
 }

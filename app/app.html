@@ -12,9 +12,8 @@
   </ion-toolbar>
 
   <ion-content>
-
-    <ion-list>
-
+    <!-- Display the side menu pages if it is production -->
+    <ion-list *ngIf="isProductionMode">
       <button ion-item *ngFor="#p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
@@ -22,20 +21,16 @@
       <button ion-item menuClose="leftMenu" detail-none>
         Close Menu
       </button>
+    </ion-list>
 
+    <!-- Display all of the sections if this isn't production -->
+    <ion-list *ngIf="!isProductionMode">
+      <a ion-item *ngFor="#route of routes" (click)="openPage(route)" >
+        {{ route.path | displayRoute }}
+      </a>
     </ion-list>
   </ion-content>
 
 </ion-menu>
 
 <ion-nav id="nav" [root]="rootPage" #content></ion-nav>
-
-
-<div *ngIf="!isProductionMode">
-  <button fab fab-bottom fab-left light (click)="previousSection()">
-    <ion-icon name="arrow-back"></ion-icon>
-  </button>
-  <button fab fab-bottom fab-right light (click)="nextSection()">
-    <ion-icon name="arrow-forward"></ion-icon>
-  </button>
-</div>

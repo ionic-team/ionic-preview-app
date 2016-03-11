@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/cards/advanced-weather/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/cards/advanced-weather/template.html'
 })
-export class AdvancedWeatherPage {
-    constructor() {
-
-    }
-}
+export class AdvancedWeatherPage { }

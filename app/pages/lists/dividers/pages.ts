@@ -1,13 +1,7 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-    templateUrl: './build/pages/lists/dividers/template.html',
-    directives: [forwardRef(() => AndroidAttribute)]
+    templateUrl: './build/pages/lists/dividers/template.html'
 })
-export class DividersPage {
-    constructor() {
-
-    }
-}
+export class DividersPage { }

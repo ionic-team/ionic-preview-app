@@ -1,37 +1,26 @@
-import {App, IonicApp, Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import * as helpers from '../../../directives/helpers';
+import {IonicApp, Page} from 'ionic-angular';
+
 
 @Page({
-  templateUrl: './build/pages/menus/basic/menu-home.html',
-  directives: [forwardRef(() => helpers.AndroidAttribute)]
+  templateUrl: './build/pages/menus/basic/menu-home.html'
 })
-export class BasicPage{
+export class BasicPage {
   constructor(app: IonicApp) {
-    this.app = app;
-    this.app.getComponent('leftMenu').enable(true);
+    app.getComponent('leftMenu').enable(true);
   }
 }
 
 @Page({
-  templateUrl: './build/pages/menus/basic/menu-home.html',
-  directives: [forwardRef(() => helpers.AndroidAttribute)]
+  templateUrl: './build/pages/menus/basic/menu-home.html'
 })
-export class PageOne{
-  constructor() {
-  }
-}
+export class PageOne { }
 
 @Page({
-  templateUrl: './build/pages/menus/basic/menu-friends.html',
-  directives: [forwardRef(() => helpers.AndroidAttribute)]
+  templateUrl: './build/pages/menus/basic/menu-friends.html'
 })
-export class PageTwo{
-}
+export class PageTwo { }
 
 @Page({
-  templateUrl: './build/pages/menus/basic/menu-events.html',
-  directives: [forwardRef(() => helpers.AndroidAttribute)]
+  templateUrl: './build/pages/menus/basic/menu-events.html'
 })
-export class PageThree{
-}
+export class PageThree { }

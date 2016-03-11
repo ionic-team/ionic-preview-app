@@ -1,14 +1,14 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/searchbars/basic/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/searchbars/basic/template.html'
 })
-export class SearchPage{
+export class BasicPage {
+  searchQuery: string = '';
+  items;
+
   constructor() {
-    this.searchQuery = '';
     this.initializeItems();
   }
 

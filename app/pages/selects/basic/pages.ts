@@ -1,12 +1,10 @@
 import {Page} from 'ionic-angular';
-import {forwardRef} from 'angular2/core';
-import {AndroidAttribute} from '../../../directives/helpers';
+
 
 @Page({
-  templateUrl: './build/pages/selects/basic/template.html',
-  directives: [forwardRef(() => AndroidAttribute)]
+  templateUrl: './build/pages/selects/basic/template.html'
 })
-export class SelectPage {
+export class BasicPage {
   gaming: string = "n64";
   gender: string = "f";
   musicAlertOpts: { title: string, subTitle: string };

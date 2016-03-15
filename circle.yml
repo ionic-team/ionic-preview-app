@@ -1,7 +1,12 @@
+machine:
+  node:
+    version: 5.1.0
+
 general:
   branches:
     only:
-      - master # list of branches to build
+      - master # ignore PRs and branches
+
 test:
   override:
     - ./scripts/test.sh

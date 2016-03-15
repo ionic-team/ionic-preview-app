@@ -34,12 +34,12 @@ function run {
   # if no changes, don't commit
   if [[ "$CHANGES" == "" ]]; then
   #if [[ true ]]; then
-    echo "-- No changes detected in docs for $VERSION_NAME; docs not updated."
+    echo "-- No changes detected in docs for $CIRCLE_PROJECT_REPONAME $CIRCLE_SHA1; docs not updated."
   else
     git config --global user.email "hi@ionicframework.com"
     git config --global user.name "Ionitron"
     git add -A
-    git commit -am "Automated build of platform docs v$VERSION"
+    git commit -am "Automated build of $CIRCLE_PROJECT_REPONAME $CIRCLE_SHA1"
     git push origin master
 
     echo "-- Updated docs for $VERSION_NAME succesfully!"

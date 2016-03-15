@@ -10,7 +10,7 @@ echo "#####"
 # }
 
 function run {
-  ./node_modules/.bin/gulp build
+  ../node_modules/.bin/gulp build
 }
 
 source $(dirname $0)/utils.inc.sh

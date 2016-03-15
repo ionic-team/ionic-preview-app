@@ -7,6 +7,7 @@ echo "#####"
 
 function init {
   SITE_PATH=$(readJsonProp "config.json" "sitePath")
+  DEMO_DEST=$(readJsonProp "config.json" "demoDest")
   cd ..
   export BASE_DIR=$PWD
   SITE_DIR=$BASE_DIR/$SITE_PATH
@@ -22,7 +23,8 @@ function run {
   VERSION=$(readJsonProp "package.json" "version")
 
   # process new docs
-  echo "do stuff here!"
+  echo "Copying www to $DEMO_DEST"
+  cp -R www $DEMO_DEST
 
   # CD in to the site dir to commit updated docs
   cd $SITE_DIR
@@ -31,6 +33,7 @@ function run {
 
   # if no changes, don't commit
   if [[ "$CHANGES" == "" ]]; then
+  #if [[ true ]]; then
     echo "-- No changes detected in docs for $VERSION_NAME; docs not updated."
   else
     git config --global user.email "hi@ionicframework.com"

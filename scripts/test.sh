@@ -5,12 +5,12 @@ echo "##### test.sh"
 echo "#####"
 
 
-function init {
-
-}
+# function init {
+#
+# }
 
 function run {
   gulp build
 }
 
-source $(dirname $0)/../utils.sh.inc
+source $(dirname $0)/utils.inc.sh

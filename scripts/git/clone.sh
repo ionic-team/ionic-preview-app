@@ -13,7 +13,7 @@ function run {
 
   echo "-- Cloning $REPOSITORY#$BRANCH to $DIRECTORY..."
 
-  ARGS="--branch=${BRANCH:-master}"
+  ARGS="--branch=${BRANCH:-master} --depth=5"
   if [[ "$DEPTH" != "" ]]; then
     ARGS="$ARGS --depth=$DEPTH"
   fi
@@ -23,4 +23,4 @@ function run {
   cd ../
 }
 
-source $(dirname $0)/../utils.sh.inc
+source $(dirname $0)/../utils.inc.sh

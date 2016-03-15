@@ -10,7 +10,7 @@ function init {
 }
 
 function run {
-  echo "Hello World!"
+  gulp build
 }
 
 source $(dirname $0)/../utils.sh.inc

@@ -1,0 +1,7 @@
+general:
+  branches:
+    only:
+      - master # list of branches to build
+test:
+  override:
+    - ./scripts/test.sh

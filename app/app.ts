@@ -135,7 +135,7 @@ const ROUTES = [
 })
 @RouteConfig(ROUTES)
 class DemoApp {
-  isProductionMode: boolean = false;
+  isProductionMode: boolean = true;
   rootPage: any;
   nextPage: any;
 

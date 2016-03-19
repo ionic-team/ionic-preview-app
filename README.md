@@ -18,3 +18,5 @@ This app accompanies the Ionic 2 component documentation.
 - Set [production mode](https://github.com/driftyco/ionic-preview-app/blob/master/app/app.ts#L13) to true
 - Rebuild app
 - Copy the contents of this entire repo to `ionic-site/dist/preview-app/` (`cp -R * ../path/to/ionic-site/dist/preview-app/`)
+
+#add test for test-branch2

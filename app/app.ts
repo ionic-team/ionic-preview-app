@@ -138,6 +138,7 @@ class DemoApp {
   isProductionMode: boolean = false;
   rootPage: any;
   nextPage: any;
+  currentPlatform: string = "ios";
 
   pages = [
     { title: 'Home', component: PageOne },
@@ -155,10 +156,15 @@ class DemoApp {
 
     this.menu.enable(true);
 
+    if (platform.is("android"))
+      this.currentPlatform = "android";
+    else if (platform.is("windows"))
+      this.currentPlatform = "windows";
+
     if (platform.query('production') == 'true') {
       this.isProductionMode = true;
 
-      window.parent.postMessage(this.platform.is('ios') ? "ios" : "android", "*");
+      window.parent.postMessage(this.currentPlatform, "*");
       if (helpers.hasScrollbar() === true) {
         setTimeout(function() {
           var body = document.getElementsByTagName('body')[0];

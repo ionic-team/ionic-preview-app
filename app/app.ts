@@ -1,3 +1,4 @@
+import {NgZone} from 'angular2/core';
 import {RouteConfig, Location} from 'angular2/router';
 import {App, IonicApp, Platform, ActionSheet, MenuController} from 'ionic-angular';
 import {Page, Config, Events} from 'ionic-angular';
@@ -152,24 +153,26 @@ class DemoApp {
     private platform: Platform,
     private config: Config,
     private menu: MenuController,
-    private location: Location) {
+    private location: Location,
+    private zone: NgZone) {
 
     this.menu.enable(true);
+  }
 
-
-    // Production-only code
+  ngAfterContentInit() {
+    // production-only code
     // production is false unless viewed on the docs
     // http://ionicframework.com/docs/v2/components/
     // ------------------------------------------------------------
 
-    if (platform.query("production") === "true") {
+    if (this.platform.query("production") === "true") {
       this.isProductionMode = true;
 
       // Platform is ios by default
       // only change it if android or windows
-      if (platform.is("android")) {
+      if (this.platform.is("android")) {
         this.currentPlatform = "android";
-      } else if (platform.is("windows")) {
+      } else if (this.platform.is("windows")) {
         this.currentPlatform = "windows";
       }
 
@@ -181,32 +184,28 @@ class DemoApp {
       }
 
       window.parent.postMessage(this.currentPlatform, "*");
-      platform.ready().then(() => {
-        window.addEventListener('message', (e) => {
-          zone.run(() => {
-            if (e.data) {
-              var data;
-              try {
-                data = JSON.parse(e.data);
-              } catch (e) {
-                console.error(e);
-              }
-
-              if (data.hash) {
-                this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
-                if (data.hash !== 'menus') {
-                  this.menu.enable(false);
-                }
-              } else {
-                this.nextPage = rootPage;
-              }
-
-              setTimeout(() => {
-                let nav = this.app.getComponent('nav');
-                helpers.debounce(nav.setRoot(this.nextPage), 60, false);
-              });
+      window.addEventListener('message', (e) => {
+        this.zone.run(() => {
+          if (e.data) {
+            var data;
+            try {
+              data = JSON.parse(e.data);
+            } catch (e) {
+              console.error(e);
             }
-          });
+
+            if (data.hash) {
+              this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
+              if (data.hash !== 'menus') {
+                this.menu.enable(false);
+              }
+            } else {
+              this.nextPage = rootPage;
+            }
+
+            let nav = this.app.getComponent('nav');
+            helpers.debounce(nav.setRoot(this.nextPage), 60, false);
+          }
         });
       });
     }

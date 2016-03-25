@@ -148,23 +148,31 @@ class DemoApp {
   routes = ROUTES;
 
   constructor(
-    public app: IonicApp,
-    public platform: Platform,
-    public config: Config,
-    public menu: MenuController,
-    public location: Location) {
+    private app: IonicApp,
+    private platform: Platform,
+    private config: Config,
+    private menu: MenuController,
+    private location: Location) {
 
     this.menu.enable(true);
 
-    if (platform.is("android"))
-      this.currentPlatform = "android";
-    else if (platform.is("windows"))
-      this.currentPlatform = "windows";
 
-    if (platform.query('production') == 'true') {
+    // Production-only code
+    // production is false unless viewed on the docs
+    // http://ionicframework.com/docs/v2/components/
+    // ------------------------------------------------------------
+
+    if (platform.query("production") === "true") {
       this.isProductionMode = true;
 
-      window.parent.postMessage(this.currentPlatform, "*");
+      // Platform is ios by default
+      // only change it if android or windows
+      if (platform.is("android")) {
+        this.currentPlatform = "android";
+      } else if (platform.is("windows")) {
+        this.currentPlatform = "windows";
+      }
+
       if (helpers.hasScrollbar() === true) {
         setTimeout(function() {
           var body = document.getElementsByTagName('body')[0];
@@ -172,6 +180,7 @@ class DemoApp {
         }, 500);
       }
 
+      window.parent.postMessage(this.currentPlatform, "*");
       platform.ready().then(() => {
         window.addEventListener('message', (e) => {
           zone.run(() => {

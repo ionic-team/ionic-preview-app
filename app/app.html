@@ -25,9 +25,9 @@
 
     <!-- Display all of the sections if this isn't production -->
     <ion-list *ngIf="!isProductionMode">
-      <a ion-item *ngFor="#route of routes" (click)="openPage(route)" >
+      <button ion-item *ngFor="#route of routes" (click)="openPage(route)" >
         {{ route.path | displayRoute }}
-      </a>
+      </button>
     </ion-list>
   </ion-content>
 

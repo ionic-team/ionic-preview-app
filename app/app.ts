@@ -1,3 +1,4 @@
+import {NgZone} from 'angular2/core';
 import {RouteConfig, Location} from 'angular2/router';
 import {App, IonicApp, Platform, ActionSheet, MenuController} from 'ionic-angular';
 import {Page, Config, Events} from 'ionic-angular';
@@ -148,23 +149,33 @@ class DemoApp {
   routes = ROUTES;
 
   constructor(
-    public app: IonicApp,
-    public platform: Platform,
-    public config: Config,
-    public menu: MenuController,
-    public location: Location) {
+    private app: IonicApp,
+    private platform: Platform,
+    private config: Config,
+    private menu: MenuController,
+    private location: Location,
+    private zone: NgZone) {
 
     this.menu.enable(true);
+  }
 
-    if (platform.is("android"))
-      this.currentPlatform = "android";
-    else if (platform.is("windows"))
-      this.currentPlatform = "windows";
+  ngAfterContentInit() {
+    // production-only code
+    // production is false unless viewed on the docs
+    // http://ionicframework.com/docs/v2/components/
+    // ------------------------------------------------------------
 
-    if (platform.query('production') == 'true') {
+    if (this.platform.query("production") === "true") {
       this.isProductionMode = true;
 
-      window.parent.postMessage(this.currentPlatform, "*");
+      // Platform is ios by default
+      // only change it if android or windows
+      if (this.platform.is("android")) {
+        this.currentPlatform = "android";
+      } else if (this.platform.is("windows")) {
+        this.currentPlatform = "windows";
+      }
+
       if (helpers.hasScrollbar() === true) {
         setTimeout(function() {
           var body = document.getElementsByTagName('body')[0];
@@ -172,32 +183,29 @@ class DemoApp {
         }, 500);
       }
 
-      platform.ready().then(() => {
-        window.addEventListener('message', (e) => {
-          zone.run(() => {
-            if (e.data) {
-              var data;
-              try {
-                data = JSON.parse(e.data);
-              } catch (e) {
-                console.error(e);
-              }
-
-              if (data.hash) {
-                this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
-                if (data.hash !== 'menus') {
-                  this.menu.enable(false);
-                }
-              } else {
-                this.nextPage = rootPage;
-              }
-
-              setTimeout(() => {
-                let nav = this.app.getComponent('nav');
-                helpers.debounce(nav.setRoot(this.nextPage), 60, false);
-              });
+      window.parent.postMessage(this.currentPlatform, "*");
+      window.addEventListener('message', (e) => {
+        this.zone.run(() => {
+          if (e.data) {
+            var data;
+            try {
+              data = JSON.parse(e.data);
+            } catch (e) {
+              console.error(e);
             }
-          });
+
+            if (data.hash) {
+              this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
+              if (data.hash !== 'menus') {
+                this.menu.enable(false);
+              }
+            } else {
+              this.nextPage = rootPage;
+            }
+
+            let nav = this.app.getComponent('nav');
+            helpers.debounce(nav.setRoot(this.nextPage), 60, false);
+          }
         });
       });
     }

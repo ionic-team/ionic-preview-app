@@ -24,6 +24,7 @@ function run {
 
   # process new docs
   echo "Copying www to $DEMO_DEST"
+  rm -R $DEMO_DEST/www
   cp -R www $DEMO_DEST
 
   # CD in to the site dir to commit updated docs

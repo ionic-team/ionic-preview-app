@@ -18,14 +18,14 @@
         {{p.title}}
       </button>
 
-      <button ion-item menuClose="leftMenu" detail-none>
+      <button ion-item menuClose detail-none>
         Close Menu
       </button>
     </ion-list>
 
     <!-- Display all of the sections if this isn't production -->
     <ion-list *ngIf="!isProductionMode">
-      <button ion-item *ngFor="#route of routes" (click)="openPage(route)" >
+      <button ion-item *ngFor="#route of routes" menuClose (click)="openPage(route)" >
         {{ route.path | displayRoute }}
       </button>
     </ion-list>

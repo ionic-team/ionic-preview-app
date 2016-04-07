@@ -9,20 +9,22 @@ var argv = process.argv;
  * Ionic Gulp tasks, for more information on each see
  * https://github.com/driftyco/ionic-gulp-tasks
  */
-var buildWebpack = require('ionic-gulp-webpack-build');
+var buildBrowserify = require('ionic-gulp-browserify-typescript');
 var buildSass = require('ionic-gulp-sass-build');
 var copyHTML = require('ionic-gulp-html-copy');
 var copyFonts = require('ionic-gulp-fonts-copy');
+var copyScripts = require('ionic-gulp-scripts-copy');
 
-gulp.task('watch', ['sass', 'html', 'fonts'], function() {
+gulp.task('watch', ['sass', 'html', 'fonts'], function(done) {
   gulpWatch('app/**/*.scss', function() { gulp.start('sass'); });
   gulpWatch('app/**/*.html', function() { gulp.start('html'); });
-  return buildWebpack({watch: true});
+  buildBrowserify({ watch: true }).on('end', done);
 });
-gulp.task('build', ['sass', 'html', 'fonts'], buildWebpack);
+gulp.task('build', ['sass', 'html', 'fonts'], buildBrowserify);
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
+gulp.task('scripts', copyScripts);
 gulp.task('clean', function(done) {
   del('www/build', done);
 });

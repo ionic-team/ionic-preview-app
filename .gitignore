@@ -3,6 +3,7 @@
 
 node_modules/
 www/build/
+www/lib/
 platforms/
 plugins/
 *.swp

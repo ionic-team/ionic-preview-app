@@ -1,4 +1,5 @@
 {
-  "name": "preview-app",
-  "app_id": ""
+  "name": "ionic-preview-app",
+  "app_id": "",
+  "v2": true
 }

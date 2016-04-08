@@ -5,12 +5,10 @@ import {Platform, Page, ActionSheet, NavController} from 'ionic-angular';
   templateUrl: './build/pages/action-sheets/basic/basic.html'
 })
 export class BasicPage {
-  actionSheet;
-
   constructor(public platform: Platform, public nav: NavController) { }
 
   openMenu() {
-    this.actionSheet = ActionSheet.create({
+    let actionSheet = ActionSheet.create({
       title: 'Albums',
       buttons: [
         {
@@ -53,10 +51,6 @@ export class BasicPage {
       ]
     });
 
-    this.nav.present(this.actionSheet);
-  }
-
-  onPageWillLeave() {
-    this.actionSheet && this.actionSheet.dismiss();
+    this.nav.present(actionSheet);
   }
 }

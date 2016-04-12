@@ -119,7 +119,8 @@ const ROUTES = [
   { path: '/toolbar/basic', component: toolbar.BasicPage },
   { path: '/toolbar/buttons', component: toolbar.ButtonsPage },
   { path: '/toolbar/searchbar', component: toolbar.SearchbarPage },
-  { path: '/toolbar/segment', component: toolbar.SegmentPage }
+  { path: '/toolbar/segment', component: toolbar.SegmentPage },
+  { path: '/toolbar/colors', component: toolbar.ColorsPage}
 ];
 
 @App({

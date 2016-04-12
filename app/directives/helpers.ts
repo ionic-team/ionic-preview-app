@@ -126,7 +126,8 @@ export function getPages() {
     'toolbar': toolbar.BasicPage,
     'toolbar-buttons': toolbar.ButtonsPage,
     'toolbar-segment': toolbar.SegmentPage,
-    'toolbar-searchbar': toolbar.SearchbarPage
+    'toolbar-searchbar': toolbar.SearchbarPage,
+    'toolbar-colors': toolbar.ColorsPage
   };
 }
 

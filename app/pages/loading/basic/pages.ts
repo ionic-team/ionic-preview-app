@@ -11,7 +11,8 @@ export class BasicPage {
   presentLoading() {
     let loading = Loading.create({
       content: "Please wait...",
-      duration: 3000
+      duration: 3000,
+      dismissOnPageChange: true
     });
     this.nav.present(loading);
   }

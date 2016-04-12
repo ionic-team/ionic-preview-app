@@ -22,6 +22,7 @@ import * as grid from './pages/grid/grid';
 import * as icons from './pages/icons/icons';
 import * as inputs from './pages/inputs/inputs';
 import * as lists from './pages/lists/lists';
+import * as loading from './pages/loading/loading';
 import * as menus from './pages/menus/menus';
 import * as modals from './pages/modals/modals';
 import * as navigation from './pages/navigation/navigation';
@@ -90,6 +91,8 @@ const ROUTES = [
   { path: '/lists/no-lines', component: lists.NoLinesPage },
   { path: '/lists/sliding', component: lists.SlidingPage },
   { path: '/lists/thumbnail', component: lists.ThumbnailPage },
+
+  { path: '/loading/basic', component: loading.BasicPage },
 
   { path: '/menus/basic', component: menus.BasicPage },
 

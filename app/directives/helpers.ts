@@ -11,6 +11,7 @@ import * as grid from '../pages/grid/grid';
 import * as icons from '../pages/icons/icons';
 import * as inputs from '../pages/inputs/inputs';
 import * as lists from '../pages/lists/lists';
+import * as loading from '../pages/loading/loading';
 import * as menus from '../pages/menus/menus';
 import * as modals from '../pages/modals/modals';
 import * as navigation from '../pages/navigation/navigation';
@@ -37,6 +38,7 @@ export function hasScrollbar() {
   // Check overflow style property on body for fauxscrollbars
   var overflowStyle;
 
+  // TODO fix this
   if (typeof rootElem.currentStyle !== 'undefined') {
     overflowStyle = rootElem.currentStyle.overflow;
   }
@@ -46,6 +48,7 @@ export function hasScrollbar() {
   // Also need to check the Y axis overflow
   var overflowYStyle;
 
+  // TODO fix this
   if (typeof rootElem.currentStyle !== 'undefined') {
     overflowYStyle = rootElem.currentStyle.overflowY;
   }
@@ -115,6 +118,7 @@ export function getPages() {
     'multiline-list': lists.MultilinePage,
     'sliding-list': lists.SlidingPage,
     'thumbnail-list': lists.ThumbnailPage,
+    'loading': loading.BasicPage,
     'menus': menus.BasicPage,
     'modals': modals.BasicPage,
     'navigation': navigation.BasicPage,

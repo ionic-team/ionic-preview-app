@@ -5,8 +5,10 @@ import {Page, Platform} from 'ionic-angular';
     templateUrl: './build/pages/toolbar/searchbar/template.html'
 })
 export class SearchbarPage {
+  searchQuery = '';
+  items;
+
   constructor() {
-    this.searchQuery = '';
     this.initializeItems();
   }
 

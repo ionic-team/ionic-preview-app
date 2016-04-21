@@ -64,7 +64,7 @@ export class Page2 {
 @Page({
   template: `
       <ion-navbar *navbar primary>
-      <ion-title>Pirmary</ion-title>
+      <ion-title>Primary</ion-title>
       </ion-navbar>
 
       <ion-content>

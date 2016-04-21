@@ -139,7 +139,11 @@ const ROUTES = [
       android: {
         activator: 'ripple',
         backButtonIcon: 'md-arrow-back'
+      },
+      ios: {
+        statusbarPadding: true
       }
+
     }
   },
   pipes: [DisplayRoutePipe]

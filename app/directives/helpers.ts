@@ -23,6 +23,7 @@ import * as segments from '../pages/segments/segments';
 import * as selects from '../pages/selects/selects';
 import * as slides from '../pages/slides/slides';
 import * as tabs from '../pages/tabs/tabs';
+import * as toast from '../pages/toast/toast';
 import * as toggles from '../pages/toggles/toggles';
 import * as toolbar from '../pages/toolbar/toolbar';
 
@@ -129,6 +130,7 @@ export function getPages() {
     'tabs-icon': tabs.IconPage,
     'tabs-icon-text': tabs.IconTextPage,
     'tabs-badges': tabs.BadgesPage,
+    'toast': toast.BasicPage,
     'toolbar': toolbar.BasicPage,
     'toolbar-buttons': toolbar.ButtonsPage,
     'toolbar-segment': toolbar.SegmentPage,

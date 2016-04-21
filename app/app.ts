@@ -34,6 +34,7 @@ import * as segments from './pages/segments/segments';
 import * as selects from './pages/selects/selects';
 import * as slides from './pages/slides/slides';
 import * as tabs from './pages/tabs/tabs';
+import * as toast from './pages/toast/toast';
 import * as toggles from './pages/toggles/toggles';
 import * as toolbar from './pages/toolbar/toolbar';
 
@@ -119,6 +120,8 @@ const ROUTES = [
   { path: '/tabs/basic', component: tabs.BasicPage },
   { path: '/tabs/icon', component: tabs.IconPage },
   { path: '/tabs/icon-text', component: tabs.IconTextPage },
+
+  { path: '/toast/basic', component: toast.BasicPage },
 
   { path: '/toggles/basic', component: toggles.BasicPage },
 

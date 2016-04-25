@@ -7,7 +7,7 @@ import * as badges from '../pages/badges/badges';
 import * as buttons from '../pages/buttons/buttons';
 import * as cards from '../pages/cards/cards';
 import * as checkboxes from '../pages/checkboxes/checkboxes';
-import * as events from '../pages/events/events';
+import * as gestures from '../pages/gestures/gestures';
 import * as grid from '../pages/grid/grid';
 import * as icons from '../pages/icons/icons';
 import * as inputs from '../pages/inputs/inputs';
@@ -94,7 +94,7 @@ export function getPages() {
     'card-advanced-social': cards.AdvancedSocialPage,
     'card-advanced-weather': cards.AdvancedWeatherPage,
     'checkbox': checkboxes.BasicPage,
-    'events': events.BasicPage,
+    'gestures': gestures.BasicPage,
     'radio': radios.BasicPage,
     'range': ranges.BasicPage,
     'segment': segments.BasicPage,

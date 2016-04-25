@@ -2,7 +2,7 @@ import {Page} from 'ionic-angular';
 
 
 @Page({
-  templateUrl: './build/pages/events/basic/template.html'
+  templateUrl: './build/pages/gestures/basic/template.html'
 })
 export class BasicPage {
 

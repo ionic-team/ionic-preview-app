@@ -18,7 +18,7 @@ import * as badges from './pages/badges/badges';
 import * as buttons from './pages/buttons/buttons';
 import * as cards from './pages/cards/cards';
 import * as checkboxes from './pages/checkboxes/checkboxes';
-import * as events from './pages/events/events';
+import * as gestures from './pages/gestures/gestures';
 import * as grid from './pages/grid/grid';
 import * as icons from './pages/icons/icons';
 import * as inputs from './pages/inputs/inputs';
@@ -71,7 +71,7 @@ const ROUTES = [
 
   { path: '/checkboxes/basic', component: checkboxes.BasicPage },
 
-  { path: '/events/basic', component: events.BasicPage },
+  { path: '/gestures/basic', component: gestures.BasicPage },
 
   { path: '/grid/basic', component: grid.BasicPage },
 

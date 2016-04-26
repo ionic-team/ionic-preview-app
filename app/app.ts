@@ -135,15 +135,12 @@ const ROUTES = [
 @App({
   templateUrl: './build/app.html',
   config: {
+    statusbarPadding: true,
     platforms: {
       android: {
         activator: 'ripple',
         backButtonIcon: 'md-arrow-back'
-      },
-      ios: {
-        statusbarPadding: true
       }
-
     }
   },
   pipes: [DisplayRoutePipe]

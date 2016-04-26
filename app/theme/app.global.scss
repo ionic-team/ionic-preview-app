@@ -74,21 +74,15 @@ ion-content.cards-bg {
 .demo-list-icons icon#secondary {
   color: #32DB64;
 }
-body.md {
-  border-top: 24px solid black;
-}
-
-body.md backdrop {
-  top: -24px;
-  height: 107%;
-}
 
 body.md img#md-only {
   display: block !important;
   position: absolute;
-  top: -24px;
+  background-color: transparent;
+  top: 0px;
   width: 100%;
   height: auto;
+  z-index: 999;
 }
 
 body.md img#md-tabs-icon, body.md img#md-tabs-icon-text {
@@ -110,15 +104,13 @@ body.ios img#ios-only {
   z-index: 999;
 }
 
-body.wp {
-  border-top: 18px solid transparent;
-}
-
 body.wp img#wp-only {
   display: block !important;
   position: absolute;
-  background-color: #F8F8F8;
-  top: -18px;
+  background-color: transparent;
+  padding: 5px 0;
+  top: 0px;
   width: 100%;
   height: auto;
+  z-index: 999;
 }

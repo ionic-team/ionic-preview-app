@@ -24,7 +24,7 @@ class TabIconPage {
 
 @Page({
   template:
-  '<ion-tabs class="tabs-icon">' +
+  '<ion-tabs class="tabs-icon" [attr.danger]="isAndroid ? \'\' : null">' +
     '<ion-tab tabIcon="contact" [root]="tabOne"></ion-tab>' +
     '<ion-tab tabIcon="compass" [root]="tabTwo"></ion-tab>' +
     '<ion-tab tabIcon="analytics" [root]="tabThree"></ion-tab>' +
@@ -36,6 +36,11 @@ export class IconPage {
   tabTwo = TabIconPage;
   tabThree = TabIconPage;
   tabFour = TabIconPage;
+  isAndroid: boolean = false;
+
+  constructor(platform: Platform) {
+    this.isAndroid = platform.is('android');
+  }
 
   onPageWillLeave() {
     document.getElementById('md-tabs-icon').style.display = "none";

@@ -10,6 +10,7 @@ export class BasicPage {
   openMenu() {
     let actionSheet = ActionSheet.create({
       title: 'Albums',
+      cssClass: 'action-sheets-basic-page',
       buttons: [
         {
           text: 'Delete',

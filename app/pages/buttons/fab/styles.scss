@@ -1,19 +1,18 @@
-#subtle-footer {
-  background-color: #fff;
-  border-image-source: url(../../img/footer-wireframe.png);
-  border-image-repeat: repeat;
-  border-image-width: 100%;
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
-  position: absolute;
-  bottom:0;
-}
-#demo-fab-bottom {
-  padding-top: 3px;
-  z-index: 100;
-}
-#subtle-footer .toolbar-background {
-  background-color: #fff;
-  border-bottom: 0;
+
+.buttons-fab-page {
+
+  .fab-footer {
+    z-index: 99;
+  }
+
+  .bar-footer {
+    background: url(../../img/footer-wireframe.png) repeat-x;
+    height: 2px;
+
+    position: absolute;
+    right: 0;
+    bottom: 44px;
+    left: 0;
+  }
+
 }

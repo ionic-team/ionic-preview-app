@@ -1,18 +1,14 @@
-p.toolbar-buttons {
-  margin-left: 25px;
-}
 
-body.md {
-  .toolbar-buttons-page {
-    div.toolbar-title,
-    p.toolbar-buttons {
-      color: #fff;
-    }
+.toolbar-buttons-page {
+
+  .footer-title {
+    padding: 0 1rem;
   }
-}
 
-body.ios {
-  .toolbar-buttons-page {
-
+  .footer-title .toolbar-title {
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0;
   }
+
 }

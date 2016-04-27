@@ -15,6 +15,36 @@ body.ios ion-card p.advanced-background-title-large span {
   font-weight: 300;
 }
 
+ion-content ion-card ion-item.advanced-trans p {
+  color: #fff;
+}
+ion-card ion-item.advanced-trans.item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 12px 20px !important;
+  background: transparent;
+}
+ion-card ion-item.advanced-trans.item p {
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+ion-card p.advanced-background-title-large {
+  top: 29%;
+  font-weight: normal;
+  font-size: 4.4em;
+  color: #fff !important;
+}
+ion-card p.advanced-background-title-large span {
+  vertical-align: top;
+  padding-top: 5px;
+  font-size: 72px;
+  height: 74px;
+  line-height: 1;
+  display: inline-block;
+}
 
 .preview-weather-cards {
 

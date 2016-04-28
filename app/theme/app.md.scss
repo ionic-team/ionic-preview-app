@@ -40,3 +40,46 @@ $cordova-ios-statusbar-padding:           29px;
 // App Material Design Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Material Design app
+
+@import "../pages/cards/advanced-weather/styles.md";
+
+
+// Android Status Bar
+// ----------------------------
+img#md-only {
+  display: block !important;
+  position: absolute;
+  background-color: transparent;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+
+// TODO this can be removed when we replace the Android
+// status bar with a transparent one with a rgba bg
+img#md-tabs-icon,
+img#md-tabs-icon-text {
+  display: none;
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  height: auto;
+}
+
+.tabs-icon-text ion-title div.toolbar-title {
+  color: #fff !important;
+}
+
+.tabs-icon-text tabbar {
+  background-color: #7e60ff;
+
+  a {
+    color: #fff !important;
+  }
+}
+
+.tabs-icon-text tab-highlight {
+  color: #fff;
+  background-color: #fff;
+}

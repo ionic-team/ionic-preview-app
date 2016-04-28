@@ -14,6 +14,7 @@
 $checkbox-ios-icon-checkmark-color:   #fff;
 $cordova-ios-statusbar-padding:       20px;
 
+
 // Ionic iOS Sass
 // --------------------------------------------------
 // Custom App variables must be declared before importing Ionic.
@@ -31,3 +32,26 @@ $cordova-ios-statusbar-padding:       20px;
 // App iOS Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the iOS app
+
+@import "../pages/cards/advanced-weather/styles.ios";
+
+
+// iOS Status Bar
+// ----------------------------
+img#ios-only {
+  display: block !important;
+  position: absolute;
+  background-color: transparent;
+  padding: 5px 0;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+
+.tabs-icon-text tabbar {
+  .tab-button[aria-selected=true],
+  .tab-button:hover:not(.disable-hover) {
+    color: #7e60ff;
+  }
+}

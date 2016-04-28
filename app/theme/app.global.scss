@@ -14,57 +14,6 @@
 }
 
 
-// Android Status Bar
-// ----------------------------
-body.md img#md-only {
-  display: block !important;
-  position: absolute;
-  background-color: transparent;
-  top: 0px;
-  width: 100%;
-  height: auto;
-  z-index: 999;
-}
-
-// TODO this can be removed when we replace the Android
-// status bar with a transparent one with a rgba bg
-body.md img#md-tabs-icon, body.md img#md-tabs-icon-text {
-  display: none;
-  position: absolute;
-  top: -24px;
-  width: 100%;
-  height: auto;
-}
-
-
-// iOS Status Bar
-// ----------------------------
-body.ios img#ios-only {
-  display: block !important;
-  position: absolute;
-  background-color: transparent;
-  padding: 5px 0;
-  top: 0px;
-  width: 100%;
-  height: auto;
-  z-index: 999;
-}
-
-
-// Windows Status Bar
-// ----------------------------
-body.wp img#wp-only {
-  display: block !important;
-  position: absolute;
-  background-color: transparent;
-  padding: 5px 0;
-  top: 0px;
-  width: 100%;
-  height: auto;
-  z-index: 999;
-}
-
-
 // Global Styles
 // ----------------------------
 body, body:hover, body a, body button, body media-switch {

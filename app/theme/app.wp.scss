@@ -31,3 +31,16 @@ $cordova-ios-statusbar-padding:           31px;
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+
+// Windows Status Bar
+// ----------------------------
+img#wp-only {
+  display: block !important;
+  position: absolute;
+  background-color: transparent;
+  padding: 5px 0;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}

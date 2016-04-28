@@ -1,20 +1,3 @@
-body.ios ion-card .advanced-weather-tabs tabbar {
-  height: 88px;
-}
-body.md ion-card .advanced-weather-tabs tabbar {
-  height: 100px;
-}
-body.md ion-card .advanced-weather-tabs tabbar a span.tab-button-text {
-  text-transform: uppercase;
-}
-body.md .cards-bg tab-highlight {
-  background-color: #fff !important;
-  top: 0;
-}
-body.ios ion-card p.advanced-background-title-large span {
-  font-weight: 300;
-}
-
 ion-content ion-card ion-item.advanced-trans p {
   color: #fff;
 }

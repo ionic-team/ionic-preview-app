@@ -55,17 +55,6 @@ img#md-only {
   z-index: 999;
 }
 
-// TODO this can be removed when we replace the Android
-// status bar with a transparent one with a rgba bg
-img#md-tabs-icon,
-img#md-tabs-icon-text {
-  display: none;
-  position: absolute;
-  top: -24px;
-  width: 100%;
-  height: auto;
-}
-
 .tabs-icon-text ion-title div.toolbar-title {
   color: #fff !important;
 }

@@ -11,8 +11,8 @@ test:
   override:
     - ./scripts/test.sh
 
-deployment:
-  staging:
-    branch: master
-    commands:
-      #- ./scripts/deploy.sh
+#deployment:
+#  staging:
+#    branch: master
+#    commands:
+#      - ./scripts/deploy.sh

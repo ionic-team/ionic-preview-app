@@ -11,7 +11,7 @@ export class BasicPage {
   doAlert() {
     let alert = Alert.create({
       title: 'New Friend!',
-      message: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      message: 'Your friend, Obi wan Kenobi, just approved your friend request!',
       buttons: ['Ok']
     });
     this.nav.present(alert);

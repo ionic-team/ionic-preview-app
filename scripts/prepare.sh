@@ -6,7 +6,6 @@ echo "#####"
 
 
 function init {
-  cd ..
   SITE_PATH=$(readJsonProp "config.json" "sitePath")
   cd ..
   export IONIC_DIR=$PWD
@@ -21,7 +20,6 @@ function run {
     ./git/clone.sh --repository="ionic-site" \
       --directory="$SITE_DIR" \
       --branch="master"
-    ls -al $SITE_DIR
   else
     echo "using existing"
     cd $SITE_DIR
@@ -30,4 +28,4 @@ function run {
   fi
 }
 
-source $(dirname $0)/../utils.inc.sh
+source $(dirname $0)/utils.inc.sh

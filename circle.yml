@@ -9,7 +9,7 @@ general:
 
 dependencies:
  pre:
-   - ./scripts/docs/prepare.sh
+   - ./scripts/prepare.sh
  cache_directories:
    - "~/ionic-site" # cache ionic-site
 

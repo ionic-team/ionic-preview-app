@@ -14,7 +14,6 @@ function init {
 }
 
 function run {
-  cd ..
   VERSION=$(readJsonProp "package.json" "version")
 
   # process new docs

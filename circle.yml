@@ -7,12 +7,18 @@ general:
     only:
       - master # ignore PRs and branches
 
+dependencies:
+ pre:
+   - ./scripts/docs/prepare.sh
+ cache_directories:
+   - "~/ionic-site" # cache ionic-site
+
 test:
   override:
     - ./scripts/test.sh
 
-#deployment:
-#  staging:
-#    branch: master
-#    commands:
-#      - ./scripts/deploy.sh
+deployment:
+ staging:
+   branch: master
+   commands:
+     - ./scripts/deploy.sh

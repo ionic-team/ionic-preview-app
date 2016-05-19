@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Renderer} from 'angular2/core';
+import {Directive, ElementRef, Renderer} from '@angular/core';
 import {Platform, Navbar} from 'ionic-angular';
 
 import * as actionSheets from '../pages/action-sheets/action-sheets';

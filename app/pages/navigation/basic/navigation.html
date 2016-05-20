@@ -5,7 +5,7 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#item of items" (click)="openNavDetailsPage(item)">
+    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
       <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon>
       {{ item.title }}
     </button>

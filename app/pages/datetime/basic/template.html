@@ -1,0 +1,48 @@
+<ion-navbar *navbar hideBackButton class="show-navbar">
+  <ion-title>
+    DateTime
+  </ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+   <ion-item-divider light></ion-item-divider>
+    <ion-item>
+      <ion-input placeholder="Title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+
+   <ion-item-divider light></ion-item-divider>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ends</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+    </ion-item>
+
+
+   <ion-item-divider light></ion-item-divider>
+    <ion-item>
+      <ion-label>Repeats</ion-label>
+      <p item-right>Every Year</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <p item-right>2 weeks before</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+

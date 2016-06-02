@@ -5,7 +5,7 @@
 </ion-navbar>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let item of items">
       {{ item }}

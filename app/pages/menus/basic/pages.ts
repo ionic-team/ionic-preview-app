@@ -1,12 +1,12 @@
 import {Component} from "@angular/core";
-import {App} from 'ionic-angular';
+import {App, MenuController} from 'ionic-angular';
 
 @Component({
   templateUrl: './build/pages/menus/basic/menu-home.html'
 })
 export class BasicPage {
-  constructor(app: App) {
-    app.getComponent('leftMenu').enable(true);
+  constructor(app: App, menu:MenuController) {
+    menu.enable(true);
   }
 }
 

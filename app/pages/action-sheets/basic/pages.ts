@@ -1,7 +1,8 @@
-import {Platform, Page, ActionSheet, NavController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Platform, ActionSheet, NavController} from 'ionic-angular';
 
 
-@Page({
+@Component({
   templateUrl: './build/pages/action-sheets/basic/basic.html'
 })
 export class BasicPage {

@@ -1,7 +1,7 @@
-import {Page, Platform} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
 
-
-@Page({
+@Component({
     templateUrl: './build/pages/toolbar/segment/template.html'
 })
 export class SegmentPage {
@@ -12,12 +12,12 @@ export class SegmentPage {
     this.isAndroid = platform.is('android');
   }
 
-  onPageWillEnter() {
+  ionViewWillEnter() {
     document.getElementById('md-tabs-icon').style.display = "block";
     document.getElementById('md-only').style.display = "none";
   }
 
-  onPageWillLeave() {
+  ionViewWillLeave() {
     document.getElementById('md-tabs-icon').style.display = "none";
     document.getElementById('md-only').style.display = "block";
   }

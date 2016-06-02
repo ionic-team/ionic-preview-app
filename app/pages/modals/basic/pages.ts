@@ -1,8 +1,8 @@
-import {IonicApp, Modal, Platform, NavController, NavParams, Page, ViewController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Modal, Platform, NavController, NavParams, ViewController} from 'ionic-angular';
 
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/modals/basic/template.html'
 })
 export class BasicPage {
@@ -14,7 +14,7 @@ export class BasicPage {
   }
 }
 
-@Page({
+@Component({
   templateUrl: './build/pages/modals/basic/modal-content.html'
 })
 class ModalsContentPage {

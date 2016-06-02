@@ -1,8 +1,7 @@
 import {NavController, NavParams} from 'ionic-angular';
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-
-@Page({
+@Component({
   template: '' +
     '<ion-navbar *navbar hideBackButton>' +
       '<ion-title>Tabs</ion-title>' +
@@ -12,7 +11,7 @@ import {Page} from 'ionic-angular';
 })
 class TabBadgePage { }
 
-@Page({
+@Component({
   template:
     '<ion-tabs>' +
       '<ion-tab tabIcon="call" [root]="tabOne" tabBadge="3" tabBadgeStyle="danger"></ion-tab>' +

@@ -1,7 +1,8 @@
-import {Page, Alert, NavController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Alert, NavController} from 'ionic-angular';
 
 
-@Page({
+@Component({
   templateUrl: './build/pages/alerts/confirm/template.html'
 })
 export class ConfirmPage {

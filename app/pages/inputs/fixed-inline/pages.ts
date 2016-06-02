@@ -1,7 +1,6 @@
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/inputs/fixed-inline/template.html'
 })
 export class FixedInlinePage { }

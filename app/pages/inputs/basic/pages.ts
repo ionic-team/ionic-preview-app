@@ -1,8 +1,7 @@
 import {FORM_DIRECTIVES, FormBuilder, Validators, Control, ControlGroup} from '@angular/common';
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/inputs/basic/template.html',
   providers: [FormBuilder]
 })

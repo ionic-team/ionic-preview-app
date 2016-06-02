@@ -1,7 +1,6 @@
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/cards/advanced-social/template.html'
 })
 export class AdvancedSocialPage { }

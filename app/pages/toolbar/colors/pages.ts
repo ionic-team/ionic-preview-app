@@ -1,6 +1,7 @@
-import {Page, NavController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
 
-@Page({
+@Component({
   template: `
     <ion-navbar *navbar light>
       <ion-title>Toolbar: Light</ion-title>
@@ -21,7 +22,7 @@ export class Page4 {
 }
 
 
-@Page({
+@Component({
   template: `
     <ion-navbar *navbar danger>
       <ion-title>Toolbar: Danger</ion-title>
@@ -43,7 +44,7 @@ export class Page3 {
 }
 
 
-@Page({
+@Component({
   template: `
     <ion-navbar *navbar secondary>
       <ion-title>Toolbar: Secondary</ion-title>
@@ -66,7 +67,7 @@ export class Page2 {
 }
 
 
-@Page({
+@Component({
   template: `
     <ion-navbar *navbar primary>
       <ion-title>Toolbar: Primary</ion-title>

@@ -6,7 +6,7 @@ import {DisplayRoutePipe} from './pipes/display-route';
 import * as helpers from './directives/helpers';
 
 // Change the import if you want to change the first page, for example:
-// import { ImagePage as rootPage } from './pages/cards/cards';
+// import { ImagePage as ActionPage } from './pages/cards/cards';
 import { BasicPage as ActionPage} from './pages/action-sheets/action-sheets';
 
 @Component({
@@ -29,7 +29,6 @@ class DemoApp {
     { title: 'Events', component: PageThree }
   ];
 
-
   constructor(
     private platform: Platform,
     private config: Config,
@@ -39,9 +38,9 @@ class DemoApp {
   }
 
   ngAfterContentInit() {
-    //   // production-only code
-    //   // production is false unless viewed on the docs
-    //   // http://ionicframework.com/docs/v2/components/
+    // production-only code
+    // production is false unless viewed on the docs
+    // http://ionicframework.com/docs/v2/components/
 
     if (this.platform.query('production') === 'true') {
       this.isProductionMode = true;

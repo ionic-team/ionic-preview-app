@@ -4,20 +4,18 @@
   </ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content class="outer-content">
 
-  <ion-item-group>
-    <ion-item-divider light></ion-item-divider>
+  <ion-list>
     <ion-item>
       <ion-input placeholder="Title"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input placeholder="Location"></ion-input>
     </ion-item>
-  </ion-item-group>
+  </ion-list>
 
-  <ion-item-group>
-    <ion-item-divider light></ion-item-divider>
+  <ion-list>
     <ion-item>
       <ion-label>Start Date</ion-label>
       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
@@ -33,19 +31,33 @@
       <ion-label>Ends</ion-label>
       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
     </ion-item>
-  </ion-item-group>
 
-  <ion-item-group>
-    <ion-item-divider light></ion-item-divider>
-    <ion-item>
-      <ion-label>Repeats</ion-label>
-      <p item-right>Every Year</p>
-    </ion-item>
+    <button ion-item>
+      <ion-label>Repeat</ion-label>
+      <ion-note item-right>Never</ion-note>
+    </button>
 
-    <ion-item>
+    <button ion-item>
+      <ion-label>Travel Time</ion-label>
+      <ion-note item-right>None</ion-note>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item>
       <ion-label>Alert</ion-label>
-      <p item-right>2 weeks before</p>
-    </ion-item>
-  </ion-item-group>
+      <ion-note item-right>None</ion-note>
+    </button>
+  </ion-list>
 
 </ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

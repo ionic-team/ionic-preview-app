@@ -1,0 +1,17 @@
+
+// Material Design Popover Specific CSS
+// -----------------------------------------
+
+.popover-page {
+  .text-smaller {
+    border-right: 1px solid $list-md-border-color;
+  }
+
+  .row-dots {
+    border-bottom: 1px solid $list-md-border-color;
+  }
+
+  .dot {
+    border: 1px solid $list-md-border-color;
+  }
+}

@@ -1,26 +1,16 @@
-import {NgZone, ViewChild, AfterContentInit} from '@angular/core';
-import {App, Platform, ActionSheet, MenuController, NavController, Menu} from 'ionic-angular';
-import {Page, Config, Events} from 'ionic-angular';
+import {Component, NgZone, ViewChild, AfterContentInit} from '@angular/core';
+import {App, ionicBootstrap, Platform, ActionSheet, MenuController, NavController, Menu} from 'ionic-angular';
+import {Config, Events} from 'ionic-angular';
 import {PageOne, PageTwo, PageThree} from './pages/menus/menus';
 import {DisplayRoutePipe} from './pipes/display-route';
 import * as helpers from './directives/helpers';
 
 // Change the import if you want to change the first page, for example:
-// import { ImagePage as rootPage } from './pages/cards/cards';
+// import { ImagePage as ActionPage } from './pages/cards/cards';
 import { BasicPage as ActionPage} from './pages/action-sheets/action-sheets';
 
-
-@App({
+@Component({
   templateUrl: './build/app.html',
-  config: {
-    statusbarPadding: true,
-    platforms: {
-      android: {
-        activator: 'ripple',
-        backButtonIcon: 'md-arrow-back'
-      }
-    }
-  },
   pipes: [DisplayRoutePipe]
 })
 class DemoApp {
@@ -39,7 +29,6 @@ class DemoApp {
     { title: 'Events', component: PageThree }
   ];
 
-
   constructor(
     private platform: Platform,
     private config: Config,
@@ -49,9 +38,9 @@ class DemoApp {
   }
 
   ngAfterContentInit() {
-    //   // production-only code
-    //   // production is false unless viewed on the docs
-    //   // http://ionicframework.com/docs/v2/components/
+    // production-only code
+    // production is false unless viewed on the docs
+    // http://ionicframework.com/docs/v2/components/
 
     if (this.platform.query('production') === 'true') {
       this.isProductionMode = true;
@@ -125,3 +114,13 @@ class DemoApp {
   }
 
 }
+
+ionicBootstrap(DemoApp, [], {
+  statusbarPadding: true,
+  platforms: {
+    android: {
+      activator: 'ripple',
+      backButtonIcon: 'md-arrow-back'
+    }
+  }
+});

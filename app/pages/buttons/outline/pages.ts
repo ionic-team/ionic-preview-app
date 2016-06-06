@@ -1,7 +1,6 @@
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/buttons/outline/outline.html'
 })
 export class OutlinePage { }

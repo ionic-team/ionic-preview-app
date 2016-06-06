@@ -1,7 +1,7 @@
-import {Page, Loading, NavController} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Loading, NavController} from 'ionic-angular';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/loading/basic/template.html'
 })
 export class BasicPage {

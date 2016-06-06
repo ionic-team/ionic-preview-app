@@ -1,7 +1,8 @@
-import {Page, Platform} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
 
 
-@Page({
+@Component({
     templateUrl: './build/pages/toolbar/searchbar/template.html'
 })
 export class SearchbarPage {

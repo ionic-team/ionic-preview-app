@@ -1,8 +1,8 @@
+import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
-import {Page, ViewController, Platform} from 'ionic-angular';
+import {ViewController, Platform} from 'ionic-angular';
 
-
-@Page({
+@Component({
   template:
     '<ion-navbar *navbar hideBackButton>' +
       '<ion-title>Tabs</ion-title>' +
@@ -18,7 +18,7 @@ class TabTextPage {
   }
 }
 
-@Page({
+@Component({
   template:
     '<ion-tabs class="tabs-basic">' +
       '<ion-tab tabTitle="Music" [root]="tabOne"></ion-tab>' +

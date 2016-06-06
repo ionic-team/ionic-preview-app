@@ -1,7 +1,7 @@
-import {Page, Platform} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/segments/basic/template.html'
 })
 export class BasicPage {

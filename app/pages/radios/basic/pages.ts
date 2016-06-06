@@ -1,4 +1,5 @@
-import {App, IonicApp, Page} from 'ionic-angular';
+import {Component} from '@angular/core';
+import {App} from 'ionic-angular';
 import {
   Control,
   ControlGroup,
@@ -12,7 +13,7 @@ import {
 } from '@angular/common';
 
 
-@Page({
+@Component({
   templateUrl: './build/pages/radios/basic/template.html'
 })
 export class BasicPage {

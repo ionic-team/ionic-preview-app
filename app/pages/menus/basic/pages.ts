@@ -1,26 +1,26 @@
-import {IonicApp, Page} from 'ionic-angular';
+import {Component} from "@angular/core";
+import {App, MenuController} from 'ionic-angular';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/menus/basic/menu-home.html'
 })
 export class BasicPage {
-  constructor(app: IonicApp) {
-    app.getComponent('leftMenu').enable(true);
+  constructor(app: App, menu:MenuController) {
+    menu.enable(true);
   }
 }
 
-@Page({
+@Component({
   templateUrl: './build/pages/menus/basic/menu-home.html'
 })
 export class PageOne { }
 
-@Page({
+@Component({
   templateUrl: './build/pages/menus/basic/menu-friends.html'
 })
 export class PageTwo { }
 
-@Page({
+@Component({
   templateUrl: './build/pages/menus/basic/menu-events.html'
 })
 export class PageThree { }

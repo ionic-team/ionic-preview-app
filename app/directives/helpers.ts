@@ -17,6 +17,7 @@ import * as loading from '../pages/loading/loading';
 import * as menus from '../pages/menus/menus';
 import * as modals from '../pages/modals/modals';
 import * as navigation from '../pages/navigation/navigation';
+import * as popovers from '../pages/popovers/popovers';
 import * as radios from '../pages/radios/radios';
 import * as ranges from '../pages/ranges/ranges';
 import * as searchbars from '../pages/searchbars/searchbars';
@@ -97,6 +98,7 @@ export function getPages() {
     'checkbox': checkboxes.BasicPage,
     'datetime': datetime.BasicPage,
     'gestures': gestures.BasicPage,
+    'popovers': popovers.BasicPage,
     'radio': radios.BasicPage,
     'range': ranges.BasicPage,
     'segment': segments.BasicPage,

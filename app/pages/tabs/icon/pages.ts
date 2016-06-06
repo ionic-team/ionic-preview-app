@@ -1,8 +1,9 @@
+import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
-import {Page, ViewController, Platform} from 'ionic-angular';
+import {ViewController, Platform} from 'ionic-angular';
 
 
-@Page({
+@Component({
   template:
   '<ion-navbar *navbar hideBackButton [attr.danger]="isAndroid ? \'\' : null">' +
     '<ion-title>Tabs</ion-title>' +
@@ -16,13 +17,13 @@ class TabIconPage {
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
   }
-  onPageWillEnter() {
+  ionViewWillEnter() {
     document.getElementById('md-tabs-icon').style.display = "block";
     document.getElementById('md-only').style.display = "none";
   }
 }
 
-@Page({
+@Component({
   template:
   '<ion-tabs class="tabs-icon" [attr.danger]="isAndroid ? \'\' : null">' +
     '<ion-tab tabIcon="contact" [root]="tabOne"></ion-tab>' +
@@ -42,7 +43,7 @@ export class IconPage {
     this.isAndroid = platform.is('android');
   }
 
-  onPageWillLeave() {
+  ionViewWillLeave() {
     document.getElementById('md-tabs-icon').style.display = "none";
     document.getElementById('md-only').style.display = "block";
   }

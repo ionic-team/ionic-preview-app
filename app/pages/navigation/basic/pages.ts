@@ -1,8 +1,7 @@
+import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
-import {Page} from 'ionic-angular';
 
-
-@Page({
+@Component({
   templateUrl: './build/pages/navigation/basic/navigation-details.html',
 })
 class NavigationDetailsPage {
@@ -13,7 +12,7 @@ class NavigationDetailsPage {
   }
 }
 
-@Page({
+@Component({
     templateUrl: './build/pages/navigation/basic/navigation.html'
 })
 export class BasicPage {

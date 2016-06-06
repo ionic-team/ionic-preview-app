@@ -1,0 +1,18 @@
+
+// iOS Popover Specific CSS
+// -----------------------------------------
+
+
+.popover-page {
+  .text-smaller {
+    border-right: 1px solid $list-ios-border-color;
+  }
+
+  .row-dots {
+    border-bottom: 1px solid $list-ios-border-color;
+  }
+
+  .dot {
+    border: 1px solid $list-ios-border-color;
+  }
+}

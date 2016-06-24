@@ -20,17 +20,12 @@ class TabIconTextPage {
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
   }
-  ionViewWillEnter() {
-    console.log('enter');
-    document.getElementById('md-tabs-icon-text').style.display = "block";
-    document.getElementById('md-only').style.display = "none";
-  }
 }
 
 
 @Component({
   template: `
-    <ion-tabs class="tabs-icon-text">
+    <ion-tabs class="tabs-icon-text" [attr.royal]="isAndroid ? '' : null">
       <ion-tab tabIcon="water" tabTitle="Water" [root]="tabOne"></ion-tab>
       <ion-tab tabIcon="leaf" tabTitle="Life" [root]="tabTwo"></ion-tab>
       <ion-tab tabIcon="flame" tabTitle="Fire" [root]="tabThree"></ion-tab>
@@ -42,10 +37,9 @@ export class IconTextPage {
   tabTwo = TabIconTextPage;
   tabThree = TabIconTextPage;
   tabFour = TabIconTextPage;
+  isAndroid: boolean = false;
 
-  ionViewWillLeave() {
-    document.getElementById('md-tabs-icon-text').style.display = "none";
-    document.getElementById('md-only').style.display = "block";
+  constructor(platform: Platform) {
+    this.isAndroid = platform.is('android');
   }
-
 }

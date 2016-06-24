@@ -3,13 +3,16 @@ import {NavController, NavParams} from 'ionic-angular';
 import {ViewController, Platform} from 'ionic-angular';
 
 @Component({
-  template:
-    '<ion-navbar *navbar hideBackButton>' +
-      '<ion-title>Tabs</ion-title>' +
-    '</ion-navbar>' +
-    '<ion-content>' +
-    '</ion-content>'
-})
+  template: `
+    <ion-header>
+      <ion-navbar hideBackButton>
+        <ion-title>Tabs</ion-title>
+      </ion-navbar>
+    </ion-header>
+
+    <ion-content>
+    </ion-content>
+`})
 class TabTextPage {
   isAndroid: boolean = false;
 
@@ -19,13 +22,13 @@ class TabTextPage {
 }
 
 @Component({
-  template:
-    '<ion-tabs class="tabs-basic">' +
-      '<ion-tab tabTitle="Music" [root]="tabOne"></ion-tab>' +
-      '<ion-tab tabTitle="Movies" [root]="tabTwo"></ion-tab>' +
-      '<ion-tab tabTitle="Games" [root]="tabThree"></ion-tab>' +
-    '</ion-tabs>',
-})
+  template: `
+    <ion-tabs class="tabs-basic">
+      <ion-tab tabTitle="Music" [root]="tabOne"></ion-tab>
+      <ion-tab tabTitle="Movies" [root]="tabTwo"></ion-tab>
+      <ion-tab tabTitle="Games" [root]="tabThree"></ion-tab>
+    </ion-tabs>
+`})
 export class BasicPage {
   tabOne = TabTextPage;
   tabTwo = TabTextPage;

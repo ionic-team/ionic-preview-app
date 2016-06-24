@@ -1,32 +1,27 @@
-<ion-navbar *navbar hideBackButton>
 
-  <ion-title>
-    Segments
-  </ion-title>
+<ion-header>
+  <ion-navbar hideBackButton no-border-bottom>
+    <ion-title>
+      Segments
+    </ion-title>
+  </ion-navbar>
 
-</ion-navbar>
-
-<ion-toolbar [attr.primary]="isAndroid ? '' : null" >
-  <ion-segment [(ngModel)]="pet" [attr.light]="isAndroid ? '' : null">
-    <ion-segment-button value="puppies">
-      Puppies
-    </ion-segment-button>
-    <ion-segment-button value="kittens">
-      Kittens
-    </ion-segment-button>
-    <ion-segment-button value="ducklings">
-      Ducklings
-    </ion-segment-button>
-  </ion-segment>
-</ion-toolbar>
-
+  <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
+    <ion-segment [(ngModel)]="pet" [attr.light]="isAndroid ? '' : null">
+      <ion-segment-button value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
-
-<!--   <div padding>
-
-  </div>  -->
-
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchWhen="'puppies'">
       <ion-item>
@@ -109,6 +104,4 @@
       </ion-item>
     </ion-list>
   </div>
-
-
 </ion-content>

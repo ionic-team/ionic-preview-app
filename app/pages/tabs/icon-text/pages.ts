@@ -6,7 +6,7 @@ import {ViewController, Platform} from 'ionic-angular';
 @Component({
   template: `
     <ion-header>
-      <ion-navbar hideBackButton [attr.royal]="isAndroid ? '' : null">
+      <ion-navbar [attr.royal]="isAndroid ? '' : null">
         <ion-title>Tabs</ion-title>
       </ion-navbar>
     </ion-header>

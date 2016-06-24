@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
 @Component({
   template: `
     <ion-header>
-      <ion-navbar hideBackButton>
+      <ion-navbar>
         <ion-title>Tabs</ion-title>
       </ion-navbar>
     </ion-header>

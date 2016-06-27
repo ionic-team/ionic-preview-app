@@ -1,11 +1,11 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 import {App, MenuController} from 'ionic-angular';
 
 @Component({
   templateUrl: './build/pages/menus/basic/menu-home.html'
 })
 export class BasicPage {
-  constructor(app: App, menu:MenuController) {
+  constructor(app: App, menu: MenuController) {
     menu.enable(true);
   }
 }

@@ -1,6 +1,9 @@
-<ion-navbar *navbar hideBackButton class="show-navbar">
-  <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
-</ion-navbar>
+
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
   <ion-list>
@@ -9,4 +12,3 @@
     </ion-item>
   </ion-list>
 </ion-content>
-

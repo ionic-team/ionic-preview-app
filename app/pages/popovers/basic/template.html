@@ -1,11 +1,14 @@
-<ion-navbar *navbar>
-  <ion-title>Popovers</ion-title>
-  <ion-buttons end>
-    <button (click)="presentPopover($event)">
-      <ion-icon name="more"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-navbar>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Popovers</ion-title>
+    <ion-buttons end>
+      <button (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
 <ion-content #popoverContent padding class="popover-page">
   <div #popoverText class="text-to-change">

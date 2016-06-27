@@ -1,9 +1,12 @@
-<ion-navbar *navbar hideBackButton class="show-navbar">
-  <ion-title>Inputs</ion-title>
-</ion-navbar>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inputs</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
-  <form (submit)="processForm($event)" [ngFormModel]="form">
+  <form (submit)="processForm()" [ngFormModel]="form">
       <ion-list>
 
       <ion-item>

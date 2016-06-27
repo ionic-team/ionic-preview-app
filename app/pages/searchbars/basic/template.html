@@ -1,8 +1,11 @@
-<ion-navbar *navbar hideBackButton>
-  <ion-title>
-    Searchbars
-  </ion-title>
-</ion-navbar>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Searchbars
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content>
   <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar>

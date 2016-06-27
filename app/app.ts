@@ -72,13 +72,11 @@ class DemoApp {
             }
 
             if (data.hash) {
-              console.log('has')
               this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
               if (data.hash !== 'menus') {
                 this.menu.enable(false);
               }
             } else {
-              console.log('heere')
               this.currentPageIndex = 1;
               this.nextPage = ActionPage;
             }

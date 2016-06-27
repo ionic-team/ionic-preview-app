@@ -6,7 +6,6 @@ import {Platform} from 'ionic-angular';
     templateUrl: './build/pages/toolbar/searchbar/template.html'
 })
 export class SearchbarPage {
-  searchQuery = '';
   items;
 
   constructor() {
@@ -26,23 +25,18 @@ export class SearchbarPage {
     ];
   }
 
-  getItems(searchbar) {
+  getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();
 
-    // set q to the value of the searchbar
-    var q = searchbar.value;
+    // set val to the value of the ev target
+    var val = ev.target.value;
 
     // if the value is an empty string don't filter the items
-    if (q.trim() == '') {
-      return;
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
     }
-
-    this.items = this.items.filter((v) => {
-      if (v.toLowerCase().indexOf(q.toLowerCase()) > -1) {
-        return true;
-      }
-      return false;
-    })
   }
 }

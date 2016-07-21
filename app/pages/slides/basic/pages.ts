@@ -16,8 +16,8 @@ export class BasicPage {
       image: "img/ica-slidebox-img-2.png",
     },
     {
-      title: "What is Ionic Platform?",
-      description: "The <b>Ionic Platform</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      title: "What is Ionic Cloud?",
+      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
       image: "img/ica-slidebox-img-3.png",
     }
   ];

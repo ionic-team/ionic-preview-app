@@ -1,16 +1,11 @@
 import {Component} from '@angular/core';
 import {App} from 'ionic-angular';
 import {
-  Control,
-  ControlGroup,
-  NgForm,
+  FormGroup,
+  FormControl,
   Validators,
-  NgControl,
-  ControlValueAccessor,
-  NgControlName,
-  NgFormModel,
-  FormBuilder
-} from '@angular/common';
+
+} from '@angular/forms';
 
 
 @Component({
@@ -21,9 +16,8 @@ export class BasicPage {
   langForm;
 
   constructor() {
-    this.langs = new Control("");
-    this.langForm = new ControlGroup({
-      "langs": this.langs
+    this.langForm = new FormGroup({
+      "langs": new FormControl('')
     });
   }
 

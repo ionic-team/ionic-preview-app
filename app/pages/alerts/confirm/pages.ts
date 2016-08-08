@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
+import {AlertController} from 'ionic-angular';
 
 
 @Component({
@@ -7,10 +7,10 @@ import {Alert, NavController} from 'ionic-angular';
 })
 export class ConfirmPage {
 
-  constructor(public nav: NavController) { }
+  constructor(public alerCtrl: AlertController) { }
 
   doConfirm() {
-    let confirm = Alert.create({
+    let confirm = this.alerCtrl.create({
       title: 'Use this lightsaber?',
       message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
       buttons: [
@@ -28,7 +28,7 @@ export class ConfirmPage {
         }
       ]
     });
-    this.nav.present(confirm);
+    confirm.present()
   }
 
 }

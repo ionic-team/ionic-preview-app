@@ -1,23 +1,25 @@
-import {FORM_DIRECTIVES, FormBuilder, Validators, Control, ControlGroup} from '@angular/common';
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
-
+import {AlertController, NavController} from 'ionic-angular';
+import {
+  FormGroup,
+  FormControl,
+  Validators
+} from '@angular/forms';
 @Component({
   templateUrl: './build/pages/inputs/basic/template.html',
-  providers: [FormBuilder]
 })
 export class BasicPage {
   form;
 
-  constructor(private nav: NavController) {
-    this.form = new ControlGroup({
-      firstName: new Control("", Validators.required),
-      lastName: new Control("", Validators.required)
+  constructor(public alertCtrl: AlertController) {
+    this.form = new FormGroup({
+      firstName: new FormControl("", Validators.required),
+      lastName: new FormControl("", Validators.required)
     });
   }
 
   processForm() {
-    let alert = Alert.create({
+    let alert = this.alertCtrl.create({
       title: "Account Created",
       message: "Created Account for: " + this.form.value.firstName + " " + this.form.value.lastName,
       buttons: [{
@@ -26,7 +28,7 @@ export class BasicPage {
     });
 
     if (this.form.status === 'VALID') {
-      this.nav.present(alert);
+      alert.present()
     }
   }
 

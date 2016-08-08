@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
+import {AlertController} from 'ionic-angular';
 
 
 @Component({
@@ -7,10 +7,10 @@ import {Alert, NavController} from 'ionic-angular';
 })
 export class PromptPage {
 
-  constructor(public nav: NavController) { }
+  constructor(public alerCtrl: AlertController) { }
 
   doPrompt() {
-    let prompt = Alert.create({
+    let prompt = this.alerCtrl.create({
       title: 'Login',
       message: "Enter a name for this new album you're so keen on adding",
       inputs: [
@@ -34,7 +34,7 @@ export class PromptPage {
         }
       ]
     });
-    this.nav.present(prompt);
+    prompt.present();
   }
 
 }

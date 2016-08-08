@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
+import {AlertController} from 'ionic-angular';
 
 
 @Component({
@@ -9,10 +9,10 @@ export class RadioPage {
   testRadioOpen: boolean;
   testRadioResult;
 
-  constructor(public nav: NavController) { }
+  constructor(public alerCtrl: AlertController) { }
 
   doRadio() {
-    let alert = Alert.create();
+    let alert = this.alerCtrl.create();
     alert.setTitle('Lightsaber color');
 
     alert.addInput({
@@ -68,7 +68,7 @@ export class RadioPage {
       }
     });
 
-    this.nav.present(alert).then(() => {
+    alert.present().then(() => {
       this.testRadioOpen = true;
     });
   }

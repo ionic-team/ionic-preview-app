@@ -1,6 +1,6 @@
 import {Component, ViewChild, ElementRef} from '@angular/core';
-import {App, Popover, NavController, Content, NavParams} from 'ionic-angular';
-
+import {App, PopoverController, NavController, Content, NavParams} from 'ionic-angular';
+import {NgForm} from '@angular/forms'
 @Component({
   template: `
     <ion-list radio-group [(ngModel)]="fontFamily" (ionChange)="changeFontFamily()" class="popover-page">
@@ -55,7 +55,7 @@ import {App, Popover, NavController, Content, NavParams} from 'ionic-angular';
         <ion-radio value="Times New Roman"></ion-radio>
       </ion-item>
     </ion-list>
-  `,
+  `
 })
 class PopoverPage {
   background: string;
@@ -139,17 +139,18 @@ export class BasicPage {
   @ViewChild('popoverContent', {read: ElementRef}) content: ElementRef;
   @ViewChild('popoverText', {read: ElementRef}) text: ElementRef;
 
-  constructor(private nav: NavController) {
+  constructor(private popoverCtrl: PopoverController) {
 
   }
 
   presentPopover(ev) {
-    let popover = Popover.create(PopoverPage, {
+
+    let popover = this.popoverCtrl.create(PopoverPage, {
       contentEle: this.content.nativeElement,
       textEle: this.text.nativeElement
     });
 
-    this.nav.present(popover, {
+    popover.present({
       ev: ev
     });
   }

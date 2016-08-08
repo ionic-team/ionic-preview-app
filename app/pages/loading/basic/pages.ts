@@ -1,20 +1,20 @@
 import {Component} from '@angular/core';
-import {Loading, NavController} from 'ionic-angular';
+import {LoadingController} from 'ionic-angular';
 
 @Component({
   templateUrl: './build/pages/loading/basic/template.html'
 })
 export class BasicPage {
 
-  constructor(public nav: NavController) { }
+  constructor(public loadingCtrl: LoadingController) { }
 
   presentLoading() {
-    let loading = Loading.create({
+    let loading = this.loadingCtrl.create({
       content: "Please wait...",
       duration: 3000,
       dismissOnPageChange: true
     });
-    this.nav.present(loading);
+    loading.present();
   }
 
 }

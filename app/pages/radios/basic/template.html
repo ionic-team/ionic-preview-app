@@ -9,8 +9,8 @@
 
 <ion-content>
 
-  <form (submit)="doSubmit($event)" [ngFormModel]="langForm">
-    <ion-list radio-group ngControl="langs">
+  <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs">
 
       <ion-list-header>
         Language

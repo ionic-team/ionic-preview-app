@@ -6,15 +6,15 @@
 </ion-header>
 
 <ion-content>
-  <form (submit)="processForm()" [ngFormModel]="form">
+  <form (submit)="processForm()" [formGroup]="form">
       <ion-list>
 
       <ion-item>
-        <ion-input ngControl="firstName" type="text" placeholder="First Name"></ion-input>
+        <ion-input formControlName="firstName" type="text" placeholder="First Name"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input ngControl="lastName" type="text" placeholder="Last Name"></ion-input>
+        <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
       </ion-item>
 
     </ion-list>

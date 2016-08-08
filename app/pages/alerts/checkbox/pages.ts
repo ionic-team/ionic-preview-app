@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
+import {AlertController} from 'ionic-angular';
 
 
 @Component({
@@ -9,10 +9,10 @@ export class CheckboxPage {
   testCheckboxOpen: boolean;
   testCheckboxResult;
 
-  constructor(public nav: NavController) { }
+  constructor(public alerCtrl:AlertController) { }
 
   doCheckbox() {
-    let alert = Alert.create();
+    let alert = this.alerCtrl.create();
     alert.setTitle('Which planets have you visited?');
 
     alert.addInput({
@@ -79,8 +79,7 @@ export class CheckboxPage {
         this.testCheckboxResult = data;
       }
     });
-
-    this.nav.present(alert).then(() => {
+    alert.present().then(() => {
       this.testCheckboxOpen = true;
     });
   }

@@ -23,7 +23,7 @@
 
 <ion-content>
   <div [ngSwitch]="pet">
-    <ion-list *ngSwitchWhen="'puppies'">
+    <ion-list *ngSwitchCase="'puppies'">
       <ion-item>
         <ion-thumbnail item-left>
           <img src="img/thumbnail-puppy-1.jpg">
@@ -50,7 +50,7 @@
       </ion-item>
     </ion-list>
 
-    <ion-list *ngSwitchWhen="'kittens'">
+    <ion-list *ngSwitchCase="'kittens'">
       <ion-item>
         <ion-thumbnail item-left>
           <img src="img/thumbnail-kitten-1.jpg">
@@ -77,7 +77,7 @@
       </ion-item>
     </ion-list>
 
-    <ion-list *ngSwitchWhen="'ducklings'">
+    <ion-list *ngSwitchCase="'ducklings'">
       <ion-item>
         <ion-thumbnail item-left>
           <img src="img/thumbnail-duckling-1.jpg">

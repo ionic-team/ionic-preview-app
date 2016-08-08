@@ -1,15 +1,18 @@
 import {Component} from '@angular/core';
-import {Platform, ActionSheet, NavController} from 'ionic-angular';
+import {Platform, ActionSheetController} from 'ionic-angular';
 
 
 @Component({
   templateUrl: './build/pages/action-sheets/basic/basic.html'
 })
 export class BasicPage {
-  constructor(public platform: Platform, public nav: NavController) { }
+  constructor(
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController
+  ) { }
 
   openMenu() {
-    let actionSheet = ActionSheet.create({
+    let actionSheet = this.actionsheetCtrl.create({
       title: 'Albums',
       cssClass: 'action-sheets-basic-page',
       buttons: [
@@ -52,7 +55,6 @@ export class BasicPage {
         }
       ]
     });
-
-    this.nav.present(actionSheet);
+    actionSheet.present()
   }
 }

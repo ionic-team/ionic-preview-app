@@ -32,7 +32,7 @@ import { BasicPage } from '../pages/action-sheets/action-sheets';
       <!-- Display all of the sections if this isn't production -->
       <ion-list *ngIf="!isProductionMode">
         <button ion-item *ngFor="let route of routes" menuClose (click)="openPage(route)">
-          {{ route.path }}
+          {{ route.path | displayRoute }}
         </button>
       </ion-list>
     </ion-content>
@@ -62,7 +62,7 @@ export class MyApp {
   rootPage: any;
   nextPage: any;
   currentPlatform: string = 'ios';
-  currentPageIndex: number = 0;
+  currentPageIndex: number = 1;
 
   @ViewChild('content') content: NavController;
   @ViewChild(Menu) menu: Menu;

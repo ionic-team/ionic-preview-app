@@ -4,7 +4,7 @@ import {Pipe, PipeTransform} from '@angular/core';
   name: 'displayRoute'
 })
 export class DisplayRoutePipe implements PipeTransform {
-  transform(v: string, args: any[]) {
+  transform(v: string) {
     // Convert path to string
     // i.e. /action-sheets/basic becomes Action Sheets: Basic
     v = v.replace("/", "").replace("/", ": ").replace("-", " ");

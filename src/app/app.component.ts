@@ -62,7 +62,7 @@ export class MyApp {
   rootPage: any;
   nextPage: any;
   currentPlatform: string = 'ios';
-  currentPageIndex: number = 1;
+  currentPageIndex: number = 0;
 
   @ViewChild('content') content: NavController;
   @ViewChild(Menu) menu: Menu;
@@ -130,15 +130,24 @@ export class MyApp {
   }
 
   previousSection() {
-    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex - 1];
+    let previousPage = this.currentPageIndex - 1;
+    if ( previousPage < 0 ) {
+      previousPage = 0;
+    }
+    let pageName = Object.keys(helpers.getPages())[previousPage];
     this.content.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
-    this.currentPageIndex = this.currentPageIndex - 1;
+    this.currentPageIndex = previousPage;
   }
 
   nextSection() {
-    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex + 1];
+    let nextPage = this.currentPageIndex + 1;
+    const pageList = Object.keys(helpers.getPages());
+    if ( nextPage >= pageList.length ){
+      nextPage = pageList.length - 1;
+    }
+    let pageName = pageList[nextPage];
     this.content.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
-    this.currentPageIndex = this.currentPageIndex + 1;
+    this.currentPageIndex = nextPage;
   }
 
   openPage(page) {

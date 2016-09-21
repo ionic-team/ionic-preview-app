@@ -6,18 +6,30 @@
 </ion-header>
 
 <ion-content class="buttons-fab-page">
-  <button fab primary fab-top fab-left>
-    <ion-icon name="add"></ion-icon>
-  </button>
-  <button fab secondary fab-top fab-center>
-    <ion-icon name="compass" is-active="false"></ion-icon>
-  </button>
-  <button fab danger fab-top fab-right>
-    <ion-icon name="mic" is-active="false"></ion-icon>
-  </button>
+  <ion-fab left top>
+    <button ion-fab color="primary">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 
-  <button fab dark fab-bottom fab-center class="fab-footer">
-    <ion-icon name="heart" is-active="false"></ion-icon>
-  </button>
+
+  <ion-fab center top>
+    <button ion-fab color="secondary" icon-only>
+      <ion-icon name="compass" is-active="false"></ion-icon>
+    </button>
+  </ion-fab>
+
+
+  <ion-fab top right>
+    <button ion-fab color="danger" icon-only>
+      <ion-icon name="mic" is-active="false"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab bottom center >
+    <button ion-fab color="dark" class="fab-footer" icon-only>
+      <ion-icon name="heart" is-active="false"></ion-icon>
+    </button>
+  </ion-fab>
   <div class="bar-footer"></div>
 </ion-content>

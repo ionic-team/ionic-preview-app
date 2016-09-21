@@ -84,12 +84,15 @@ import { PageThree as MenuPageThree } from '../pages/menus/menus';
 
 // modals
 import { BasicPage as ModalBasicPage } from '../pages/modals/modals';
+import { ModalsContentPage as ModalContentPage } from '../pages/modals/modals';
 
 // navigation
 import { BasicPage as NavigationBasicPage } from '../pages/navigation/navigation';
+import { NavigationDetailsPage } from '../pages/navigation/navigation';
 
 // popover
 import { BasicPage as PopoverBasicPage } from '../pages/popovers/popovers';
+import { PopoverPage as PopoverContentPage } from '../pages/popovers/popovers';
 
 // radios
 import { BasicPage as RadioBasicPage } from '../pages/radios/radios';
@@ -111,9 +114,16 @@ import { BasicPage as SlidesBasicPage } from '../pages/slides/slides';
 
 // tabs
 import { BadgesPage as TabsBadgesPage } from '../pages/tabs/tabs';
+import { TabBadgePage as TabsBadgesContent } from '../pages/tabs/tabs';
+
 import { BasicPage as TabsBasicPage } from '../pages/tabs/tabs';
+import { TabTextPage as TabsBasicContentPage } from '../pages/tabs/tabs';
+
 import { IconPage as TabsIconPage } from '../pages/tabs/tabs';
+import { TabIconPage as TabsIconContentPage } from '../pages/tabs/tabs';
+
 import { IconTextPage as TabsIconTextPage } from '../pages/tabs/tabs';
+import { TabIconTextPage as TabsIconTextContentPage } from '../pages/tabs/tabs';
 
 // toast
 import { BasicPage as ToastBasicPage } from '../pages/toast/toast';
@@ -124,11 +134,14 @@ import { BasicPage as ToggleBasicPage } from '../pages/toggles/toggles';
 // toolbars
 import { BasicPage as ToolBarBasicPage } from '../pages/toolbar/toolbar';
 import { ButtonsPage as ToolBarButtonsPage } from '../pages/toolbar/toolbar';
+
 import { ColorsPage as ToolBarColorsPage } from '../pages/toolbar/toolbar';
-import { Page2 as ToolBarPage2 } from '../pages/toolbar/toolbar';
-import { Page3 as ToolBarPage3 } from '../pages/toolbar/toolbar';
-import { Page4 as ToolBarPage4 } from '../pages/toolbar/toolbar';
+import { Page2 as ToolBarColorsPage2 } from '../pages/toolbar/toolbar';
+import { Page3 as ToolBarColorsPage3 } from '../pages/toolbar/toolbar';
+import { Page4 as ToolBarColorsPage4 } from '../pages/toolbar/toolbar';
+
 import { SearchbarPage as ToolBarSearchbarPage } from '../pages/toolbar/toolbar';
+
 import { SegmentPage as ToolBarSegmentPage } from '../pages/toolbar/toolbar';
 
 
@@ -206,10 +219,13 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     MenuPageThree,
 
     ModalBasicPage,
+    ModalContentPage,
 
     NavigationBasicPage,
+    NavigationDetailsPage,
 
     PopoverBasicPage,
+    PopoverContentPage,
 
     RadioBasicPage,
 
@@ -224,9 +240,16 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     SlidesBasicPage,
 
     TabsBadgesPage,
+    TabsBadgesContent,
+
     TabsBasicPage,
+    TabsBasicContentPage,
+
     TabsIconPage,
+    TabsIconContentPage,
+
     TabsIconTextPage,
+    TabsIconTextContentPage,
 
     ToastBasicPage,
 
@@ -235,9 +258,9 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     ToolBarBasicPage,
     ToolBarButtonsPage,
     ToolBarColorsPage,
-    ToolBarPage2,
-    ToolBarPage3,
-    ToolBarPage4,
+    ToolBarColorsPage2,
+    ToolBarColorsPage3,
+    ToolBarColorsPage4,
     ToolBarSearchbarPage,
     ToolBarSegmentPage,
 
@@ -249,7 +272,117 @@ import {DisplayRoutePipe} from '../pipes/display-route';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ActionSheetBasicPage
+    ActionSheetBasicPage,
+
+    AlertBasicPage,
+    AlertCheckboxPage,
+    AlertConfirmPage,
+    AlertPromptPage,
+    AlertRadioPage,
+
+    BadgeBasicPage,
+
+    ButtonBasicPage,
+    ButtonBlockPage,
+    ButtonClearPage,
+    ButtonComponentsPage,
+    ButtonFabPage,
+    ButtonFullPage,
+    ButtonIconsPage,
+    ButtonOutlinePage,
+    ButtonRoundPage,
+    ButtonSizesPage,
+
+    CardAdvancedMapPage,
+    CardAdvancedSocialPage,
+    CardAdvancedWeatherPage,
+    CardBackgroundPage,
+    CardBasicPage,
+    CardHeaderPage,
+    CardImagePage,
+    CardListPage,
+
+    CheckBoxesBasicPage,
+
+    DateTimeBasicPage,
+
+    GestureBasicPage,
+
+    GridBasicPage,
+
+    IconBasicPage,
+
+    InputBasicPage,
+    InputFloatingPage,
+    InputFixedInlinePage,
+    InputInlinePage,
+    InputInsetPage,
+    InputPlaceholderPage,
+    InputStackedPage,
+
+    ListAvatarPage,
+    ListBasicPage,
+    ListDividersPage,
+    ListHeadersPage,
+    ListIconPage,
+    ListInsetPage,
+    ListMultilinePage,
+    ListNoLinesPage,
+    ListSlidingPage,
+    ListThumbnailPage,
+
+    LoadingBasicPage,
+
+    MenuBasicPage,
+    MenuPageOne,
+    MenuPageTwo,
+    MenuPageThree,
+
+    ModalBasicPage,
+    ModalContentPage,
+
+    NavigationBasicPage,
+    NavigationDetailsPage,
+
+    PopoverBasicPage,
+    PopoverContentPage,
+
+    RadioBasicPage,
+
+    RangeBasicPage,
+
+    SearchBarBasicPage,
+
+    SegmentBasicPage,
+
+    SelectBasicPage,
+
+    SlidesBasicPage,
+
+    TabsBadgesPage,
+    TabsBadgesContent,
+
+    TabsBasicPage,
+    TabsBasicContentPage,
+
+    TabsIconPage,
+    TabsIconContentPage,
+
+    TabsIconTextPage,
+    TabsIconTextContentPage,
+
+    ToastBasicPage,
+
+    ToggleBasicPage,
+
+    ToolBarBasicPage,
+    ToolBarButtonsPage,
+    ToolBarColorsPage,
+    ToolBarColorsPage2,
+    ToolBarColorsPage3,
+    ToolBarColorsPage4,
+    ToolBarSearchbarPage,
+    ToolBarSegmentPage
   ],
   providers: []
 })

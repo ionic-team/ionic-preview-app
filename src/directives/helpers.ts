@@ -29,7 +29,6 @@ import * as toast from '../pages/toast/toast';
 import * as toggles from '../pages/toggles/toggles';
 import * as toolbar from '../pages/toolbar/toolbar';
 
-
 export function hasScrollbar() {
 
   if (typeof window.top.innerWidth === 'number') {

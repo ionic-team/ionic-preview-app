@@ -1,14 +1,22 @@
 
 <ion-header>
-  <ion-navbar [attr.royal]="isAndroid ? ' ' : null">
+  <ion-navbar [color]="isAndroid ? 'royal' : 'light'">
     <ion-buttons start>
-      <button ion-button royal showWhen="ios,windows"><ion-icon name="search"></ion-icon></button>
-      <button ion-button light hideWhen="ios,windows"><ion-icon name="search"></ion-icon></button>
+      <button ion-button color="royal" icon-only showWhen="ios,windows">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button color="light" icon-only hideWhen="ios,windows">
+        <ion-icon name="search"></ion-icon>
+      </button>
     </ion-buttons>
     <ion-title>Send To...</ion-title>
     <ion-buttons end>
-      <button ion-button royal showWhen="ios,windows"><ion-icon name="person-add"></ion-icon></button>
-      <button ion-button light hideWhen="ios,windows"><ion-icon name="person-add"></ion-icon></button>
+      <button ion-button color="royal" icon-only showWhen="ios,windows">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+      <button ion-button color="light" icon-only hideWhen="ios,windows">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -18,14 +26,14 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar [attr.royal]="isAndroid ? ' ' : null" class="toolbar-buttons-page">
+  <ion-toolbar [color]="isAndroid ? 'royal' : 'light'" class="toolbar-buttons-page">
     <ion-title class="footer-title">Ash, Misty, Brock</ion-title>
     <ion-buttons end>
-      <button ion-button royal large showWhen="ios,windows">
+      <button ion-button color="royal" large icon-right showWhen="ios">
         Send
         <ion-icon name="send"></ion-icon>
       </button>
-      <button ion-button light large hideWhen="ios,windows">
+      <button ion-button color="light" large icon-right hideWhen="ios">
         Send
         <ion-icon name="send"></ion-icon>
       </button>

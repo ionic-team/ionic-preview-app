@@ -13,7 +13,7 @@ import {ViewController, Platform} from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-class TabTextPage {
+export class TabTextPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {

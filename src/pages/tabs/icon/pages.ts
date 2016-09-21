@@ -6,7 +6,7 @@ import {ViewController, Platform} from 'ionic-angular';
 @Component({
   template: `
     <ion-header>
-      <ion-navbar [attr.danger]="isAndroid ? '' : null">
+      <ion-navbar [color]="isAndroid ? 'danger' : 'primary'">
         <ion-title>Tabs</ion-title>
       </ion-navbar>
     </ion-header>
@@ -14,21 +14,22 @@ import {ViewController, Platform} from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-class TabIconPage {
+export class TabIconPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
   }
+
   ionViewWillEnter() {
-    document.getElementById('md-tabs-icon').style.display = "block";
-    document.getElementById('md-only').style.display = "none";
+    // document.getElementById('md-tabs-icon').style.display = "block";
+    // document.getElementById('md-only').style.display = "none";
   }
 }
 
 @Component({
   template: `
-  <ion-tabs class="tabs-icon" [attr.danger]="isAndroid ? '' : null">
+  <ion-tabs class="tabs-icon" [color]="isAndroid ? 'danger' : 'primary'">
     <ion-tab tabIcon="contact" [root]="tabOne"></ion-tab>
     <ion-tab tabIcon="compass" [root]="tabTwo"></ion-tab>
     <ion-tab tabIcon="analytics" [root]="tabThree"></ion-tab>

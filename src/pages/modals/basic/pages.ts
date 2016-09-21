@@ -18,7 +18,7 @@ export class BasicPage {
 @Component({
   templateUrl: 'modal-content.html'
 })
-class ModalsContentPage {
+export class ModalsContentPage {
   character;
 
   constructor(

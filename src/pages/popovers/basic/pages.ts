@@ -7,10 +7,10 @@ import {NgForm} from '@angular/forms'
     <ion-list radio-group [(ngModel)]="fontFamily" (ionChange)="changeFontFamily()" class="popover-page">
       <ion-row>
         <ion-col>
-          <button ion-button (click)="changeFontSize('smaller')" ion-item detail-none class="text-button text-smaller">A</button>
+          <button (click)="changeFontSize('smaller')" ion-item detail-none class="text-button text-smaller">A</button>
         </ion-col>
         <ion-col>
-          <button ion-button (click)="changeFontSize('larger')" ion-item detail-none class="text-button text-larger">A</button>
+          <button (click)="changeFontSize('larger')" ion-item detail-none class="text-button text-larger">A</button>
         </ion-col>
       </ion-row>
       <ion-row class="row-dots">
@@ -58,7 +58,7 @@ import {NgForm} from '@angular/forms'
     </ion-list>
   `
 })
-class PopoverPage {
+export class PopoverPage {
   background: string;
   contentEle: any;
   textEle: any;

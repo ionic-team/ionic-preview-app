@@ -6,7 +6,7 @@ import {ViewController, Platform} from 'ionic-angular';
 @Component({
   template: `
     <ion-header>
-      <ion-navbar [attr.royal]="isAndroid ? '' : null">
+      <ion-navbar [color]="isAndroid ? 'royal' : 'primary'">
         <ion-title>Tabs</ion-title>
       </ion-navbar>
     </ion-header>
@@ -14,7 +14,7 @@ import {ViewController, Platform} from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-class TabIconTextPage {
+export class TabIconTextPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
@@ -25,7 +25,7 @@ class TabIconTextPage {
 
 @Component({
   template: `
-    <ion-tabs class="tabs-icon-text" [attr.royal]="isAndroid ? '' : null">
+    <ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
       <ion-tab tabIcon="water" tabTitle="Water" [root]="tabOne"></ion-tab>
       <ion-tab tabIcon="leaf" tabTitle="Life" [root]="tabTwo"></ion-tab>
       <ion-tab tabIcon="flame" tabTitle="Fire" [root]="tabThree"></ion-tab>

@@ -6,6 +6,11 @@ import {Component} from '@angular/core';
 export class BasicPage {
   gaming: string = "n64";
   gender: string = "f";
+  os: string;
+  music: string;
+  month: string;
+  year: number;
+
   musicAlertOpts: { title: string, subTitle: string };
 
   constructor() {

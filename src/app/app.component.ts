@@ -13,7 +13,7 @@ import { BasicPage } from '../pages/action-sheets/action-sheets';
 
   <ion-menu [content]="content">
 
-    <ion-toolbar primary>
+    <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
 
@@ -42,12 +42,18 @@ import { BasicPage } from '../pages/action-sheets/action-sheets';
   <ion-nav [root]="rootPage" #content></ion-nav>
 
   <div *ngIf="!isProductionMode">
-    <button fab fab-bottom fab-left light (click)="previousSection()">
-      <ion-icon name="arrow-back"></ion-icon>
-    </button>
-    <button fab fab-bottom fab-right light (click)="nextSection()">
-      <ion-icon name="arrow-forward"></ion-icon>
-    </button>
+
+    <ion-fab left middle>
+      <button ion-fab color="light" (click)="previousSection()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab right middle>
+      <button ion-fab color="light" (click)="nextSection()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-fab>
   </div>
   `
 })
@@ -77,7 +83,6 @@ export class MyApp {
     // http://ionicframework.com/docs/v2/components/
 
     if (this.queryParams.get('production') === 'true') {
-      alert('prod');
       this.isProductionMode = true;
 
       // Platform is ios by default
@@ -121,9 +126,6 @@ export class MyApp {
           }
         });
       });
-    }
-    else {
-      alert("Not prod");
     }
   }
 

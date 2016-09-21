@@ -4,7 +4,7 @@ import {NavController} from 'ionic-angular';
 @Component({
   template: `
     <ion-header>
-      <ion-navbar light>
+      <ion-navbar color="light">
         <ion-title>Toolbar: Light</ion-title>
       </ion-navbar>
     </ion-header>
@@ -28,7 +28,7 @@ export class Page4 {
 @Component({
   template: `
     <ion-header>
-      <ion-navbar danger>
+      <ion-navbar color="danger">
         <ion-title>Toolbar: Danger</ion-title>
       </ion-navbar>
     </ion-header>
@@ -52,7 +52,7 @@ export class Page3 {
 @Component({
   template: `
     <ion-header>
-      <ion-navbar secondary>
+      <ion-navbar color="secondary">
         <ion-title>Toolbar: Secondary</ion-title>
       </ion-navbar>
     </ion-header>
@@ -77,7 +77,7 @@ export class Page2 {
 @Component({
   template: `
     <ion-header>
-      <ion-navbar primary>
+      <ion-navbar color="primary">
         <ion-title>Toolbar: Primary</ion-title>
       </ion-navbar>
     </ion-header>

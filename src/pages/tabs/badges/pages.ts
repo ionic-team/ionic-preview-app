@@ -12,7 +12,7 @@ import {Component} from '@angular/core';
     <ion-content>
     </ion-content>
 `})
-class TabBadgePage { }
+export class TabBadgePage { }
 
 @Component({
   template: `

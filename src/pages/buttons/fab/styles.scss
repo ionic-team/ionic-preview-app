@@ -1,0 +1,18 @@
+
+.buttons-fab-page {
+
+  .fab-footer {
+    z-index: 99;
+  }
+
+  .bar-footer {
+    background: url(../../assets/img/footer-wireframe.png) repeat-x;
+    height: 2px;
+
+    position: absolute;
+    right: 0;
+    bottom: 44px;
+    left: 0;
+  }
+
+}

@@ -1,0 +1,7 @@
+{
+  "sitePath": "../ionic-site",
+  "docsDir": "docs/v2/components",
+  "docsDest": "../ionic-site/docs/v2/components",
+  "demoDir": "dist/preview-app",
+  "demoDest": "../ionic-site/dist/preview-app"
+}

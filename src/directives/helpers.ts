@@ -1,5 +1,5 @@
-import {Directive, ElementRef, Renderer} from '@angular/core';
-import {Platform, Navbar} from 'ionic-angular';
+// import { Directive, ElementRef, Renderer } from '@angular/core';
+// import { Platform, Navbar } from 'ionic-angular';
 
 import * as actionSheets from '../pages/action-sheets/action-sheets';
 import * as alerts from '../pages/alerts/alerts';
@@ -61,7 +61,7 @@ export function hasScrollbar() {
   var overflowShown = /^(visible|auto)$/.test(overflowStyle) || /^(visible|auto)$/.test(overflowYStyle);
   var alwaysShowScroll = overflowStyle === 'scroll' || overflowYStyle === 'scroll';
 
-  return (contentOverflows && overflowShown) || (alwaysShowScroll)
+  return (contentOverflows && overflowShown) || (alwaysShowScroll);
 }
 
 export function getPages() {
@@ -142,7 +142,7 @@ export function getPages() {
 }
 
 export function getPageFor(hash) {
-  return getPages()[hash]
+  return getPages()[hash];
 }
 
 export function debounce(func, wait, immediate) {

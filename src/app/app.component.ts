@@ -2,7 +2,7 @@ import { Component, NgZone, ViewChild } from '@angular/core';
 import { Config, Menu, NavController, Platform, QueryParams } from 'ionic-angular';
 
 import * as helpers from '../directives/helpers';
-import {PageOne, PageTwo, PageThree} from '../pages/menus/menus';
+import { PageOne, PageTwo, PageThree } from '../pages/menus/menus';
 import { BasicPage } from '../pages/action-sheets/action-sheets';
 
 @Component({
@@ -77,7 +77,7 @@ export class MyApp {
     this.rootPage = BasicPage;
   }
 
-   ngAfterContentInit() {
+  ngAfterContentInit() {
     // production-only code
     // production is false unless viewed on the docs
     // http://ionicframework.com/docs/v2/components/
@@ -122,7 +122,7 @@ export class MyApp {
             }
             setTimeout(() => {
               helpers.debounce(this.content.setRoot(this.nextPage), 60, false);
-            })
+            });
           }
         });
       });
@@ -131,7 +131,7 @@ export class MyApp {
 
   previousSection() {
     let previousPage = this.currentPageIndex - 1;
-    if ( previousPage < 0 ) {
+    if (previousPage < 0) {
       previousPage = 0;
     }
     let pageName = Object.keys(helpers.getPages())[previousPage];
@@ -142,7 +142,7 @@ export class MyApp {
   nextSection() {
     let nextPage = this.currentPageIndex + 1;
     const pageList = Object.keys(helpers.getPages());
-    if ( nextPage >= pageList.length ){
+    if (nextPage >= pageList.length) {
       nextPage = pageList.length - 1;
     }
     let pageName = pageList[nextPage];

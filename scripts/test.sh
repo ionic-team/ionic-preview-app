@@ -11,7 +11,7 @@ echo "#####"
 
 function run {
 
-  ../node_modules/.bin/ionic-app-scripts build --prod
+  npm run build
 }
 
 source $(dirname $0)/utils.inc.sh

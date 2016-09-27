@@ -20,12 +20,14 @@ import { BasicPage as ButtonBasicPage } from '../pages/buttons/buttons';
 import { BlockPage as ButtonBlockPage } from '../pages/buttons/buttons';
 import { ClearPage as ButtonClearPage } from '../pages/buttons/buttons';
 import { ComponentsPage as ButtonComponentsPage } from '../pages/buttons/buttons';
-import { FabPage as ButtonFabPage } from '../pages/buttons/buttons';
 import { FullPage as ButtonFullPage } from '../pages/buttons/buttons';
 import { IconsPage as ButtonIconsPage } from '../pages/buttons/buttons';
 import { OutlinePage as ButtonOutlinePage } from '../pages/buttons/buttons';
 import { RoundPage as ButtonRoundPage } from '../pages/buttons/buttons';
 import { SizesPage as ButtonSizesPage } from '../pages/buttons/buttons';
+
+// fabs
+import { BasicPage as FabsBasicPage } from '../pages/fabs/fabs';
 
 // cards
 import { AdvancedMapPage as CardAdvancedMapPage } from '../pages/cards/cards';
@@ -166,12 +168,13 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     ButtonBlockPage,
     ButtonClearPage,
     ButtonComponentsPage,
-    ButtonFabPage,
     ButtonFullPage,
     ButtonIconsPage,
     ButtonOutlinePage,
     ButtonRoundPage,
     ButtonSizesPage,
+
+    FabsBasicPage,
 
     CardAdvancedMapPage,
     CardAdvancedSocialPage,
@@ -286,12 +289,13 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     ButtonBlockPage,
     ButtonClearPage,
     ButtonComponentsPage,
-    ButtonFabPage,
     ButtonFullPage,
     ButtonIconsPage,
     ButtonOutlinePage,
     ButtonRoundPage,
     ButtonSizesPage,
+
+    FabsBasicPage,
 
     CardAdvancedMapPage,
     CardAdvancedSocialPage,

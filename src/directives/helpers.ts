@@ -5,6 +5,7 @@ import * as actionSheets from '../pages/action-sheets/action-sheets';
 import * as alerts from '../pages/alerts/alerts';
 import * as badges from '../pages/badges/badges';
 import * as buttons from '../pages/buttons/buttons';
+import * as fabs from '../pages/fabs/fabs';
 import * as cards from '../pages/cards/cards';
 import * as checkboxes from '../pages/checkboxes/checkboxes';
 import * as datetime from '../pages/datetime/datetime';
@@ -79,9 +80,9 @@ export function getPages() {
     'full-buttons': buttons.FullPage,
     'outline-buttons': buttons.OutlinePage,
     'round-buttons': buttons.RoundPage,
-    'floating-action-buttons': buttons.FabPage,
     'buttons-in-components': buttons.ComponentsPage,
     'button-sizes': buttons.SizesPage,
+    'fabs': fabs.BasicPage,
     'icon-buttons': buttons.IconsPage,
     'cards': cards.BasicPage,
     'card-header': cards.HeaderPage,

@@ -7,10 +7,10 @@ import {AlertController} from 'ionic-angular';
 })
 export class PromptPage {
 
-  constructor(public alerCtrl: AlertController) { }
+  constructor(public alertCtrl: AlertController) { }
 
   doPrompt() {
-    let prompt = this.alerCtrl.create({
+    let prompt = this.alertCtrl.create({
       title: 'Login',
       message: "Enter a name for this new album you're so keen on adding",
       inputs: [

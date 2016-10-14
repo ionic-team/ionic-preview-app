@@ -1,6 +1,7 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
-import {App, PopoverController, NavController, Content, NavParams} from 'ionic-angular';
-import {NgForm} from '@angular/forms'
+import { Component, ViewChild, ElementRef } from '@angular/core';
+
+import { PopoverController, NavParams } from 'ionic-angular';
+
 
 @Component({
   template: `
@@ -102,7 +103,7 @@ export class PopoverPage {
 
     if (!background) return 'white';
 
-    for(var key in this.colors) {
+    for (var key in this.colors) {
       if (this.colors[key].bg == background) {
         colorName = key;
       }
@@ -137,8 +138,8 @@ export class PopoverPage {
   templateUrl: 'template.html'
 })
 export class BasicPage {
-  @ViewChild('popoverContent', {read: ElementRef}) content: ElementRef;
-  @ViewChild('popoverText', {read: ElementRef}) text: ElementRef;
+  @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
+  @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
 
   constructor(private popoverCtrl: PopoverController) {
 

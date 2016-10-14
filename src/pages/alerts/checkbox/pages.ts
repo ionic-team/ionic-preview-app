@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {AlertController} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { AlertController } from 'ionic-angular';
 
 
 @Component({
@@ -9,7 +10,7 @@ export class CheckboxPage {
   testCheckboxOpen: boolean;
   testCheckboxResult;
 
-  constructor(public alerCtrl:AlertController) { }
+  constructor(public alerCtrl: AlertController) { }
 
   doCheckbox() {
     let alert = this.alerCtrl.create();

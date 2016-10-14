@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
-    templateUrl: 'template.html'
+  templateUrl: 'template.html'
 })
 export class BasicPage {
   slides = [

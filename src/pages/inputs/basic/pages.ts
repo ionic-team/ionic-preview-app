@@ -1,10 +1,13 @@
-import {Component} from '@angular/core';
-import {AlertController, NavController} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { AlertController } from 'ionic-angular';
+
 import {
   FormGroup,
   FormControl,
   Validators
 } from '@angular/forms';
+
 @Component({
   templateUrl: 'template.html',
 })

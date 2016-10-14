@@ -94,7 +94,7 @@ export class MyApp {
       }
 
       if (helpers.hasScrollbar() === true) {
-        setTimeout(function() {
+        setTimeout(function () {
           var body = document.getElementsByTagName('body')[0];
           body.className = body.className + ' has-scrollbar';
         }, 500);

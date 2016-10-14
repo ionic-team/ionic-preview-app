@@ -1,8 +1,22 @@
-import {Component} from '@angular/core';
-import {App, MenuController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { App, MenuController } from 'ionic-angular';
 
 @Component({
-  templateUrl: 'menu-home.html'
+  template: `
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Friends
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button ion-button block menuToggle>Toggle Menu</button>
+</ion-content>
+`
 })
 export class BasicPage {
   constructor(app: App, menu: MenuController) {
@@ -11,16 +25,58 @@ export class BasicPage {
 }
 
 @Component({
-  templateUrl: 'menu-home.html'
+  template: `
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Friends
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button ion-button block menuToggle>Toggle Menu</button>
+</ion-content>
+`
 })
 export class PageOne { }
 
 @Component({
-  templateUrl: 'menu-friends.html'
+  template: `
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Friends
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button ion-button block menuToggle>Toggle Menu</button>
+</ion-content>
+`
 })
 export class PageTwo { }
 
 @Component({
-  templateUrl: 'menu-events.html'
+  template: `
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Friends
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button ion-button block menuToggle>Toggle Menu</button>
+</ion-content>
+`
 })
 export class PageThree { }

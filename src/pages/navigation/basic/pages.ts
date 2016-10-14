@@ -13,7 +13,22 @@ export class NavigationDetailsPage {
 }
 
 @Component({
-    templateUrl: 'navigation.html'
+    template: `
+<ion-header>
+  <ion-navbar>
+    <ion-title>Navigation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-left>
+      <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon>
+      {{ item.title }}
+    </button>
+  </ion-list>
+</ion-content>
+`
 })
 export class BasicPage {
   items = [];

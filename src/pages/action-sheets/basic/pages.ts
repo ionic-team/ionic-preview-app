@@ -55,6 +55,6 @@ export class BasicPage {
         }
       ]
     });
-    actionSheet.present()
+    actionSheet.present();
   }
 }

@@ -1,13 +1,13 @@
 
 <ion-header>
-  <ion-navbar no-border-bottom [color]="isAndroid ? 'primary' : 'light'">
+  <ion-navbar no-border-bottom>
     <ion-title>
       Segments
     </ion-title>
   </ion-navbar>
 
-  <ion-toolbar [color]="isAndroid ? 'primary' : 'light'" no-border-top>
-    <ion-segment [(ngModel)]="pet" [color]="isAndroid ? 'light' : 'primary'">
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
       <ion-segment-button value="puppies">
         Puppies
       </ion-segment-button>

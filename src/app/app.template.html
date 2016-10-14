@@ -1,0 +1,48 @@
+<img src="assets/img/android-statusbar.png" style="display:none" id="md-only">
+<img src="assets/img/ios-statusbar.png" style="display:none" id="ios-only">
+<img src="assets/img/wp-statusbar.png" style="display:none" id="wp-only">
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <!-- Display the side menu pages if it is production -->
+    <ion-list *ngIf="isProductionMode">
+      <button ion-item *ngFor="let p of pages" menuClose (click)="openPage(p)">
+        {{p.title}}
+      </button>
+
+      <button ion-item menuClose detail-none>
+        Close Menu
+      </button>
+    </ion-list>
+
+    <!-- Display all of the sections if this isn't production -->
+    <ion-list *ngIf="!isProductionMode">
+      <button ion-item *ngFor="let route of routes" menuClose (click)="openPage(route)">
+        {{ route.path | displayRoute }}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
+
+<div *ngIf="!isProductionMode">
+  <ion-fab left middle>
+    <button ion-fab color="light" (click)="previousSection()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab right middle>
+    <button ion-fab color="light" (click)="nextSection()">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-fab>
+</div>

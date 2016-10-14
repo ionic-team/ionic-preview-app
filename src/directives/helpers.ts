@@ -1,6 +1,3 @@
-// import { Directive, ElementRef, Renderer } from '@angular/core';
-// import { Platform, Navbar } from 'ionic-angular';
-
 import * as actionSheets from '../pages/action-sheets/action-sheets';
 import * as alerts from '../pages/alerts/alerts';
 import * as badges from '../pages/badges/badges';

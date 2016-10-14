@@ -270,7 +270,9 @@ import {DisplayRoutePipe} from '../pipes/display-route';
     DisplayRoutePipe
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      statusbarPadding: true
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

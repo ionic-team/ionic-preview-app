@@ -41,16 +41,14 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$checkbox-ios-icon-checkmark-color:   #fff;
+$cordova-ios-statusbar-padding:       20px;
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-// Change #000 to any color to see the md text color change
-$text-md-color:                           #000;
-
-// Use the primary color as the background for the toolbar-md-background
 $toolbar-md-background:                   color($colors, primary);
 
 // Use the default background for the tabbar since it inherits from toolbar
@@ -65,11 +63,21 @@ $toolbar-md-active-color:                 #fff;
 $toolbar-md-inactive-color:               #fff;
 $segment-button-md-text-color-activated:  #fff;
 
+$checkbox-md-icon-checkmark-color:        #fff;
+$segment-button-md-text-color-activated:  #fff;
+
+// Used to show the status bar for component demos
+// TODO rename with https://github.com/driftyco/ionic/issues/8712
+$cordova-ios-statusbar-padding:           29px;
+
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+// Used to show the status bar for component demos
+// TODO rename with https://github.com/driftyco/ionic/issues/8712
+$cordova-ios-statusbar-padding:           31px;
 
 
 // App Theme
@@ -89,6 +97,11 @@ $segment-button-md-text-color-activated:  #fff;
 
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
+
+
+// Global Styles
+// --------------------------------------------------
+// Styles that apply to the entire app
 
 body, body:hover, body a, body button, body media-switch {
   cursor: url('http://ionicframework.com/img/finger.png') 8 8, auto;
@@ -117,4 +130,93 @@ body.has-scrollbar ion-menu scroll-content {
 
 scroll-content {
   overflow-y: scroll;
+}
+
+
+// App iOS Styles
+// --------------------------------------------------
+// iOS only styles can go here
+
+.ios {
+
+  // iOS Status Bar
+  //---------------------------
+  img#ios-only {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .tabs-icon-text tabbar {
+    .tab-button[aria-selected=true],
+    .tab-button:hover:not(.disable-hover) {
+      color: #7e60ff;
+    }
+  }
+
+}
+
+
+// App Material Design Styles
+// --------------------------------------------------
+// Material Design only styles can go here
+
+.md {
+
+  // Android Status Bar
+  //---------------------------
+  img#md-only {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .tabs-icon-text ion-title div.toolbar-title {
+    color: #fff !important;
+  }
+
+  .tabs-icon-text tabbar {
+    background-color: #7e60ff;
+
+    a {
+      color: #fff !important;
+    }
+  }
+
+  .tabs-icon-text tab-highlight {
+    color: #fff;
+    background-color: #fff;
+  }
+
+}
+
+
+// App Windows Styles
+// --------------------------------------------------
+// Windows only styles can go here
+
+.wp {
+
+  // Windows Status Bar
+  //---------------------------
+  img#wp-only {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
 }

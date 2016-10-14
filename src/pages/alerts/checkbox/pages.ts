@@ -10,10 +10,10 @@ export class CheckboxPage {
   testCheckboxOpen: boolean;
   testCheckboxResult;
 
-  constructor(public alerCtrl: AlertController) { }
+  constructor(public alertCtrl: AlertController) { }
 
   doCheckbox() {
-    let alert = this.alerCtrl.create();
+    let alert = this.alertCtrl.create();
     alert.setTitle('Which planets have you visited?');
 
     alert.addInput({

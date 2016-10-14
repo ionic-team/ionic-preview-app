@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {NavController, ToastController} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { ToastController } from 'ionic-angular';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class BasicPage {
     toast.present(toast);
   }
 
-  showToastWithCloseButton(){
+  showToastWithCloseButton() {
     const toast = this.toastCtrl.create({
       message: 'Your files were successfully saved',
       showCloseButton: true,
@@ -27,7 +28,7 @@ export class BasicPage {
     toast.present();
   }
 
-  showLongToast(){
+  showLongToast() {
     let toast = this.toastCtrl.create({
       message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptatibus quibusdam eum nihil optio, ullam accusamus magni, nobis suscipit reprehenderit, sequi quam amet impedit. Accusamus dolorem voluptates laborum dolor obcaecati.',
       duration: 2000,

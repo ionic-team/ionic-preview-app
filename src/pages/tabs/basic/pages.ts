@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
-import {ViewController, Platform} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { Platform } from 'ionic-angular';
+
 
 @Component({
   template: `

@@ -1,4 +1,4 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'displayRoute'
@@ -14,7 +14,7 @@ export class DisplayRoutePipe implements PipeTransform {
   }
 
   capitalize(value) {
-    return value.toLowerCase().replace( /\b\w/g, function (m) {
+    return value.toLowerCase().replace(/\b\w/g, function (m) {
       return m.toUpperCase();
     });
   }

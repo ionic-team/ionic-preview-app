@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {ModalController, Platform, NavParams, ViewController} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 
 
 @Component({
@@ -55,9 +56,9 @@ export class ModalsContentPage {
   character;
 
   constructor(
-      public platform: Platform,
-      public params: NavParams,
-      public viewCtrl: ViewController
+    public platform: Platform,
+    public params: NavParams,
+    public viewCtrl: ViewController
   ) {
     var characters = [
       {

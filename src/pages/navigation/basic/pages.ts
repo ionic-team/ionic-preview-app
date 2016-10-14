@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import { Component } from '@angular/core';
+
+import { NavController, NavParams } from 'ionic-angular';
+
 
 @Component({
   templateUrl: 'navigation-details.html',
@@ -13,7 +15,7 @@ export class NavigationDetailsPage {
 }
 
 @Component({
-    template: `
+  template: `
 <ion-header>
   <ion-navbar>
     <ion-title>Navigation</ion-title>

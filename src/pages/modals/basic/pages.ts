@@ -11,7 +11,7 @@ export class BasicPage {
 
   openModal(characterNum) {
 
-    let modal = this.modalCtrl.create(ModalsContentPage, characterNum);
+    let modal = this.modalCtrl.create(ModalContentPage, characterNum);
     modal.present();
   }
 }
@@ -52,7 +52,7 @@ export class BasicPage {
 </ion-content>
 `
 })
-export class ModalsContentPage {
+export class ModalContentPage {
   character;
 
   constructor(

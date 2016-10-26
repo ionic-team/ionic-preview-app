@@ -14,7 +14,7 @@ import { Platform } from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-export class TabTextPage {
+export class TabBasicContentPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
@@ -25,13 +25,11 @@ export class TabTextPage {
 @Component({
   template: `
     <ion-tabs class="tabs-basic">
-      <ion-tab tabTitle="Music" [root]="tabOne"></ion-tab>
-      <ion-tab tabTitle="Movies" [root]="tabTwo"></ion-tab>
-      <ion-tab tabTitle="Games" [root]="tabThree"></ion-tab>
+      <ion-tab tabTitle="Music" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="Movies" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="Games" [root]="rootPage"></ion-tab>
     </ion-tabs>
 `})
 export class BasicPage {
-  tabOne = TabTextPage;
-  tabTwo = TabTextPage;
-  tabThree = TabTextPage;
+  rootPage = TabBasicContentPage;
 }

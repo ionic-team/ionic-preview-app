@@ -14,7 +14,7 @@ import { Platform } from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-export class TabIconTextPage {
+export class TabIconTextContentPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
@@ -26,17 +26,15 @@ export class TabIconTextPage {
 @Component({
   template: `
     <ion-tabs class="tabs-icon-text" [color]="isAndroid ? 'royal' : 'primary'">
-      <ion-tab tabIcon="water" tabTitle="Water" [root]="tabOne"></ion-tab>
-      <ion-tab tabIcon="leaf" tabTitle="Life" [root]="tabTwo"></ion-tab>
-      <ion-tab tabIcon="flame" tabTitle="Fire" [root]="tabThree"></ion-tab>
-      <ion-tab tabIcon="magnet" tabTitle="Force" [root]="tabFour"></ion-tab>
+      <ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="flame" tabTitle="Fire" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
     </ion-tabs>
 `})
 export class IconTextPage {
-  tabOne = TabIconTextPage;
-  tabTwo = TabIconTextPage;
-  tabThree = TabIconTextPage;
-  tabFour = TabIconTextPage;
+  rootPage = TabIconTextContentPage;
+
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {

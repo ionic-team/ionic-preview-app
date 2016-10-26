@@ -14,41 +14,29 @@ import { Platform } from 'ionic-angular';
     <ion-content>
     </ion-content>
 `})
-export class TabIconPage {
+export class TabIconContentPage {
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
-  }
-
-  ionViewWillEnter() {
-    // document.getElementById('md-tabs-icon').style.display = "block";
-    // document.getElementById('md-only').style.display = "none";
   }
 }
 
 @Component({
   template: `
   <ion-tabs class="tabs-icon" [color]="isAndroid ? 'danger' : 'primary'">
-    <ion-tab tabIcon="contact" [root]="tabOne"></ion-tab>
-    <ion-tab tabIcon="compass" [root]="tabTwo"></ion-tab>
-    <ion-tab tabIcon="analytics" [root]="tabThree"></ion-tab>
-    <ion-tab tabIcon="settings" [root]="tabFour"></ion-tab>
+    <ion-tab tabIcon="contact" [root]="rootPage"></ion-tab>
+    <ion-tab tabIcon="compass" [root]="rootPage"></ion-tab>
+    <ion-tab tabIcon="analytics" [root]="rootPage"></ion-tab>
+    <ion-tab tabIcon="settings" [root]="rootPage"></ion-tab>
   </ion-tabs>
 `})
 export class IconPage {
-  tabOne = TabIconPage;
-  tabTwo = TabIconPage;
-  tabThree = TabIconPage;
-  tabFour = TabIconPage;
+  rootPage = TabIconContentPage;
+
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
-  }
-
-  ionViewWillLeave() {
-    document.getElementById('md-tabs-icon').style.display = "none";
-    document.getElementById('md-only').style.display = "block";
   }
 }

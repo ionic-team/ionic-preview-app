@@ -10,8 +10,7 @@ echo "#####"
 # }
 
 function run {
-
-  npm run build --dev
+  npm run build
 }
 
 source $(dirname $0)/utils.inc.sh

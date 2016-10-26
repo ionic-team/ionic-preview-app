@@ -2,8 +2,8 @@ import { Component, NgZone, ViewChild } from '@angular/core';
 import { Config, Menu, NavController, Platform, QueryParams } from 'ionic-angular';
 
 import * as helpers from '../directives/helpers';
-import { PageOne, PageTwo, PageThree } from '../pages/menus/menus';
-import { BasicPage } from '../pages/action-sheets/action-sheets';
+import { PageOne, PageTwo, PageThree } from '../pages/menus/basic/pages';
+import { BasicPage } from '../pages/action-sheets/basic/pages';
 
 @Component({
   templateUrl: 'app.template.html'

@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <ion-title>No Lines</ion-title>
@@ -6,23 +5,9 @@
 </ion-header>
 
 <ion-content>
-    <ion-list no-lines>
-      <ion-item>Pokémon Yellow</ion-item>
-      <ion-item>Super Metroid</ion-item>
-      <ion-item>Mega Man X</ion-item>
-      <ion-item>The Legend of Zelda</ion-item>
-      <ion-item>Pac-Man</ion-item>
-      <ion-item>Super Mario World</ion-item>
-      <ion-item>Street Fighter II</ion-item>
-      <ion-item>Half Life</ion-item>
-      <ion-item>Final Fantasy VII</ion-item>
-      <ion-item>Star Fox</ion-item>
-      <ion-item>Tetris</ion-item>
-      <ion-item>Donkey Kong III</ion-item>
-      <ion-item>GoldenEye 007</ion-item>
-      <ion-item>Doom</ion-item>
-      <ion-item>Fallout</ion-item>
-      <ion-item>GTA</ion-item>
-      <ion-item>Halo</ion-item>
-    </ion-list>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
 </ion-content>

@@ -10,7 +10,7 @@ echo "#####"
 # }
 
 function run {
-  npm run build
+  ionic build
 }
 
 source $(dirname $0)/utils.inc.sh

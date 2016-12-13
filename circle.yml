@@ -8,7 +8,7 @@ general:
       - master # ignore PRs and branches
 
 dependencies:
- pre:
+ post:
    - ./scripts/prepare.sh
  cache_directories:
    - "~/ionic-site" # cache ionic-site

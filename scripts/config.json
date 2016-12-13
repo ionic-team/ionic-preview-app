@@ -1,7 +1,7 @@
 {
   "sitePath": "../ionic-site",
-  "docsDir": "docs/v2/components",
-  "docsDest": "../ionic-site/docs/v2/components",
+  "docsDir": "content/docs/v2/components",
+  "docsDest": "../ionic-site/content/docs/v2/components",
   "demoDir": "dist/preview-app",
-  "demoDest": "../ionic-site/dist/preview-app"
+  "demoDest": "../ionic-site/content/dist/preview-app"
 }

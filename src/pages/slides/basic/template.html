@@ -11,7 +11,7 @@
     <ion-slide *ngFor="let slide of slides">
       <ion-toolbar>
         <ion-buttons end>
-          <button ion-button>Skip</button>
+          <button ion-button color="primary">Skip</button>
         </ion-buttons>
       </ion-toolbar>
       <img [src]="slide.image" class="slide-image"/>
@@ -23,7 +23,7 @@
       </ion-toolbar>
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
       <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button large clear icon-right>
+      <button ion-button large clear icon-right color="primary">
         Continue
         <ion-icon name="arrow-forward"></ion-icon>
       </button>

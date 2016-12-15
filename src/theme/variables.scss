@@ -10,8 +10,6 @@
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
-$text-color:        #000;
-$background-color:  #fff;
 
 
 // Named Color Variables
@@ -41,7 +39,10 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+// Change the checkbox checkmark color
 $checkbox-ios-icon-checkmark-color:   #fff;
+
+// Used to show the status bar for component demos
 $cordova-ios-statusbar-padding:       20px;
 
 
@@ -49,22 +50,14 @@ $cordova-ios-statusbar-padding:       20px;
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+// Change the toolbar background color
 $toolbar-md-background:                   color($colors, primary);
-
-// Use the default background for the tabbar since it inherits from toolbar
-$tabs-md-background:                      #f8f8f8;
-
-// Change the color of the tabs text
-$tabs-md-tab-color-active:                color($colors, primary);
-$tabs-md-tab-color:                       rgba(#8c8c8c, 0.7);
 
 // Change the color of the segment button text
 $toolbar-md-active-color:                 #fff;
-$toolbar-md-inactive-color:               #fff;
-$segment-button-md-text-color-activated:  #fff;
 
+// Change the checkbox checkmark color
 $checkbox-md-icon-checkmark-color:        #fff;
-$segment-button-md-text-color-activated:  #fff;
 
 // Used to show the status bar for component demos
 $cordova-md-statusbar-padding:           29px;

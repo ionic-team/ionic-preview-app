@@ -1,7 +1,11 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
-@import "ionic.globals";
 
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
 
 // Shared Variables
 // --------------------------------------------------
@@ -86,8 +90,16 @@ $cordova-wp-statusbar-padding:           31px;
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-$ionicons-font-path: "../assets/fonts";
 @import "ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+// Roboto font is used by default for Material Design. Noto sans
+// is used by default for Windows.
+
+@import "roboto";
+@import "noto-sans";
 
 
 // Global Styles

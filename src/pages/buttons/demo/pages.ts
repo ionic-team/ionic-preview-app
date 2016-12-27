@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  templateUrl: 'basic.html'
+  templateUrl: 'demo.html'
 })
-export class BasicPage { }
+export class ButtonsDemoPage { }

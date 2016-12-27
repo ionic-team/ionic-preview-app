@@ -16,7 +16,7 @@ export class BasicPage {
 
   constructor() {
     this.langForm = new FormGroup({
-      "langs": new FormControl('')
+      "langs": new FormControl({value: 'rust', disabled: false})
     });
   }
 

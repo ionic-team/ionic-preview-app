@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 5.1.0
+    version: 6.9.2
 
 general:
   branches:
@@ -8,7 +8,7 @@ general:
       - master # ignore PRs and branches
 
 dependencies:
- pre:
+ post:
    - ./scripts/prepare.sh
  cache_directories:
    - "~/ionic-site" # cache ionic-site

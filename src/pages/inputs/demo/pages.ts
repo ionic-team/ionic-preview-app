@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'demo.html',
+  templateUrl: 'template.html',
 })
 export class InputsDemoPage {
   

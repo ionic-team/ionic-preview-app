@@ -16,7 +16,7 @@ import { RadioPage as AlertRadioPage } from '../pages/alerts/radio/pages';
 import { BasicPage as BadgeBasicPage } from '../pages/badges/basic/pages';
 
 // buttons
-import { BasicPage as ButtonBasicPage } from '../pages/buttons/basic/pages';
+import { ButtonsDemoPage as ButtonBasicPage } from '../pages/buttons/demo/pages';
 import { BlockPage as ButtonBlockPage } from '../pages/buttons/block/pages';
 import { ClearPage as ButtonClearPage } from '../pages/buttons/clear/pages';
 import { ComponentsPage as ButtonComponentsPage } from '../pages/buttons/components/pages';
@@ -34,7 +34,7 @@ import { AdvancedMapPage as CardAdvancedMapPage } from '../pages/cards/advanced-
 import { AdvancedSocialPage as CardAdvancedSocialPage } from '../pages/cards/advanced-social/pages';
 import { AdvancedWeatherPage as CardAdvancedWeatherPage } from '../pages/cards/advanced-weather/pages';
 import { BackgroundPage as CardBackgroundPage } from '../pages/cards/background/pages';
-import { BasicPage as CardBasicPage } from '../pages/cards/basic/pages';
+import { CardsDemoPage as CardBasicPage } from '../pages/cards/demo/pages';
 import { HeaderPage as CardHeaderPage } from '../pages/cards/header/pages';
 import { ImagePage as CardImagePage } from '../pages/cards/image/pages';
 import { ListPage as CardListPage } from '../pages/cards/list/pages';
@@ -55,7 +55,7 @@ import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
 
 // inputs
-import { BasicPage as InputBasicPage } from '../pages/inputs/basic/pages';
+import { InputsDemoPage as InputBasicPage } from '../pages/inputs/demo/pages';
 import { FloatingPage as InputFloatingPage } from '../pages/inputs/floating/pages';
 import { FixedInlinePage as InputFixedInlinePage } from '../pages/inputs/fixed-inline/pages';
 import { InlinePage as InputInlinePage } from '../pages/inputs/inline/pages';

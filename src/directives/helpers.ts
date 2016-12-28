@@ -8,6 +8,9 @@ import { ConfirmPage as AlertConfirmPage } from '../pages/alerts/confirm/pages';
 import { PromptPage as AlertPromptPage } from '../pages/alerts/prompt/pages';
 import { RadioPage as AlertRadioPage } from '../pages/alerts/radio/pages';
 
+//avatar
+import { AvatarDemoPage as AvatarBasicPage } from '../pages/avatar/demo/pages';
+
 // badges
 import { BasicPage as BadgeBasicPage } from '../pages/badges/basic/pages';
 
@@ -167,6 +170,7 @@ export function getPages() {
     'alert-prompt': AlertPromptPage,
     'alert-radio': AlertRadioPage,
     'alert-checkbox': AlertCheckboxPage,
+    'avatar': AvatarBasicPage,
     'badges': BadgeBasicPage,
     'buttons': ButtonBasicPage,
     'block-buttons': ButtonBlockPage,

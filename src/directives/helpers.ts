@@ -53,6 +53,9 @@ import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
 // icons
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
 
+// infinite Scroll
+import { InfiniteScrollDemoPage as InfiniteScrollBasicPage } from '../pages/infinite-scroll/demo/pages';
+
 // inputs
 import { InputsDemoPage as InputBasicPage } from '../pages/inputs/demo/pages';
 import { FloatingPage as InputFloatingPage } from '../pages/inputs/floating/pages';
@@ -194,6 +197,7 @@ export function getPages() {
     'checkbox': CheckboxBasicPage,
     'datetime': DatetimeBasicPage,
     'gestures': GestureBasicPage,
+    'infinitescroll': InfiniteScrollBasicPage,
     'inputs': InputBasicPage,
     'fixed-inline-labels': InputFixedInlinePage,
     'floating-labels': InputFloatingPage,

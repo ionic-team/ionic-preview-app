@@ -57,6 +57,9 @@ import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
 // icons
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
 
+// infinite scroll
+import { InfiniteScrollDemoPage as InfiniteScrollBasicPage } from '../pages/infinite-scroll/demo/pages';
+
 // inputs
 import { InputsDemoPage as InputBasicPage } from '../pages/inputs/demo/pages';
 import { FloatingPage as InputFloatingPage } from '../pages/inputs/floating/pages';
@@ -194,6 +197,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     InputPlaceholderPage,
     InputStackedPage,
 
+    InfiniteScrollBasicPage,
+
     ListAvatarPage,
     ListBasicPage,
     ListDividersPage,
@@ -310,6 +315,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     GridBasicPage,
 
     IconBasicPage,
+
+    InfiniteScrollBasicPage,
 
     InputBasicPage,
     InputFloatingPage,

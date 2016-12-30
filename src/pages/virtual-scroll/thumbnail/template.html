@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Thumbnail Virtual Scroll</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list [virtualScroll]="items" approxItemHeight="75px">
+  <ion-item *virtualItem="let item">
+    <ion-thumbnail item-left>
+      <img [src]="item.thumbnail" width="56" height="56">
+    </ion-thumbnail>
+    <h2>{{item.title}}</h2>
+    <button ion-button clear item-right>View</button>
+  </ion-item>
+</ion-list>
+  
+</ion-content>

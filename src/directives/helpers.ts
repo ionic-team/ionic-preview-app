@@ -67,7 +67,7 @@ import { StackedPage as InputStackedPage } from '../pages/inputs/stacked/pages';
 
 // lists
 import { AvatarPage as ListAvatarPage } from '../pages/lists/avatar/pages';
-import { BasicPage as ListBasicPage } from '../pages/lists/basic/pages';
+import { ListsDemoPage as ListBasicPage } from '../pages/lists/demo/pages';
 import { DividersPage as ListDividersPage } from '../pages/lists/dividers/pages';
 import { HeadersPage as ListHeadersPage } from '../pages/lists/headers/pages';
 import { IconPage as ListIconPage } from '../pages/lists/icon/pages';
@@ -129,6 +129,9 @@ import { ColorsPage as ToolbarColorsPage } from '../pages/toolbar/colors/pages';
 import { SearchbarPage as ToolbarSearchbarPage } from '../pages/toolbar/searchbar/pages';
 import { SegmentPage as ToolbarSegmentPage } from '../pages/toolbar/segment/pages';
 
+// virtual scroll
+import { VirtualScrollDemoPage as VirtualScrollBasicPage } from '../pages/virtual-scroll/demo/pages';
+import { VirtualScrollThumbnailPage as VirtualScrollThumbnailPage } from '../pages/virtual-scroll/thumbnail/pages';
 
 export function hasScrollbar() {
 
@@ -239,7 +242,9 @@ export function getPages() {
     'toolbar-buttons': ToolbarButtonsPage,
     'toolbar-segment': ToolbarSegmentPage,
     'toolbar-searchbar': ToolbarSearchbarPage,
-    'toolbar-colors': ToolbarColorsPage
+    'toolbar-colors': ToolbarColorsPage,
+    'virtualscroll': VirtualScrollBasicPage,
+    'virtualscroll-thumbnail': VirtualScrollThumbnailPage
   };
 }
 

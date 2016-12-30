@@ -71,7 +71,7 @@ import { StackedPage as InputStackedPage } from '../pages/inputs/stacked/pages';
 
 // lists
 import { AvatarPage as ListAvatarPage } from '../pages/lists/avatar/pages';
-import { BasicPage as ListBasicPage } from '../pages/lists/basic/pages';
+import { ListsDemoPage as ListBasicPage } from '../pages/lists/demo/pages';
 import { DividersPage as ListDividersPage } from '../pages/lists/dividers/pages';
 import { HeadersPage as ListHeadersPage } from '../pages/lists/headers/pages';
 import { IconPage as ListIconPage } from '../pages/lists/icon/pages';
@@ -138,6 +138,10 @@ import { Page3 as ToolbarColorsPage3 } from '../pages/toolbar/colors/pages';
 import { Page4 as ToolbarColorsPage4 } from '../pages/toolbar/colors/pages';
 import { SearchbarPage as ToolbarSearchbarPage } from '../pages/toolbar/searchbar/pages';
 import { SegmentPage as ToolbarSegmentPage } from '../pages/toolbar/segment/pages';
+
+// virtual scroll
+import { VirtualScrollDemoPage as VirtualScrollBasicPage } from '../pages/virtual-scroll/demo/pages';
+import { VirtualScrollThumbnailPage as VirtualScrollThumbnailPage } from '../pages/virtual-scroll/thumbnail/pages';
 
 // pipes
 import { DisplayRoutePipe } from '../pipes/display-route';
@@ -263,6 +267,9 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     ToolbarSearchbarPage,
     ToolbarSegmentPage,
 
+    VirtualScrollBasicPage,
+    VirtualScrollThumbnailPage,
+
     DisplayRoutePipe
   ],
   imports: [
@@ -385,7 +392,10 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     ToolbarColorsPage3,
     ToolbarColorsPage4,
     ToolbarSearchbarPage,
-    ToolbarSegmentPage
+    ToolbarSegmentPage,
+
+    VirtualScrollBasicPage,
+    VirtualScrollThumbnailPage
   ],
   providers: []
 })

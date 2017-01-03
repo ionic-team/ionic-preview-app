@@ -45,14 +45,23 @@ import { ListPage as CardListPage } from '../pages/cards/list/pages';
 // checkboxes
 import { BasicPage as CheckboxBasicPage } from '../pages/checkboxes/basic/pages';
 
+// content
+import { BasicDemoPage as ContentBasicPage } from '../pages/basic/demo/pages';
+
 // datetime
 import { BasicPage as DatetimeBasicPage } from '../pages/datetime/basic/pages';
+
+// footer
+import { BasicDemoPage as FooterBasicPage } from '../pages/basic/demo/pages';
 
 // gestures
 import { BasicPage as GestureBasicPage } from '../pages/gestures/basic/pages';
 
 // grid
 import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
+
+// header
+import { BasicDemoPage as HeaderBasicPage } from '../pages/basic/demo/pages';
 
 // icons
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
@@ -185,11 +194,17 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     CheckboxBasicPage,
 
+    ContentBasicPage,
+
     DatetimeBasicPage,
+
+    FooterBasicPage,
 
     GestureBasicPage,
 
     GridBasicPage,
+
+    HeaderBasicPage,
 
     IconBasicPage,
 
@@ -315,11 +330,17 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     CheckboxBasicPage,
 
+    ContentBasicPage,
+
     DatetimeBasicPage,
+
+    FooterBasicPage,
 
     GestureBasicPage,
 
     GridBasicPage,
+
+    HeaderBasicPage,
 
     IconBasicPage,
 

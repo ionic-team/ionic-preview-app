@@ -1,5 +1,5 @@
 import { Component, NgZone, ViewChild } from '@angular/core';
-import { Config, Menu, NavController, Platform, QueryParams } from 'ionic-angular';
+import { Config, Menu, NavController, Platform } from 'ionic-angular';
 
 import * as helpers from '../directives/helpers';
 import { PageOne, PageTwo, PageThree } from '../pages/menus/basic/pages';
@@ -24,7 +24,7 @@ export class MyApp {
     { title: 'Events', component: PageThree }
   ];
 
-  constructor(public platform: Platform, public config: Config, public zone: NgZone, public queryParams: QueryParams) {
+  constructor(public platform: Platform, public config: Config, public zone: NgZone) {
     this.rootPage = BasicPage;
   }
 
@@ -33,7 +33,7 @@ export class MyApp {
     // production is false unless viewed on the docs
     // http://ionicframework.com/docs/v2/components/
 
-    if (this.queryParams.get('production') === 'true') {
+    if (this.platform.getQueryParam('production') === 'true') {
       this.isProductionMode = true;
 
       // Platform is ios by default

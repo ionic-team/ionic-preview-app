@@ -105,6 +105,9 @@ import { BasicPage as ModalBasicPage, ModalContentPage } from '../pages/modals/b
 // navigation
 import { BasicPage as NavigationBasicPage, NavigationDetailsPage } from '../pages/navigation/basic/pages';
 
+// note
+import { NoteDemoPage as NoteBasicPage } from '../pages/note/demo/pages';
+
 // popover
 import { BasicPage as PopoverBasicPage, PopoverPage as PopoverContentPage } from '../pages/popovers/basic/pages';
 
@@ -242,6 +245,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     NavigationBasicPage,
     NavigationDetailsPage,
 
+    NoteBasicPage,
+
     PopoverBasicPage,
     PopoverContentPage,
 
@@ -374,6 +379,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     NavigationBasicPage,
     NavigationDetailsPage,
+
+    NoteBasicPage,
 
     PopoverBasicPage,
     PopoverContentPage,

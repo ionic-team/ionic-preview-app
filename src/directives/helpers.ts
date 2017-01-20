@@ -98,6 +98,9 @@ import { BasicPage as ModalBasicPage } from '../pages/modals/basic/pages';
 // navigation
 import { BasicPage as NavigationBasicPage } from '../pages/navigation/basic/pages';
 
+//note
+import { NoteDemoPage as NoteBasicPage } from '../pages/note/demo/pages';
+
 // popover
 import { BasicPage as PopoverBasicPage } from '../pages/popovers/basic/pages';
 
@@ -237,6 +240,7 @@ export function getPages() {
     'menus': MenuBasicPage,
     'modals': ModalBasicPage,
     'navigation': NavigationBasicPage,
+    'note': NoteBasicPage,
     'popovers': PopoverBasicPage,
     'radio': RadioBasicPage,
     'range': RangeBasicPage,

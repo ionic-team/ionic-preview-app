@@ -10,6 +10,7 @@ import { BasicPage } from '../pages/action-sheets/basic/pages';
 })
 export class MyApp {
   isProductionMode: boolean = false;
+  isLab: boolean = false;
   rootPage: any;
   nextPage: any;
   currentPlatform: string = 'ios';
@@ -29,10 +30,13 @@ export class MyApp {
   }
 
   ngAfterContentInit() {
+    // if viewing the preview app in lab, hide the statusbars
+    this.isLab = window.parent.location.pathname === '/ionic-lab';
+    if (this.isLab) this.config.set('statusbarPadding', false);
+
     // production-only code
     // production is false unless viewed on the docs
     // http://ionicframework.com/docs/v2/components/
-
     if (this.platform.getQueryParam('production') === 'true') {
       this.isProductionMode = true;
 

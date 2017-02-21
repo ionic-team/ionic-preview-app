@@ -69,6 +69,7 @@ export class MyApp {
             if (data.hash) {
               this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
               if (data.hash !== 'menus') {
+                this.menu.close()
                 this.menu.enable(false);
               }
             } else {

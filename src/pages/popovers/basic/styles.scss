@@ -89,12 +89,10 @@
   }
 }
 
-&.hairlines {
-  .popover-page {
-    .text-smaller,
-    .row-dots,
-    .dot {
-      border-width: $hairlines-width;
-    }
+.popover-page {
+  .text-smaller,
+  .row-dots,
+  .dot {
+    border-width: $hairlines-width;
   }
 }

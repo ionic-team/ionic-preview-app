@@ -1,6 +1,6 @@
-<img src="assets/img/android-statusbar.png" style="display:none" id="md-only">
-<img src="assets/img/ios-statusbar.png" style="display:none" id="ios-only">
-<img src="assets/img/wp-statusbar.png" style="display:none" id="wp-only">
+<img src="assets/img/android-statusbar.png" *ngIf="!isLab" class="statusbar-img statusbar-img-md">
+<img src="assets/img/ios-statusbar.png" *ngIf="!isLab" class="statusbar-img statusbar-img-ios">
+<img src="assets/img/wp-statusbar.png" *ngIf="!isLab" class="statusbar-img statusbar-img-wp">
 
 <ion-menu [content]="content">
   <ion-header>

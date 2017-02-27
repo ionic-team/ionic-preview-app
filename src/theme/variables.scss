@@ -90,7 +90,7 @@ $cordova-wp-statusbar-padding:           31px;
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
 
-@import "ionicons";
+@import "ionic.ionicons";
 
 
 // Fonts
@@ -135,6 +135,9 @@ scroll-content {
   overflow-y: scroll;
 }
 
+.statusbar-img {
+  display: none;
+}
 
 // App iOS Styles
 // --------------------------------------------------
@@ -144,7 +147,7 @@ scroll-content {
 
   // iOS Status Bar
   //---------------------------
-  img#ios-only {
+  .statusbar-img-ios {
     display: block !important;
     position: absolute;
     background-color: transparent;
@@ -173,7 +176,7 @@ scroll-content {
 
   // Android Status Bar
   //---------------------------
-  img#md-only {
+  .statusbar-img-md {
     display: block !important;
     position: absolute;
     background-color: transparent;
@@ -211,7 +214,7 @@ scroll-content {
 
   // Windows Status Bar
   //---------------------------
-  img#wp-only {
+  .statusbar-img-wp {
     display: block !important;
     position: absolute;
     background-color: transparent;

@@ -1,5 +1,5 @@
 import { Component, NgZone, ViewChild } from '@angular/core';
-import { Config, Menu, NavController, Platform, QueryParams } from 'ionic-angular';
+import { Config, Menu, NavController, Platform } from 'ionic-angular';
 
 import * as helpers from '../directives/helpers';
 import { PageOne, PageTwo, PageThree } from '../pages/menus/basic/pages';
@@ -10,6 +10,7 @@ import { BasicPage } from '../pages/action-sheets/basic/pages';
 })
 export class MyApp {
   isProductionMode: boolean = false;
+  isLab: boolean = false;
   rootPage: any;
   nextPage: any;
   currentPlatform: string = 'ios';
@@ -24,16 +25,19 @@ export class MyApp {
     { title: 'Events', component: PageThree }
   ];
 
-  constructor(public platform: Platform, public config: Config, public zone: NgZone, public queryParams: QueryParams) {
+  constructor(public platform: Platform, public config: Config, public zone: NgZone) {
     this.rootPage = BasicPage;
   }
 
   ngAfterContentInit() {
+    // if viewing the preview app in lab, hide the statusbars
+    this.isLab = window.parent.location.pathname === '/ionic-lab';
+    if (this.isLab) this.config.set('statusbarPadding', false);
+
     // production-only code
     // production is false unless viewed on the docs
     // http://ionicframework.com/docs/v2/components/
-
-    if (this.queryParams.get('production') === 'true') {
+    if (this.platform.getQueryParam('production') === 'true') {
       this.isProductionMode = true;
 
       // Platform is ios by default
@@ -65,6 +69,7 @@ export class MyApp {
             if (data.hash) {
               this.nextPage = helpers.getPageFor(data.hash.replace('#', ''));
               if (data.hash !== 'menus') {
+                this.menu.close()
                 this.menu.enable(false);
               }
             } else {

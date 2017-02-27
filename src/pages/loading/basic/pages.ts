@@ -11,12 +11,11 @@ export class BasicPage {
   constructor(public loadingCtrl: LoadingController) { }
 
   presentLoading() {
-    let loading = this.loadingCtrl.create({
-      content: "Please wait...",
+    this.loadingCtrl.create({
+      content: 'Please wait...',
       duration: 3000,
       dismissOnPageChange: true
-    });
-    loading.present();
+    }).present();
   }
 
 }

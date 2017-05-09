@@ -11,7 +11,7 @@ import { App, MenuController } from 'ionic-angular';
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Friends
+      Menus
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -34,7 +34,7 @@ export class BasicPage {
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Friends
+      Menus
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -72,7 +72,7 @@ export class PageTwo { }
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Friends
+      Events
     </ion-title>
   </ion-navbar>
 </ion-header>

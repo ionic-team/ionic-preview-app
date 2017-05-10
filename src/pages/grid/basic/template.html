@@ -6,63 +6,287 @@
 </ion-header>
 
 <ion-content class="grid-basic-page">
-  <ion-row>
-    <ion-col><div>col</div></ion-col>
-    <ion-col><div>col</div></ion-col>
-    <ion-col><div>col</div></ion-col>
-    <ion-col>
-      <div>
-        col<br>
-        3 lines<br>
-        of text<br>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row align-items-center>
-    <ion-col><div>col</div></ion-col>
-    <ion-col><div>col</div></ion-col>
-    <ion-col><div>col</div></ion-col>
-    <ion-col>
-      <div>
-        col<br>
-        3 lines<br>
-        center<br>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row align-items-center>
-    <ion-col offset-3><div>col</div></ion-col>
-    <ion-col><div>col</div></ion-col>
-    <ion-col>
-      <div>
-        col<br>
-        3 lines<br>
-        center<br>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row align-items-baseline>
-    <ion-col offset-6><div>col</div></ion-col>
-    <ion-col>
-      <div>
-        col<br>
-        3 lines<br>
-        baseline<br>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row align-items-baseline>
-    <ion-col offset-9>
-      <div>
-        col<br>
-        2 lines<br>
-      </div>
-    </ion-col>
-  </ion-row>
 
 
+  <p padding>
+    Equal-width columns
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>1 of 3</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 3</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Setting one column width
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>1 of 3</div>
+      </ion-col>
+      <ion-col col-6>
+        <div>2 of 3 (wider)</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <div>1 of 3 (wider)</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 3</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Variable-width columns
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>1 of 3</div>
+      </ion-col>
+      <ion-col col-auto>
+        <div>Variable width content</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 4</div>
+      </ion-col>
+      <ion-col col-auto>
+        <div><ion-icon name="globe"></ion-icon></div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Offsetting columns
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col offset-4>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Push and pull
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9 push-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3 pull-9>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6 push-3>
+        <div>1 of 3</div>
+      </ion-col>
+      <ion-col col-3 push-3>
+        <div>2 of 3</div>
+      </ion-col>
+      <ion-col col-3 pull-9>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Setting all column widths<br>
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <div>1 of 3</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 3</div>
+      </ion-col>
+      <ion-col col-5>
+        <div>3 of 3</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Vertical alignment
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 4 <br>#</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 4 <br>#<br>#</div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4 <br>#<br>#<br>#</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-start>
+      <ion-col>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4 <br>#<br>#<br>#</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4 <br>#<br>#<br>#</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-end>
+      <ion-col>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>2 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>3 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4 <br>#<br>#<br>#</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-start>
+        <div>1 of 4</div>
+      </ion-col>
+      <ion-col align-self-center>
+        <div>2 of 4</div>
+      </ion-col>
+      <ion-col align-self-end>
+        <div>3 of 4</div>
+      </ion-col>
+      <ion-col>
+        <div>4 of 4 <br>#<br>#<br>#</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p padding>
+    Horizontal Alignment
+  </p>
+  <ion-grid>
+    <ion-row justify-content-start>
+      <ion-col col-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row justify-content-center>
+      <ion-col col-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row justify-content-end>
+      <ion-col col-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row justify-content-around>
+      <ion-col col-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row justify-content-between>
+      <ion-col col-3>
+        <div>1 of 2</div>
+      </ion-col>
+      <ion-col col-3>
+        <div>2 of 2</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

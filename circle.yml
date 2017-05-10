@@ -8,8 +8,9 @@ general:
       - master # ignore PRs and branches
 
 dependencies:
- post:
+ pre:
    - npm install -g cordova
+ post:
    - ./scripts/prepare.sh
  cache_directories:
    - "~/ionic-site" # cache ionic-site

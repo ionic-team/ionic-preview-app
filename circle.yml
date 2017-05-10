@@ -9,6 +9,7 @@ general:
 
 dependencies:
  post:
+   - npm install -g cordova
    - ./scripts/prepare.sh
  cache_directories:
    - "~/ionic-site" # cache ionic-site

@@ -1,8 +1,8 @@
-# Ionic 2 Preview App
+# Ionic Preview App
 
-This app accompanies the Ionic 2 component documentation.
+This app accompanies the Ionic component documentation.
 
-[[LIVE DEMO]](http://ionicframework.com/docs/v2/components/)
+[[LIVE DEMO]](http://ionicframework.com/docs/components/)
 
 ### Installation & Development
 

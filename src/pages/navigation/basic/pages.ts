@@ -24,7 +24,7 @@ export class NavigationDetailsPage {
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-left>
+    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
       <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-start></ion-icon>
       {{ item.title }}
     </button>

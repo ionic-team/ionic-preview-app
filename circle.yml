@@ -8,6 +8,8 @@ general:
       - master # ignore PRs and branches
 
 dependencies:
+ pre:
+   - npm install -g cordova
  post:
    - ./scripts/prepare.sh
  cache_directories:

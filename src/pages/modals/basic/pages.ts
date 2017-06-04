@@ -35,7 +35,7 @@ export class BasicPage {
 <ion-content>
   <ion-list>
       <ion-item>
-        <ion-avatar item-left>
+        <ion-avatar item-start>
           <img src="{{character.image}}">
         </ion-avatar>
         <h2>{{character.name}}</h2>
@@ -44,7 +44,7 @@ export class BasicPage {
 
       <ion-item *ngFor="let item of character['items']">
         {{item.title}}
-        <ion-note item-right>
+        <ion-note item-end>
           {{item.note}}
         </ion-note>
       </ion-item>

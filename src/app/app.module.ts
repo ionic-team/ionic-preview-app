@@ -328,6 +328,9 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     LoadingBasicPage,
 
     MenuBasicPage,
+    MenuPageOne,
+    MenuPageTwo,
+    MenuPageThree,
 
     ModalBasicPage,
     ModalContentPage,

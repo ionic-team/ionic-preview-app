@@ -331,8 +331,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
         { component: MenuPageTwo, name: 'MenuPageTwo', segment: 'menu-two' },
         { component: MenuPageThree, name: 'MenuPageThree', segment: 'menu-three' },
 
-        { component: ModalBasicPage, name: 'ModalBasicPage', segment: 'model-basic' },
-        { component: ModalContentPage, name: 'ModalContentPage', segment: 'model-content' },
+        { component: ModalBasicPage, name: 'ModalBasicPage', segment: 'modal-basic' },
+        { component: ModalContentPage, name: 'ModalContentPage', segment: 'modal-content' },
 
         { component: NavigationBasicPage, name: 'NavigationBasicPage', segment: 'navigation-basic' },
         { component: NavigationDetailsPage, name: 'NavigationDetailsPage', segment: 'navigation-details' },
@@ -361,7 +361,7 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
         { component: ToggleBasicPage, name: 'ToggleBasicPage', segment: 'toggle-basic' },
 
-        { component: ToolbarBasicPage, name: 'ToolbarBasicPage', segment: 'toolbar-basic-page' },
+        { component: ToolbarBasicPage, name: 'ToolbarBasicPage', segment: 'toolbar-basic' },
         { component: ToolbarButtonsPage, name: 'ToolbarButtonsPage', segment: 'toolbar-buttons' },
         { component: ToolbarColorsPage, name: 'ToolbarColorsPage', segment: 'toolbar-colors' },
         { component: ToolbarColorsPage2, name: 'ToolbarColorsPage2', segment: 'toolbar-colors2' },

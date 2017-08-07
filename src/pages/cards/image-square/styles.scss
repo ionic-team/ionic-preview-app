@@ -1,0 +1,18 @@
+
+.card[img-mini] {
+   img {
+      width: 110px;
+      height: 110px;
+      float: left;
+      margin: 0 15px 0 0;
+   }
+   .card-title {
+      padding: 0 0 10px 0;
+   }
+   .card-content {
+      padding: 5px 10px 0 15px;
+   }
+   .row {
+      clear: both;
+   }
+}

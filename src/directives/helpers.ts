@@ -33,6 +33,7 @@ import { BackgroundPage as CardBackgroundPage } from '../pages/cards/background/
 import { BasicPage as CardBasicPage } from '../pages/cards/basic/pages';
 import { HeaderPage as CardHeaderPage } from '../pages/cards/header/pages';
 import { ImagePage as CardImagePage } from '../pages/cards/image/pages';
+import { ImageSquarePage as CardImageSquarePage } from '../pages/cards/image-square/pages';
 import { ListPage as CardListPage } from '../pages/cards/list/pages';
 
 // checkboxes
@@ -182,6 +183,7 @@ export function getPages() {
     'card-header': CardHeaderPage,
     'card-list': CardListPage,
     'card-image': CardImagePage,
+    'card-image-square': CardImageSquarePage,
     'card-background': CardBackgroundPage,
     'advanced-cards': CardAdvancedSocialPage,
     'card-advanced-map': CardAdvancedMapPage,

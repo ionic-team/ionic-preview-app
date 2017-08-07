@@ -38,6 +38,7 @@ import { BackgroundPage as CardBackgroundPage } from '../pages/cards/background/
 import { BasicPage as CardBasicPage } from '../pages/cards/basic/pages';
 import { HeaderPage as CardHeaderPage } from '../pages/cards/header/pages';
 import { ImagePage as CardImagePage } from '../pages/cards/image/pages';
+import { ImageSquarePage as CardImageSquarePage } from '../pages/cards/image-square/pages';
 import { ListPage as CardListPage } from '../pages/cards/list/pages';
 
 // checkboxes
@@ -170,6 +171,7 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     CardBasicPage,
     CardHeaderPage,
     CardImagePage,
+    CardImageSquarePage,
     CardListPage,
 
     CheckboxBasicPage,
@@ -293,6 +295,7 @@ import { DisplayRoutePipe } from '../pipes/display-route';
         { component: CardBasicPage, name: 'CardBasicPage', segment: 'card-basic' },
         { component: CardHeaderPage, name: 'CardHeaderPage', segment: 'card-header' },
         { component: CardImagePage, name: 'CardImagePage', segment: 'card-image' },
+        { component: CardImageSquarePage, name: 'CardImageSquarePage', segment: 'card-image-square' },
         { component: CardListPage, name: 'CardListPage', segment: 'card-list' },
 
         { component: CheckboxBasicPage, name: 'CheckboxBasicPage', segment: 'checkbox-basic' },
@@ -404,6 +407,7 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     CardBasicPage,
     CardHeaderPage,
     CardImagePage,
+    CardImageSquarePage,
     CardListPage,
 
     CheckboxBasicPage,

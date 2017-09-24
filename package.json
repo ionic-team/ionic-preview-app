@@ -35,7 +35,6 @@
     "@ionic/app-scripts": "2.1.4",
     "@ionic/cli-plugin-cordova": "^1.4.0",
     "@ionic/cli-plugin-ionic-angular": "^1.4.0",
-    "ionic": "3.6.0",
     "typescript": "2.3.3"
   },
   "cordovaPlugins": [

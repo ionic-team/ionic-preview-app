@@ -8,11 +8,14 @@ import { ConfirmPage as AlertConfirmPage } from '../pages/alerts/confirm/pages';
 import { PromptPage as AlertPromptPage } from '../pages/alerts/prompt/pages';
 import { RadioPage as AlertRadioPage } from '../pages/alerts/radio/pages';
 
+//avatar
+import { AvatarDemoPage as AvatarBasicPage } from '../pages/avatar/demo/pages';
+
 // badges
 import { BasicPage as BadgeBasicPage } from '../pages/badges/basic/pages';
 
 // buttons
-import { BasicPage as ButtonBasicPage } from '../pages/buttons/basic/pages';
+import { ButtonsDemoPage as ButtonBasicPage } from '../pages/buttons/demo/pages';
 import { BlockPage as ButtonBlockPage } from '../pages/buttons/block/pages';
 import { ClearPage as ButtonClearPage } from '../pages/buttons/clear/pages';
 import { ComponentsPage as ButtonComponentsPage } from '../pages/buttons/components/pages';
@@ -30,7 +33,7 @@ import { AdvancedMapPage as CardAdvancedMapPage } from '../pages/cards/advanced-
 import { AdvancedSocialPage as CardAdvancedSocialPage } from '../pages/cards/advanced-social/pages';
 // import { AdvancedWeatherPage as CardAdvancedWeatherPage } from '../pages/cards/advanced-weather/pages';
 import { BackgroundPage as CardBackgroundPage } from '../pages/cards/background/pages';
-import { BasicPage as CardBasicPage } from '../pages/cards/basic/pages';
+import { CardsDemoPage as CardBasicPage } from '../pages/cards/demo/pages';
 import { HeaderPage as CardHeaderPage } from '../pages/cards/header/pages';
 import { ImagePage as CardImagePage } from '../pages/cards/image/pages';
 import { ListPage as CardListPage } from '../pages/cards/list/pages';
@@ -50,8 +53,11 @@ import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
 // icons
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
 
+// infinite Scroll
+import { InfiniteScrollDemoPage as InfiniteScrollBasicPage } from '../pages/infinite-scroll/demo/pages';
+
 // inputs
-import { BasicPage as InputBasicPage } from '../pages/inputs/basic/pages';
+import { InputsDemoPage as InputBasicPage } from '../pages/inputs/demo/pages';
 import { FloatingPage as InputFloatingPage } from '../pages/inputs/floating/pages';
 import { FixedInlinePage as InputFixedInlinePage } from '../pages/inputs/fixed-inline/pages';
 import { InlinePage as InputInlinePage } from '../pages/inputs/inline/pages';
@@ -61,7 +67,7 @@ import { StackedPage as InputStackedPage } from '../pages/inputs/stacked/pages';
 
 // lists
 import { AvatarPage as ListAvatarPage } from '../pages/lists/avatar/pages';
-import { BasicPage as ListBasicPage } from '../pages/lists/basic/pages';
+import { ListsDemoPage as ListBasicPage } from '../pages/lists/demo/pages';
 import { DividersPage as ListDividersPage } from '../pages/lists/dividers/pages';
 import { HeadersPage as ListHeadersPage } from '../pages/lists/headers/pages';
 import { IconPage as ListIconPage } from '../pages/lists/icon/pages';
@@ -123,6 +129,9 @@ import { ColorsPage as ToolbarColorsPage } from '../pages/toolbar/colors/pages';
 import { SearchbarPage as ToolbarSearchbarPage } from '../pages/toolbar/searchbar/pages';
 import { SegmentPage as ToolbarSegmentPage } from '../pages/toolbar/segment/pages';
 
+// virtual scroll
+import { VirtualScrollDemoPage as VirtualScrollBasicPage } from '../pages/virtual-scroll/demo/pages';
+import { VirtualScrollThumbnailPage as VirtualScrollThumbnailPage } from '../pages/virtual-scroll/thumbnail/pages';
 
 export function hasScrollbar() {
 
@@ -167,6 +176,7 @@ export function getPages() {
     'alert-prompt': AlertPromptPage,
     'alert-radio': AlertRadioPage,
     'alert-checkbox': AlertCheckboxPage,
+    'avatar': AvatarBasicPage,
     'badges': BadgeBasicPage,
     'buttons': ButtonBasicPage,
     'block-buttons': ButtonBlockPage,
@@ -190,6 +200,7 @@ export function getPages() {
     'checkbox': CheckboxBasicPage,
     'datetime': DatetimeBasicPage,
     'gestures': GestureBasicPage,
+    'infinitescroll': InfiniteScrollBasicPage,
     'inputs': InputBasicPage,
     'fixed-inline-labels': InputFixedInlinePage,
     'floating-labels': InputFloatingPage,
@@ -231,7 +242,9 @@ export function getPages() {
     'toolbar-buttons': ToolbarButtonsPage,
     'toolbar-segment': ToolbarSegmentPage,
     'toolbar-searchbar': ToolbarSearchbarPage,
-    'toolbar-colors': ToolbarColorsPage
+    'toolbar-colors': ToolbarColorsPage,
+    'virtualscroll': VirtualScrollBasicPage,
+    'virtualscroll-thumbnail': VirtualScrollThumbnailPage
   };
 }
 

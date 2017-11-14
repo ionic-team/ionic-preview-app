@@ -13,11 +13,14 @@ import { ConfirmPage as AlertConfirmPage } from '../pages/alerts/confirm/pages';
 import { PromptPage as AlertPromptPage } from '../pages/alerts/prompt/pages';
 import { RadioPage as AlertRadioPage } from '../pages/alerts/radio/pages';
 
+//avatar
+import { AvatarDemoPage as AvatarBasicPage } from '../pages/avatar/demo/pages';
+
 // badges
 import { BasicPage as BadgeBasicPage } from '../pages/badges/basic/pages';
 
 // buttons
-import { BasicPage as ButtonBasicPage } from '../pages/buttons/basic/pages';
+import { ButtonsDemoPage as ButtonBasicPage } from '../pages/buttons/demo/pages';
 import { BlockPage as ButtonBlockPage } from '../pages/buttons/block/pages';
 import { ClearPage as ButtonClearPage } from '../pages/buttons/clear/pages';
 import { ComponentsPage as ButtonComponentsPage } from '../pages/buttons/components/pages';
@@ -35,7 +38,7 @@ import { AdvancedMapPage as CardAdvancedMapPage } from '../pages/cards/advanced-
 import { AdvancedSocialPage as CardAdvancedSocialPage } from '../pages/cards/advanced-social/pages';
 import { AdvancedWeatherPage as CardAdvancedWeatherPage } from '../pages/cards/advanced-weather/pages';
 import { BackgroundPage as CardBackgroundPage } from '../pages/cards/background/pages';
-import { BasicPage as CardBasicPage } from '../pages/cards/basic/pages';
+import { CardsDemoPage as CardBasicPage } from '../pages/cards/demo/pages';
 import { HeaderPage as CardHeaderPage } from '../pages/cards/header/pages';
 import { ImagePage as CardImagePage } from '../pages/cards/image/pages';
 import { ListPage as CardListPage } from '../pages/cards/list/pages';
@@ -43,8 +46,14 @@ import { ListPage as CardListPage } from '../pages/cards/list/pages';
 // checkboxes
 import { BasicPage as CheckboxBasicPage } from '../pages/checkboxes/basic/pages';
 
+// content
+import { BasicDemoPage as ContentBasicPage } from '../pages/basic/demo/pages';
+
 // datetime
 import { BasicPage as DatetimeBasicPage } from '../pages/datetime/basic/pages';
+
+// footer
+import { BasicDemoPage as FooterBasicPage } from '../pages/basic/demo/pages';
 
 // gestures
 import { BasicPage as GestureBasicPage } from '../pages/gestures/basic/pages';
@@ -52,11 +61,17 @@ import { BasicPage as GestureBasicPage } from '../pages/gestures/basic/pages';
 // grid
 import { BasicPage as GridBasicPage } from '../pages/grid/basic/pages';
 
+// header
+import { BasicDemoPage as HeaderBasicPage } from '../pages/basic/demo/pages';
+
 // icons
 import { BasicPage as IconBasicPage } from '../pages/icons/basic/pages';
 
+// infinite scroll
+import { InfiniteScrollDemoPage as InfiniteScrollBasicPage } from '../pages/infinite-scroll/demo/pages';
+
 // inputs
-import { BasicPage as InputBasicPage } from '../pages/inputs/basic/pages';
+import { InputsDemoPage as InputBasicPage } from '../pages/inputs/demo/pages';
 import { FloatingPage as InputFloatingPage } from '../pages/inputs/floating/pages';
 import { FixedInlinePage as InputFixedInlinePage } from '../pages/inputs/fixed-inline/pages';
 import { InlinePage as InputInlinePage } from '../pages/inputs/inline/pages';
@@ -66,7 +81,7 @@ import { StackedPage as InputStackedPage } from '../pages/inputs/stacked/pages';
 
 // lists
 import { AvatarPage as ListAvatarPage } from '../pages/lists/avatar/pages';
-import { BasicPage as ListBasicPage } from '../pages/lists/basic/pages';
+import { ListsDemoPage as ListBasicPage } from '../pages/lists/demo/pages';
 import { DividersPage as ListDividersPage } from '../pages/lists/dividers/pages';
 import { HeadersPage as ListHeadersPage } from '../pages/lists/headers/pages';
 import { IconPage as ListIconPage } from '../pages/lists/icon/pages';
@@ -90,6 +105,9 @@ import { BasicPage as ModalBasicPage, ModalContentPage } from '../pages/modals/b
 
 // navigation
 import { BasicPage as NavigationBasicPage, NavigationDetailsPage } from '../pages/navigation/basic/pages';
+
+// note
+import { NoteDemoPage as NoteBasicPage } from '../pages/note/demo/pages';
 
 // popover
 import { BasicPage as PopoverBasicPage, PopoverPage as PopoverContentPage } from '../pages/popovers/basic/pages';
@@ -134,6 +152,10 @@ import { Page4 as ToolbarColorsPage4 } from '../pages/toolbar/colors/pages';
 import { SearchbarPage as ToolbarSearchbarPage } from '../pages/toolbar/searchbar/pages';
 import { SegmentPage as ToolbarSegmentPage } from '../pages/toolbar/segment/pages';
 
+// virtual scroll
+import { VirtualScrollDemoPage as VirtualScrollBasicPage } from '../pages/virtual-scroll/demo/pages';
+import { VirtualScrollThumbnailPage as VirtualScrollThumbnailPage } from '../pages/virtual-scroll/thumbnail/pages';
+
 // pipes
 import { DisplayRoutePipe } from '../pipes/display-route';
 
@@ -148,6 +170,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     AlertConfirmPage,
     AlertPromptPage,
     AlertRadioPage,
+
+    AvatarBasicPage,
 
     BadgeBasicPage,
 
@@ -174,11 +198,17 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     CheckboxBasicPage,
 
+    ContentBasicPage,
+
     DatetimeBasicPage,
+
+    FooterBasicPage,
 
     GestureBasicPage,
 
     GridBasicPage,
+
+    HeaderBasicPage,
 
     IconBasicPage,
 
@@ -189,6 +219,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     InputInsetPage,
     InputPlaceholderPage,
     InputStackedPage,
+
+    InfiniteScrollBasicPage,
 
     ListAvatarPage,
     ListBasicPage,
@@ -213,6 +245,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     NavigationBasicPage,
     NavigationDetailsPage,
+
+    NoteBasicPage,
 
     PopoverBasicPage,
     PopoverContentPage,
@@ -253,6 +287,9 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     ToolbarColorsPage4,
     ToolbarSearchbarPage,
     ToolbarSegmentPage,
+
+    VirtualScrollBasicPage,
+    VirtualScrollThumbnailPage,
 
     DisplayRoutePipe
   ],
@@ -383,6 +420,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     AlertPromptPage,
     AlertRadioPage,
 
+    AvatarBasicPage,
+
     BadgeBasicPage,
 
     ButtonBasicPage,
@@ -408,13 +447,21 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     CheckboxBasicPage,
 
+    ContentBasicPage,
+
     DatetimeBasicPage,
+
+    FooterBasicPage,
 
     GestureBasicPage,
 
     GridBasicPage,
 
+    HeaderBasicPage,
+
     IconBasicPage,
+
+    InfiniteScrollBasicPage,
 
     InputBasicPage,
     InputFloatingPage,
@@ -447,6 +494,8 @@ import { DisplayRoutePipe } from '../pipes/display-route';
 
     NavigationBasicPage,
     NavigationDetailsPage,
+
+    NoteBasicPage,
 
     PopoverBasicPage,
     PopoverContentPage,
@@ -486,7 +535,10 @@ import { DisplayRoutePipe } from '../pipes/display-route';
     ToolbarColorsPage3,
     ToolbarColorsPage4,
     ToolbarSearchbarPage,
-    ToolbarSegmentPage
+    ToolbarSegmentPage,
+
+    VirtualScrollBasicPage,
+    VirtualScrollThumbnailPage
   ],
   providers: []
 })

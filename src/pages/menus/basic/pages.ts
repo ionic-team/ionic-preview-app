@@ -11,7 +11,7 @@ import { App, MenuController } from 'ionic-angular';
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Menus
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>

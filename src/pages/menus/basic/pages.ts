@@ -34,7 +34,7 @@ export class BasicPage {
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Menus
+      images
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -53,7 +53,7 @@ export class PageOne { }
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Friends
+     songs
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -72,7 +72,7 @@ export class PageTwo { }
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-title>
-      Events
+      videos
     </ion-title>
   </ion-navbar>
 </ion-header>

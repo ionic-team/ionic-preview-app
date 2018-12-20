@@ -234,3 +234,18 @@ scroll-content {
   }
 
 }
+
+.ios ion-menu>.menu-inner>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-menu>.menu-inner>.toolbar.statusbar-padding:first-child ion-title, .ios ion-menu>.menu-inner>ion-header>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-menu>.menu-inner>ion-header>.toolbar.statusbar-padding:first-child ion-title, .ios ion-nav>.ion-page>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-nav>.ion-page>.toolbar.statusbar-padding:first-child ion-title, .ios ion-nav>.ion-page>ion-header>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-nav>.ion-page>ion-header>.toolbar.statusbar-padding:first-child ion-title, .ios ion-tab>.ion-page>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-tab>.ion-page>.toolbar.statusbar-padding:first-child ion-title, .ios ion-tab>.ion-page>ion-header>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-tab>.ion-page>ion-header>.toolbar.statusbar-padding:first-child ion-title, .ios ion-tabs>.ion-page.tab-subpage>ion-header>.toolbar.statusbar-padding:first-child ion-segment, .ios ion-tabs>.ion-page.tab-subpage>ion-header>.toolbar.statusbar-padding:first-child ion-title {
+  padding-top: 20px !important;
+  height: 64px !important;
+  min-height: 64px !important;
+}
+.ios ion-nav > .ion-page > .toolbar.statusbar-padding:first-child, .ios ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child, .ios ion-tab > .ion-page > .toolbar.statusbar-padding:first-child, .ios ion-tab > .ion-page > ion-header > .toolbar.statusbar-padding:first-child, .ios ion-tabs > .ion-page.tab-subpage > ion-header > .toolbar.statusbar-padding:first-child, .ios ion-menu > .menu-inner > .toolbar.statusbar-padding:first-child, .ios ion-menu > .menu-inner > ion-header > .toolbar.statusbar-padding:first-child {
+  padding-top: 44px !important;
+  min-height: 64px !important;
+}
+
+md ion-menu>.menu-inner>.toolbar.statusbar-padding:first-child, .md ion-menu>.menu-inner>ion-header>.toolbar.statusbar-padding:first-child, .md ion-nav>.ion-page>.toolbar.statusbar-padding:first-child, .md ion-nav>.ion-page>ion-header>.toolbar.statusbar-padding:first-child, .md ion-tab>.ion-page>.toolbar.statusbar-padding:first-child, .md ion-tab>.ion-page>ion-header>.toolbar.statusbar-padding:first-child, .md ion-tabs>.ion-page.tab-subpage>ion-header>.toolbar.statusbar-padding:first-child {
+  padding-top: 32px !important;
+  min-height: 85px !important;
+}

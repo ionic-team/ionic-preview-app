@@ -11,7 +11,7 @@ export class BasicPage {
   constructor(public alerCtrl: AlertController) { }
 
   doAlert() {
-    let alert = this.alerCtrl.create({
+    let alert = this.alertCtrl.create({
       title: 'New Friend!',
       message: 'Your friend, Obi wan Kenobi, just approved your friend request!',
       buttons: ['Ok']

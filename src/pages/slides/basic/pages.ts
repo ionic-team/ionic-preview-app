@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
+  selector: 'tutorial-page',
   templateUrl: 'template.html'
 })
 export class BasicPage {

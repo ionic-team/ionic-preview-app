@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Gesture } from 'ionic-angular';
 
 @Component({
   templateUrl: 'template.html'
@@ -16,12 +16,23 @@ export class BasicPage {
   pressEvent(e) {
     this.press++
   }
+  
   panEvent(e) {
     this.pan++
   }
-  swipeEvent(e) {
-    this.swipe++
+  
+  swipeEvent(gesture: Gesture) {
+     const direction:number = Number(gesture.direction);
+    // swipe right
+    if(direction === 2){
+      this.swipe++;
+    }
+    // swipe left
+    if(direction === 4){
+      this.swipe--;
+    }
   }
+  
   tapEvent(e) {
     this.tap++
   }

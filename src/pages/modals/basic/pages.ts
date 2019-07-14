@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-
 import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
-
 
 @Component({
   templateUrl: 'template.html'
 })
 export class BasicPage {
-  constructor(public modalCtrl: ModalController) { }
-
-  openModal(characterNum) {
-
-    let modal = this.modalCtrl.create(ModalContentPage, characterNum);
-    modal.present();
+  constructor(private modalCtrl: ModalController) { }
+  openModal(characterNum:number) {
+    this.modalCtrl.create(ModalContentPage, characterNum).present();
   }
 }
 
@@ -53,14 +48,14 @@ export class BasicPage {
 `
 })
 export class ModalContentPage {
-  character;
+  private character:any;
 
   constructor(
-    public platform: Platform,
-    public params: NavParams,
-    public viewCtrl: ViewController
+    private platform: Platform,
+    private params: NavParams,
+    private viewCtrl: ViewController
   ) {
-    var characters = [
+    const characters = [
       {
         name: 'Gollum',
         quote: 'Sneaky little hobbitses!',
